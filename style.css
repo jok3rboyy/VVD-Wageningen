@@ -507,25 +507,37 @@ ul {
 }
 
 .footer-bottom {
-  text-align: center;
-  margin-top: 3rem; /* Meer ruimte boven */
-  padding-top: 2rem; /* Meer padding boven */
-  border-top: 1px solid var(--color-border);
-  font-size: 0.875rem; /* 14px */
-  color: #6c757d; /* Grijs */
+  border-top: 1px solid #e0e0e0;
+  margin-top: 2rem;
+  padding: 1rem 0;
 }
 
-.footer-bottom a {
-  color: var(--color-primary);
-  font-weight: 700;
+.footer-bottom-inner {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
 }
-.footer-bottom a:hover, .footer-bottom a:focus {
-  color: var(--color-accent);
+
+.footer-bottom-inner a {
+  color: #666;
+  text-decoration: none;
+  font-weight: bold;
 }
+
+.footer-bottom-inner a:hover {
+  text-decoration: underline;
+}
+
+
 .footer-separator {
-    margin: 0 0.75rem; /* Meer ruimte rond | */
-    color: var(--color-border);
+    margin: 0 8px;
+    color: #ccc;
 }
+
+.footer-bottom .made-by {
+    margin-top: 0.25rem;
+}
+
 
 .footer-bottom p {
   margin-top: 0.75rem; /* Meer ruimte */
@@ -998,4 +1010,20 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--color-accent); 
   .footer-column { margin-bottom: 0; }
   .footer-column h3 { margin-bottom: 1rem; }
   .social-links { justify-content: center; }
+}
+.footer-bottom .made-by {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+
+.footer-bottom .made-by a {
+  color: #666;
+  text-decoration: none;
+}
+
+.footer-bottom .made-by a:hover {
+  text-decoration: underline;
 }
