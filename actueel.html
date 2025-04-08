@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blijf op de hoogte van het laatste nieuws en de activiteiten van VVD Wageningen. Lees onze blogs, persberichten en aankondigingen.">
+    <title>Actueel - VVD Wageningen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="/" class="logo">
+                <img src="images/VVD_Logo_01_RGB_Kleur_1200DPI.png" alt="Logo VVD Wageningen">
+                <span>WAGENINGEN</span>
+            </a>
+            <button class="nav-toggle" aria-label="Menu openen/sluiten" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/over-ons">Over Ons</a></li>
+                <li><a href="/standpunten">Standpunten</a></li>
+                <li><a href="/actueel">Actueel</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Actueel</h1>
+                <p class="intro-text">Blijf op de hoogte van het laatste nieuws en de activiteiten van VVD Wageningen.</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="nieuws-filter">
+                    <button class="filter-btn active" data-filter="all">Alles</button>
+                    <button class="filter-btn" data-filter="raadswerk">Raadswerk</button>
+                    <button class="filter-btn" data-filter="opinie">Opinie</button>
+                    <button class="filter-btn" data-filter="agenda">Agenda</button>
+                    <button class="filter-btn" data-filter="aankondiging">Aankondigingen</button>
+                </div>
+                
+                <div id="nieuws-container" class="nieuws-grid">
+                    <!-- Nieuws items worden hier dynamisch geladen vanuit de markdown bestanden -->
+                    <div class="nieuws-item" data-category="raadswerk">
+                        <div class="nieuws-image">
+                            <img src="images/DeWageningsSAMPLE.png" alt="VVD stelt vragen over woningbouw" loading="lazy">
+                            <span class="nieuws-date">12 maart 2025</span>
+                        </div>
+                        <div class="nieuws-content">
+                            <span class="nieuws-category">Raadswerk</span>
+                            <h3>VVD stelt vragen over woningbouw in Wageningen</h3>
+                            <p>De VVD-fractie heeft vragen gesteld aan het college over de voortgang van woningbouwprojecten in Wageningen. De partij maakt zich zorgen over het tempo waarin nieuwe woningen worden gerealiseerd.</p>
+                            <a href="/actueel/vragen-woningbouw" class="btn btn-small">Lees meer</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nieuws-item" data-category="opinie">
+                        <div class="nieuws-image">
+                            <img src="images/DeWageningsSAMPLE.png" alt="Opinie over ondernemerschap" loading="lazy">
+                            <span class="nieuws-date">5 maart 2025</span>
+                        </div>
+                        <div class="nieuws-content">
+                            <span class="nieuws-category">Opinie</span>
+                            <h3>Ondernemerschap verdient meer ruimte in Wageningen</h3>
+                            <p>In deze opinie pleit onze fractievoorzitter voor meer ruimte voor ondernemers in Wageningen. "Een bloeiend ondernemersklimaat is essentieel voor de toekomst van onze stad."</p>
+                            <a href="/actueel/opinie-ondernemerschap" class="btn btn-small">Lees meer</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nieuws-item" data-category="agenda">
+                        <div class="nieuws-image">
+                            <img src="images/DeWageningsSAMPLE.png" alt="Liberaal café" loading="lazy">
+                            <span class="nieuws-date">20 april 2025</span>
+                        </div>
+                        <div class="nieuws-content">
+                            <span class="nieuws-category">Agenda</span>
+                            <h3>Liberaal Café: Duurzaamheid & Ondernemerschap</h3>
+                            <p>Op 20 april organiseren we een Liberaal Café over de combinatie van duurzaamheid en ondernemerschap. Met interessante sprekers en volop ruimte voor discussie.</p>
+                            <a href="/actueel/liberaal-cafe-april" class="btn btn-small">Meer info</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nieuws-item" data-category="aankondiging">
+                        <div class="nieuws-image">
+                            <img src="images/DeWageningsSAMPLE.png" alt="Nieuwe kandidaten" loading="lazy">
+                            <span class="nieuws-date">1 maart 2025</span>
+                        </div>
+                        <div class="nieuws-content">
+                            <span class="nieuws-category">Aankondiging</span>
+                            <h3>VVD Wageningen presenteert nieuwe kandidaten</h3>
+                            <p>De VVD Wageningen heeft haar nieuwe kandidaten voor de gemeenteraadsverkiezingen gepresenteerd. Een divers team van betrokken Wageningers staat klaar om de stad vooruit te helpen.</p>
+                            <a href="/actueel/nieuwe-kandidaten" class="btn btn-small">Lees meer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta section-padding">
+            <div class="container cta-container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Blijf op de hoogte!</h2>
+                    <p class="cta-text">Meld je aan voor onze nieuwsbrief en ontvang regelmatig updates over onze activiteiten en standpunten.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="/nieuwsbrief" class="btn btn-cta">Aanmelden Nieuwsbrief</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>VVD Wageningen</h3>
+                    <ul>
+                        <li><a href="/over-ons">Over Ons & Mensen</a></li>
+                        <li><a href="/standpunten">Onze Standpunten</a></li>
+                        <li><a href="/fractie">Raadsfractie</a></li>
+                        <li><a href="/bestuur">Bestuur</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Actueel</h3>
+                    <ul>
+                        <li><a href="/actueel">Actueel</a></li>
+                        <li><a href="/agenda">Agenda</a></li>
+                        <li><a href="/nieuwsbrief">Nieuwsbrief</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Doe Mee</h3>
+                    <ul>
+                        <li><a href="https://www.vvd.nl/word-lid" target="_blank" rel="noopener noreferrer">Word Lid</a></li>
+                        <li><a href="/doneren">Doneren</a></li>
+                        <li><a href="/vrijwilliger">Vrijwilliger Worden</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Volg Ons</h3>
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/VVDWageningen/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://x.com/vvdwageningen"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/vvdwageningen/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/vvd/"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.youtube.com/vvdtube"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-inner">
+                    <p>© <script>document.write(new Date().getFullYear())</script> VVD Wageningen - Alle rechten voorbehouden.</p>
+                    <p class="made-by">Website door <a href="https://twinpixel.nl" target="_blank" rel="noopener noreferrer">TwinPixel</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/sitegenerator.js"></script>
+    <script>
+        // Deze code laadt de nieuwsberichten uit de markdown bestanden
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof SiteGenerator !== 'undefined') {
+                SiteGenerator.loadNieuws('nieuws-container');
+            }
+            
+            // Filter functionaliteit
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const nieuwsItems = document.querySelectorAll('.nieuws-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Actieve knop bijwerken
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    const filter = button.getAttribute('data-filter');
+                    
+                    nieuwsItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

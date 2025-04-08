@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: username/WebsiteVVD-Wageningen # Replace with actual GitHub username/repo
+  branch: main # Branch to update
+  site_domain: vvdwageningen.nl # Replace with actual domain
+
+# Media files will be stored in the repo under images/uploads
+media_folder: "VVD-Wageningen/images/uploads"
+public_folder: "/images/uploads"
+
+# Content Collections
+collections:
+  - name: "actueel" # Used in routes, e.g., /admin/collections/blog
+    label: "Actueel" # Used in the UI
+    folder: "VVD-Wageningen/nieuws" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Publicatiedatum", name: "date", widget: "datetime" }
+      - {
+          label: "Categorie",
+          name: "category",
+          widget: "select",
+          options: ["raadswerk", "opinie", "agenda", "aankondiging"],
+        }
+      - {
+          label: "Afbeelding",
+          name: "thumbnail",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Korte beschrijving", name: "description", widget: "text" }
+      - { label: "Inhoud", name: "body", widget: "markdown" }
+
+  - name: "kandidaten" # Used in routes, e.g., /admin/collections/kandidaten
+    label: "Kandidaten" # Used in the UI
+    folder: "VVD-Wageningen/kandidaten" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template
+    fields: # The fields for each document
+      - { label: "Naam", name: "title", widget: "string" }
+      - { label: "Functie", name: "role", widget: "string" }
+      - { label: "Volgorde", name: "order", widget: "number", default: 99 }
+      - { label: "Foto", name: "photo", widget: "image" }
+      - { label: "Biografie", name: "bio", widget: "markdown" }
