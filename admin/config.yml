@@ -1,12 +1,13 @@
 backend:
-  name: github
-  repo: username/WebsiteVVD-Wageningen # Replace with actual GitHub username/repo
+  name: git-gateway
+  repo: jok3rboyy/VVD-Wageningen # Replace with actual GitHub username/repo
   branch: main # Branch to update
-  site_domain: vvdwageningen.nl # Replace with actual domain
 
 # Media files will be stored in the repo under images/uploads
 media_folder: "VVD-Wageningen/images/uploads"
 public_folder: "/images/uploads"
+
+site_url: https://vvd-wageningen.nl???? ????????????????????????
 
 # Content Collections
 collections:
@@ -44,3 +45,4 @@ collections:
       - { label: "Volgorde", name: "order", widget: "number", default: 99 }
       - { label: "Foto", name: "photo", widget: "image" }
       - { label: "Biografie", name: "bio", widget: "markdown" }
+        #toevoegen persoonlijke socials?
