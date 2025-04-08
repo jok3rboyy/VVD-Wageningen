@@ -1,48 +1,110 @@
 backend:
   name: git-gateway
-  repo: jok3rboyy/VVD-Wageningen # Replace with actual GitHub username/repo
-  branch: main # Branch to update
+  repo: jok3rboyy/VVD-Wageningen # CONTROLEER DIT! Is dit de juiste repo?
+  branch: main
 
-# Media files will be stored in the repo under images/uploads
-media_folder: "VVD-Wageningen/images/uploads"
-public_folder: "/images/uploads"
+# Zorg dat deze paden kloppen t.o.v. de root van je repository!
+media_folder: "images/uploads" # Waarschijnlijk zonder "VVD-Wageningen/" ervoor
+public_folder: "/images/uploads" # Het URL pad naar de media
 
-site_url: https://vvd-wageningen.nl???? ????????????????????????
+# Vul hier de correcte URL in
+site_url: https://vvd-wageningen.nl # Of je dev URL
 
 # Content Collections
 collections:
-  - name: "actueel" # Used in routes, e.g., /admin/collections/blog
-    label: "Actueel" # Used in the UI
-    folder: "VVD-Wageningen/nieuws" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document
-      - { label: "Titel", name: "title", widget: "string" }
+  - name: "actueel"
+    label: "Actueel"
+    folder: "nieuws" # Waarschijnlijk zonder "VVD-Wageningen/" ervoor
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" } # Voor weergave & slug
       - { label: "Publicatiedatum", name: "date", widget: "datetime" }
       - {
           label: "Categorie",
           name: "category",
           widget: "select",
           options: ["raadswerk", "opinie", "agenda", "aankondiging"],
+          required: false, # Maak optioneel als niet altijd nodig
         }
       - {
-          label: "Afbeelding",
-          name: "thumbnail",
+          label: "Thumbnail Afbeelding", # Duidelijker label
+          name: "thumbnail", # Naam gebruikt in script
           widget: "image",
           required: false,
         }
-      - { label: "Korte beschrijving", name: "description", widget: "text" }
-      - { label: "Inhoud", name: "body", widget: "markdown" }
+      - {
+          label: "Korte Samenvatting (excerpt)", # Duidelijker label & naam
+          name: "excerpt", # Naam gebruikt in script voor index
+          widget: "text",
+          required: false, # Maak optioneel
+        }
+      - { label: "Volledige Inhoud", name: "body", widget: "markdown" } # 'body' is standaard voor hoofdinhoud
 
-  - name: "kandidaten" # Used in routes, e.g., /admin/collections/kandidaten
-    label: "Kandidaten" # Used in the UI
-    folder: "VVD-Wageningen/kandidaten" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template
-    fields: # The fields for each document
-      - { label: "Naam", name: "title", widget: "string" }
-      - { label: "Functie", name: "role", widget: "string" }
-      - { label: "Volgorde", name: "order", widget: "number", default: 99 }
-      - { label: "Foto", name: "photo", widget: "image" }
-      - { label: "Biografie", name: "bio", widget: "markdown" }
-        #toevoegen persoonlijke socials?
+  - name: "kandidaten"
+    label: "Kandidaten"
+    folder: "kandidaten" # Waarschijnlijk zonder "VVD-Wageningen/" ervoor
+    create: true
+    slug: "{{slug}}" # Wordt meestal afgeleid van het 'naam' veld
+    fields:
+      # --- !! BELANGRIJK: Keys aangepast aan script/MD !! ---
+      - { label: "Volledige Naam", name: "naam", widget: "string" } # Key = naam
+      - { label: "Functie/Rol", name: "rol", widget: "string" } # Key = rol
+      - {
+          label: "Volgorde (Lijstnummer)", # Duidelijker label
+          name: "volgorde", # Key = volgorde
+          widget: "number",
+          value_type: "int", # Zorg dat het een integer is
+          min: 1,
+          default: 99,
+        }
+      - { label: "Foto", name: "foto", widget: "image" } # Key = foto
+      # --- Einde belangrijke aanpassingen ---
+      - {
+          label: "E-mailadres",
+          name: "email",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "LinkedIn URL",
+          name: "linkedin",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Twitter/X URL",
+          name: "twitter",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Instagram URL",
+          name: "instagram",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Facebook URL",
+          name: "facebook",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Persoonlijke Website URL",
+          name: "website",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Korte Biografie (voor lijst)", # Optioneel voor JSON
+          name: "bio_kort",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Volledige Biografie/Tekst", # Voor eventuele detailpagina
+          name: "body", # Hernoemd van 'bio' naar 'body' voor consistentie
+          widget: "markdown",
+          required: false,
+        }

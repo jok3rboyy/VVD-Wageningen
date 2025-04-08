@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "title": "Liberaal Café - Duurzaamheid & Ondernemerschap",
+    "date": "2025-04-01T08:00:00.000Z",
+    "excerpt": "",
+    "thumbnail": "/images/DeWageningsSAMPLE.png",
+    "path": "/genereerd/nieuws/2025-04-01-liberaal-cafe-april.html",
+    "category": "agenda"
+  },
+  {
+    "title": "VVD stelt vragen over woningbouw in Wageningen",
+    "date": "2025-03-12T13:30:00.000Z",
+    "excerpt": "",
+    "thumbnail": "/images/DeWageningsSAMPLE.png",
+    "path": "/genereerd/nieuws/2025-03-12-vragen-woningbouw.html",
+    "category": "raadswerk"
+  },
+  {
+    "title": "Ondernemerschap verdient meer ruimte in Wageningen",
+    "date": "2025-03-05T09:15:00.000Z",
+    "excerpt": "",
+    "thumbnail": "/images/DeWageningsSAMPLE.png",
+    "path": "/genereerd/nieuws/2025-03-05-opinie-ondernemerschap.html",
+    "category": "opinie"
+  },
+  {
+    "title": "VVD Wageningen presenteert nieuwe kandidaten",
+    "date": "2025-03-01T10:00:00.000Z",
+    "excerpt": "",
+    "thumbnail": "/images/DeWageningsSAMPLE.png",
+    "path": "/genereerd/nieuws/2025-03-01-nieuwe-kandidaten.html",
+    "category": "aankondiging"
+  }
+]

@@ -1,8 +1,13 @@
 ---
-title: Peter Bakker
-role: Raadslid
-order: 3
-photo: /images/DeWageningsSAMPLE.png
+naam: Peter Bakker # Hernoemd van 'title'
+rol: Raadslid # Hernoemd van 'role'
+volgorde: 3 # Hernoemd van 'order'
+foto: /images/DeWageningsSAMPLE.png # Hernoemd van 'photo'
+# ---- Optionele Velden (pas aan of verwijder) ----
+email: peter.bakker@voorbeeld.nl
+linkedin: https://www.linkedin.com/in/peterbakker-voorbeeld/
+bio_kort: "Expert duurzaamheid en ruimtelijke ordening."
+# ---------------------------------------------
 ---
 
 Peter Bakker is sinds 2020 raadslid voor de VVD in de gemeenteraad van Wageningen. Met zijn expertise op het gebied van duurzaamheid en ruimtelijke ordening, zet hij zich in voor een groen én leefbaar Wageningen.

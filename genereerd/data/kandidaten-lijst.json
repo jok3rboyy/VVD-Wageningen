@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "id": "jan-de-vries",
+    "naam": "Jan de Vries",
+    "foto": "/images/DeWageningsSAMPLE.png",
+    "rol": "Fractievoorzitter",
+    "volgorde": 1,
+    "email": "jan.devries@voorbeeld.nl",
+    "linkedin": "https://linkedin.com/...",
+    "twitter": null,
+    "instagram": null,
+    "facebook": null,
+    "website": null,
+    "bio_kort": "Ervaren fractievoorzitter...",
+    "path": "/genereerd/kandidaten/jan-de-vries.html"
+  },
+  {
+    "id": "marieke-jansen",
+    "naam": "Marieke Jansen",
+    "foto": "/images/DeWageningsSAMPLE.png",
+    "rol": "Raadslid",
+    "volgorde": 2,
+    "email": "jan.devries@voorbeeld.nl",
+    "linkedin": "https://linkedin.com/...",
+    "twitter": null,
+    "instagram": null,
+    "facebook": null,
+    "website": null,
+    "bio_kort": "Ervaren fractievoorzitter...",
+    "path": "/genereerd/kandidaten/marieke-jansen.html"
+  },
+  {
+    "id": "peter-bakker",
+    "naam": "Peter Bakker",
+    "foto": "/images/DeWageningsSAMPLE.png",
+    "rol": "Raadslid",
+    "volgorde": 3,
+    "email": "peter.bakker@voorbeeld.nl",
+    "linkedin": "https://www.linkedin.com/in/peterbakker-voorbeeld/",
+    "twitter": null,
+    "instagram": null,
+    "facebook": null,
+    "website": null,
+    "bio_kort": "Expert duurzaamheid en ruimtelijke ordening.",
+    "path": "/genereerd/kandidaten/peter-bakker.html"
+  }
+]
