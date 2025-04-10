@@ -2187,3 +2187,52 @@ button:focus-visible {
 .standpunt-item svg {
   margin-bottom: 16px;
 }
+/* Dropdown styling */
+.nav-links .dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: #0A2CCA;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Aeonik', Arial, sans-serif;
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  display: none;
+  min-width: 220px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  z-index: 999;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #0A2CCA;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Toon dropdown bij hover (desktop) */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Optioneel: pijl toevoegen aan knop */
+.dropdown-button::after {
+  content: ' ▼';
+  font-size: 0.7rem;
+}

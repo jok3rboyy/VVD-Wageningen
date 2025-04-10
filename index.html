@@ -35,9 +35,9 @@
   <body>
     <header class="header">
       <nav class="navbar container">
-        <a href="#" class="logo">
+        <a href="/" class="logo">
           <img
-            src="images/VVD_Logo_01_RGB_Kleur_1200DPI.png"
+            src="/images/VVD_Logo_01_RGB_Kleur_1200DPI.png"
             alt="Logo VVD Wageningen"
           />
           <span>WAGENINGEN</span>
@@ -53,10 +53,18 @@
           <span class="hamburger-line"></span>
         </button>
         <ul class="nav-links" id="nav-menu">
-          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="over-ons.html">Over Ons</a></li>
-          <li><a href="standpunten.html">Standpunten</a></li>
-          <li><a href="actueel.html">Actueel</a></li>
+    
+          <li class="dropdown">
+            <a href="standpunten.html" class="nav-link">Standpunten <span class="dropdown-arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="standpunten.html">Onze standpunten</a></li>
+              <li><a href="actiepunten.html">Actiepunten</a></li>
+            </ul>
+          </li>
+    
+          <li><a href="actueel.html" class="active">Actueel</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>

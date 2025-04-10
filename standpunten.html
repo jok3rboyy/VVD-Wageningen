@@ -37,7 +37,7 @@
       <nav class="navbar container">
         <a href="/" class="logo">
           <img
-            src="images/VVD_Logo_01_RGB_Kleur_1200DPI.png"
+            src="/images/VVD_Logo_01_RGB_Kleur_1200DPI.png"
             alt="Logo VVD Wageningen"
           />
           <span>WAGENINGEN</span>
@@ -55,8 +55,16 @@
         <ul class="nav-links" id="nav-menu">
           <li><a href="/">Home</a></li>
           <li><a href="over-ons.html">Over Ons</a></li>
-          <li><a href="standpunten.html" class="active">Standpunten</a></li>
-          <li><a href="actueel.html">Actueel</a></li>
+    
+          <li class="dropdown">
+            <a href="standpunten.html" class="nav-link">Standpunten <span class="dropdown-arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="standpunten.html">Onze standpunten</a></li>
+              <li><a href="actiepunten.html">Actiepunten</a></li>
+            </ul>
+          </li>
+    
+          <li><a href="actueel.html" class="active">Actueel</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -98,6 +106,7 @@
     
           <div class="standpunten-grid">
     
+            <!-- Wonen & Bereikbaarheid Card -->
             <div class="standpunt-card" id="wonen">
               <div class="standpunt-header">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
@@ -108,17 +117,12 @@
                 <h3>Wonen & Bereikbaarheid</h3>
               </div>
               <div class="standpunt-content">
-                <ul>
-                  <li>Versnelling van woningbouwprojecten</li>
-                  <li>Meer betaalbare koopwoningen voor starters</li>
-                  <li>Levensloopbestendige woningen voor senioren</li>
-                  <li>Verbetering van de bereikbaarheid van Wageningen</li>
-                  <li>Investeren in veilige fietsroutes en goede OV-verbindingen</li>
-                </ul>
-                <a href="#wonen" class="btn">Lees meer</a>
+                <!-- UL is hier verwijderd -->
+                <a href="standpunt-wonen.html" class="btn">Lees meer</a>
               </div>
             </div>
     
+            <!-- Economie & Innovatie Card -->
             <div class="standpunt-card" id="economie">
               <div class="standpunt-header">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
@@ -129,17 +133,12 @@
                 <h3>Economie & Innovatie</h3>
               </div>
               <div class="standpunt-content">
-                <ul>
-                  <li>Ruimte voor ondernemers en minder regeldruk</li>
-                  <li>Versterking van de band tussen universiteit en bedrijfsleven</li>
-                  <li>Ondersteuning van startups en innovatieve bedrijven</li>
-                  <li>Een aantrekkelijk en levendig stadscentrum</li>
-                  <li>Goede digitale infrastructuur in de hele gemeente</li>
-                </ul>
-                <a href="#economie" class="btn">Lees meer</a>
+                <!-- UL is hier verwijderd -->
+                <a href="standpunt-economie.html" class="btn">Lees meer</a>
               </div>
             </div>
     
+            <!-- Veiligheid & Leefbaarheid Card -->
             <div class="standpunt-card" id="veiligheid">
               <div class="standpunt-header">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
@@ -149,17 +148,12 @@
                 <h3>Veiligheid & Leefbaarheid</h3>
               </div>
               <div class="standpunt-content">
-                <ul>
-                  <li>Meer zichtbare handhaving in wijken en het centrum</li>
-                  <li>Harde aanpak van overlast en criminaliteit</li>
-                  <li>Investeren in preventie en buurtinitiatieven</li>
-                  <li>Goed onderhouden openbare ruimte</li>
-                  <li>Aandacht voor verkeersveiligheid</li>
-                </ul>
-                <a href="#veiligheid" class="btn">Lees meer</a>
+                 <!-- UL is hier verwijderd -->
+                <a href="standpunt-veiligheid.html" class="btn">Lees meer</a>
               </div>
             </div>
     
+            <!-- Duurzaamheid & Groen Card -->
             <div class="standpunt-card" id="duurzaamheid">
               <div class="standpunt-header">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
@@ -168,17 +162,12 @@
                 <h3>Duurzaamheid & Groen</h3>
               </div>
               <div class="standpunt-content">
-                <ul>
-                  <li>Realistische en betaalbare verduurzaming van woningen</li>
-                  <li>Ruimte voor innovatieve duurzame oplossingen</li>
-                  <li>Behoud en versterking van het groene karakter van Wageningen</li>
-                  <li>Klimaatadaptatie in de openbare ruimte</li>
-                  <li>Ondersteuning van duurzame initiatieven uit de samenleving</li>
-                </ul>
-                <a href="#duurzaamheid" class="btn">Lees meer</a>
+                 <!-- UL is hier verwijderd -->
+                <a href="standpunt-duurzaamheid.html" class="btn">Lees meer</a>
               </div>
             </div>
     
+            <!-- Onderwijs & Cultuur Card -->
             <div class="standpunt-card" id="onderwijs">
               <div class="standpunt-header">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
@@ -188,17 +177,12 @@
                 <h3>Onderwijs & Cultuur</h3>
               </div>
               <div class="standpunt-content">
-                <ul>
-                  <li>Kwalitatief hoogwaardig onderwijs voor alle kinderen</li>
-                  <li>Goede aansluiting tussen onderwijs en arbeidsmarkt</li>
-                  <li>Ondersteuning van culturele instellingen en evenementen</li>
-                  <li>Behoud van ons cultureel erfgoed</li>
-                  <li>Stimuleren van sportdeelname voor alle leeftijden</li>
-                </ul>
-                <a href="#onderwijs" class="btn">Lees meer</a>
+                 <!-- UL is hier verwijderd -->
+                <a href="standpunt-onderwijs.html" class="btn">Lees meer</a>
               </div>
             </div>
     
+            <!-- Bestuur & Financiën Card -->
             <div class="standpunt-card" id="bestuur">
               <div class="standpunt-header">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
@@ -208,20 +192,14 @@
                 <h3>Bestuur & Financiën</h3>
               </div>
               <div class="standpunt-content">
-                <ul>
-                  <li>Een slanke en efficiënte gemeentelijke organisatie</li>
-                  <li>Lage lokale lasten voor inwoners en ondernemers</li>
-                  <li>Transparante besluitvorming en goede dienstverlening</li>
-                  <li>Een gezonde gemeentelijke begroting</li>
-                  <li>Ruimte voor initiatieven uit de samenleving</li>
-                </ul>
-                <a href="#bestuur" class="btn">Lees meer</a>
+                 <!-- UL is hier verwijderd -->
+                <a href="standpunt-bestuur.html" class="btn">Lees meer</a>
               </div>
             </div>
     
-          </div>
-        </div>
-      </section>
+          </div> <!-- end standpunten-grid -->
+        </div> <!-- end container -->
+      </section> <!-- end section-padding -->
     
       <section class="cta section-padding">
         <div class="container cta-container">

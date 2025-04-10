@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ontdek de 10 concrete actiepunten van VVD Wageningen voor een betere stad. Van woningbouw tot duurzaamheid en veiligheid."
+    />
+    <title>Onze Actiepunten - VVD Wageningen</title>
+    <!-- Gebruik root-relatieve paden voor assets -->
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
+    <!-- Controleer of dit manifest bestand in de root staat -->
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Optionele extra styling voor de details/summary elementen -->
+    <style>
+      .actiepunt-item {
+        border: 1px solid #eee;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+        background-color: #fff;
+      }
+      .actiepunt-item[open] {
+         background-color: #f9f9f9;
+      }
+      .actiepunt-title {
+        padding: 1rem 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        display: block; /* Zorgt ervoor dat de hele balk klikbaar is */
+        font-size: 1.1em;
+        color: #0A2CCA; /* VVD Blauw */
+        position: relative; /* Voor positionering pijl */
+      }
+       .actiepunt-title::-webkit-details-marker {
+         display: none; /* Verberg standaard pijl in Chrome/Safari */
+       }
+      .actiepunt-title::before { /* Aangepaste pijl */
+          content: '▶';
+          position: absolute;
+          left: 0.5rem;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 0.8em;
+          color: #555;
+          transition: transform 0.2s ease-in-out;
+       }
+       .actiepunt-item[open] > .actiepunt-title::before {
+           transform: translateY(-50%) rotate(90deg);
+       }
+
+      .actiepunt-content {
+        padding: 0 1.5rem 1rem 2.5rem; /* Extra padding links voor content */
+        border-top: 1px solid #eee;
+      }
+      .actiepunt-content h4 {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+       .actiepunt-content p {
+         margin-bottom: 1rem;
+         line-height: 1.6;
+       }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+        <nav class="navbar container">
+          <a href="/" class="logo">
+            <img
+              src="/images/VVD_Logo_01_RGB_Kleur_1200DPI.png"
+              alt="Logo VVD Wageningen"
+            />
+            <span>WAGENINGEN</span>
+          </a>
+          <button
+            class="nav-toggle"
+            aria-label="Menu openen/sluiten"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          <ul class="nav-links" id="nav-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="over-ons.html">Over Ons</a></li>
+      
+            <li class="dropdown">
+              <a href="standpunten.html" class="nav-link">Standpunten <span class="dropdown-arrow">▼</span></a>
+              <ul class="dropdown-menu">
+                <li><a href="standpunten.html">Onze standpunten</a></li>
+                <li><a href="actiepunten.html">Actiepunten</a></li>
+              </ul>
+            </li>
+      
+            <li><a href="actueel.html" class="active">Actueel</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <h1>Onze 10 Actiepunten</h1>
+          <p class="intro-text">
+            Dit zijn de concrete acties die VVD Wageningen wil ondernemen om onze stad te verbeteren. Klik op een punt voor meer informatie.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-padding">
+        <div class="container">
+          <div class="actiepunten-container">
+
+            <!-- Actiepunt 1 -->
+            <details class="actiepunt-item">
+              <summary class="actiepunt-title">1. Woningnood oplossen</summary>
+              <div class="actiepunt-content">
+                <h4>Binnen en buiten de stad</h4>
+                <p>Hiervoor zijn de komende 20 jaar in Wageningen 4000 woningen nodig. De helft denken we te kunnen bouwen binnen de bebouwde kom en de rest daarbuiten. Als eerst beginnen we met het eindelijk realiseren van plannen waar soms al (tientallen) jaren wordt gesproken (Dreijen, de Lelie, Duivendaal, Vada). Daarna benutten we de nog resterende open ruimten en de verouderde industrieterreinen (de bedrijven langs de Industrieweg in de Nude willen we bijvoorbeeld verhuizen naar het Nudepark), maar wel met voldoende groen en ruimte voor water. De Eng en de uiterwaarden worden niet bebouwd.</p>
+                <h4>Woningen voor iedereen</h4>
+                <p>VVD Wageningen wil dat er ongeveer evenveel woningen voor koop en huur worden gebouwd en de verdeling van goedkoop tot duur ook gelijkmatig verdeeld is. In de eerstkomende jaren worden de al bestaande bouwplannen met grotere snelheid uitgevoerd en krijgen levensloopbestendige woningen en hofjes voor ouderen prioriteit. Ook de drempels en regels voor splitsing van kavels en woningen worden eenvoudiger.</p>
+              </div>
+            </details>
+
+            <!-- Actiepunt 2 -->
+            <details class="actiepunt-item">
+              <summary class="actiepunt-title">2. Duurzaam Wageningen</summary>
+              <div class="actiepunt-content">
+                <h4>Energietransitie</h4>
+                <p>VVD Wageningen geeft prioriteit aan het isoleren van woningen, het plaatsen van zonnepanelen op zoveel mogelijk daken en laadpalen voor elektrische auto’s. En we volgen al de met omliggende gemeenten gemaakte afspraken over zonneparken, windmolens, warmtenetten enz. (Regionale Energie Strategie). We zien in Wageningen alleen mogelijkheden voor windmolens langs de Mansholtlaan in de richting van Ede.</p>
+                <h4>Plastic achteraf scheiden</h4>
+                <p>We willen naar het achteraf scheiden van plastic, omdat uit onderzoek blijkt dat dit effectiever en duurzamer is dan het huidige systeem.</p>
+              </div>
+            </details>
+
+            <!-- Actiepunt 3 -->
+            <details class="actiepunt-item">
+              <summary class="actiepunt-title">3. Betere bereikbaarheid</summary>
+              <div class="actiepunt-content">
+                <h4>Voorkom overlast</h4>
+                <p>In tegenstelling tot de voorkeur van de VVD- Wageningen heeft de provincie Gelderland besloten de Nijenoordallee en Kortenoordallee aan te passen aan meer verkeer. Wij willen effectieve maatregelen om de lawaaioverlast voor de aanliggende woningen in de Roghorst, Tarthorst en Weiden te verminderen. Deze plannen met de Nijenoord-allee bieden hooguit tot 2030 een oplossing. Dus tegen de tijd dat die plannen uitgevoerd zijn, moet de nieuwe plannen al klaarliggen. Wat de VVD betreft is dat nog steeds een rondweg langs de noordrand van Wageningen. De doorstroming tussen Mansholtlaan en Renkum (Diedenweg en N226) gaan we met enkele aanpassingen op de kruisingen oplossen zodat er minder lang files staan.</p>
+                <h4>Beter parkeren en fietsroute</h4>
+                <p>In het centrum komen extra fietsenstallingen en we streven naar twee parkeergarages net buiten het centrum. De huidige grote parkeerplaatsen kunnen dan heringericht worden tot een aantrekkelijk groen verblijfsgebied, in combinatie met andere functies. We zijn voor een fietssnelweg van Ede naar Wageningen maar volgens ons kan de route slimmer op het gedeelte van de Oude Tol naar de Churchillweg en naar de WUR-Campus.</p>
+              </div>
+            </details>
+
+            <!-- Actiepunt 4 -->
+            <details class="actiepunt-item">
+              <summary class="actiepunt-title">4. Meer groen en natuur</summary>
+              <div class="actiepunt-content">
+                 <h4>Hondenpoep opruimen</h4>
+                 <p>Om de natuur schoon te houden komen er meer en grotere afvalbakken en wordt het verplicht om hondenpoep altijd en overal op te ruimen.</p>
+                 <h4>Minder tegels</h4>
+                 <p>We gaan het gebied rond de haven door herstructurering vergroenen voor natuur en recreatie. En na de bouw van twee parkeergarages worden de bestaande parkeerterreinen deel vervangen door groen en deels door woningbouw. We zien steeds meer bestrating in tuinen. Dat maakt de stad warmer en geeft bij de toenemende stortregens eerder en meer wateroverlast. Daarom gaan we bevorderen dat de bestrating in tuinen verminderd waardoor regenwater beter wordt opgevangen en minder snel wordt afgevoerd.</p>
+              </div>
+            </details>
+
+            <!-- Actiepunt 5 -->
+            <details class="actiepunt-item">
+              <summary class="actiepunt-title">5. Meer bedrijvigheid</summary>
+              <div class="actiepunt-content">
+                <h4>Kiezen voor bedrijven en wonen</h4>
+                <p>Het onderzoek door Wageningen Universiteit en Research trekt bedrijven aan en levert vaak nieuwe bedrijvigheid op. Wij willen daarom dat gemeente en WUR tot een samenwerkingsovereenkomst komen met afspraken waar binnen de schaarse ruimte van Wageningen welke bedrijvigheid komt. Bedrijven rond de haven die veel overlast veroorzaken en maar weinig toevoegen aan de Wageningse economie & samenleving worden verplaatst.</p>
+              </div>
+            </details>
+
+            <!-- Actiepunt 6 -->
+            <details class="actiepunt-item">
+              <summary class="actiepunt-title">6. Aantrekkelijker voor winkelen en toerisme</summary>
+              <div class="actiepunt-content">
+                <h4>Gracht herstellen en leegstand voorkomen</h4>
+                 <p>De gedempte stadsgracht langs de Stationsstraat wordt weer hersteld. Met de eigenaren en gebruikers van de panden langs de Markt, Hoogstraat met zijstraten en elders in de stad wordt samengewerkt om te voorkomen dat door het winkelen op internet in de winkelstraten van het centrum een gatenkaas ontstaat. Het gebied rond Hotel De Wereld en de Aula kan ontwikkeld worden tot een plek waar de historie van Wageningen, en met name die in de Tweede Wereldoorlog, ontdekt kan worden. Door een grotere jachthaven dicht(er) bij het centrum zal ook bezoek door watersport toenemen.</p>
+              </div>
+            </details>
+
+            <!-- Actiepunt 7 -->
+             <details class="actiepunt-item">
+               <summary class="actiepunt-title">7. Sport beter ondersteunen</summary>
+               <div class="actiepunt-content">
+                 <h4>Tijd voor echt sportbeleid</h4>
+                 <p>De ondersteuning van de sportverenigingen is de laatste jaren een beetje verwaarloosd. Zo is het zwembad inmiddels aan verbetering of vervanging toe en kan bijvoorbeeld de rugby-vereniging maar geen geschikt veld vinden. Daarom willen we dat sport weer nadrukkelijk onderdeel van de portefeuille van een wethouder wordt en er een breed gedragen gemeentelijk sportbeleid wordt vastgesteld.</p>
+               </div>
+             </details>
+
+            <!-- Actiepunt 8 -->
+            <details class="actiepunt-item">
+              <summary class="actiepunt-title">8. Cultuur voor iedereen bereikbaar</summary>
+              <div class="actiepunt-content">
+                <h4>Historie behouden en Junushoff beter benutten</h4>
+                <p>In Wageningen is aan historische panden veel verloren gegaan. Wat nog resteert moet goed onderhouden en beheerd worden. Herstel van historische gevels in de Hoogstraat heeft onze prioriteit. VVD Wageningen wil evenementen en exposities beter ondersteunen en stimuleren en met name jongeren in contact brengen met cultuur. De Junushoff e.o. omgeving willen we beter benutten door multifunctioneel gebruik.</p>
+              </div>
+            </details>
+
+            <!-- Actiepunt 9 -->
+            <details class="actiepunt-item">
+              <summary class="actiepunt-title">9. Gemeente die inwoners waardeert, helpt en ondersteunt</summary>
+              <div class="actiepunt-content">
+                 <h4>Waardevolle initiatieven in de samenleving</h4>
+                 <p>Wij steunen vrijwilligerswerk en waardevolle burgerinitiatieven krijgen ruimte voor realisatie. Bij belangrijke besluiten worden de inwoners in elke fase betrokken. De gemeente is bij besluiten open over de afwegingen die gemaakt zijn. De website van de gemeente wordt duidelijker, actueler en vollediger.</p>
+                 <h4>Hulp bij schulden, werkloosheid en bijstand</h4>
+                 <p>Bij werkloosheid helpt de gemeente snel een passende baan te vinden. Daarbij gaan we regels aanpakken die zorgen dat gaan werken soms een lagere inkomen oplevert dan de bijstandsuitkering. Verder willen we meer aandacht geven aan armoedebeleid en hulp bij schuldsanering. Wageningen geeft momenteel meer geld uit aan sociale ondersteuning dan we van het Rijk krijgen. Dat gaat ten koste van andere belangrijke zaken en onze financiële reserves. Daar gaan we meer balans in brengen.</p>
+                 <h4>Steun bij scholing</h4>
+                 <p>Kinderen van nieuwkomers moeten zo vroeg mogelijk naar de voorschoolse opvang. Dat is nodig voor hun taalontwikkeling en hun kansen in de samenleving. Ook voor de oudere nieuwkomers willen we het onderwijs in de Nederlandse taal en onze gewoonten en gebruiken versterken. We willen een betere link tussen onderwijs en jeugdzorg om schooluitval te verminderen en het scholingsniveau dat kinderen bereiken te verhogen. We willen ook meer aandacht geven aan het verhelpen van laaggeletterdheid.</p>
+              </div>
+            </details>
+
+            <!-- Actiepunt 10 -->
+            <details class="actiepunt-item">
+              <summary class="actiepunt-title">10. Geweld en discriminatie bestrijden</summary>
+              <div class="actiepunt-content">
+                <h4>Veilig Wageningen voor iedereen</h4>
+                <p>De bewoners van Wageningen moeten veilig zijn en zich veilig voelen. Overlast en criminaliteit moeten worden bestreden. Maar ook discriminatie op welke grond dan ook moeten worden aangepakt.</p>
+                <h4>BOA's meer op veiligheid minder op parkeren</h4>
+                <p>Het borgen van veiligheid en voorkomen van discriminatie moet een prioriteit zijn van de politie. Maar ook de BOA’s kunnen hiervoor worden ingezet: dan maar wat minder parkeerboetes.</p>
+              </div>
+            </details>
+
+          </div> <!-- Einde actiepunten-container -->
+        </div> <!-- Einde container -->
+      </section>
+
+      <!-- Eventuele CTA sectie kan hier -->
+      <!-- <section class="cta section-padding"> ... </section> -->
+
+    </main>
+
+    <footer class="footer">
+      <!-- Kopieer hier de volledige inhoud van je footer zoals in actueel.html -->
+      <div class="container">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3>VVD Wageningen</h3>
+            <ul>
+              <li><a href="/over-ons.html">Over Ons & Mensen</a></li>
+              <li><a href="/standpunten.html">Onze Standpunten</a></li>
+              <li><a href="/fractie">Raadsfractie</a></li>
+              <li><a href="/bestuur">Bestuur</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Actueel</h3>
+            <ul>
+              <li><a href="/actueel.html">Actueel</a></li>
+              <li><a href="/agenda">Agenda</a></li>
+              <li><a href="/nieuwsbrief">Nieuwsbrief</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Doe Mee</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://www.vvd.nl/word-lid"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Word Lid</a
+                >
+              </li>
+              <li><a href="/doneren">Doneren</a></li>
+              <li><a href="/vrijwilliger">Vrijwilliger Worden</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Volg Ons</h3>
+            <ul class="social-links">
+              <li>
+                <a href="https://www.facebook.com/VVDWageningen/"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://x.com/vvdwageningen"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/vvdwageningen/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/vvd/"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/vvdtube"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-inner">
+            <p>
+              ©
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              VVD Wageningen - Alle rechten voorbehouden.
+            </p>
+            <p class="made-by">
+              Website door
+              <a
+                href="https://twinpixel.nl"
+                target="_blank"
+                rel="noopener noreferrer"
+                >TwinPixel</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Laad je algemene script (voor nav toggle etc.) -->
+    <script src="/js/main.js"></script>
+    <!-- Specifiek script voor deze pagina is niet nodig voor basis functionaliteit -->
+    <!-- <script src="/js/actiepunten.js"></script> -->
+  </body>
+</html>
