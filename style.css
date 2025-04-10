@@ -428,6 +428,75 @@ ul {
   font-size: 1.05rem; /* Iets groter */
   margin: 0;
 }
+.standpunten-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.standpunt-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.standpunt-card:hover {
+  transform: translateY(-4px);
+}
+
+.standpunt-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.standpunt-header .icon {
+  margin-bottom: 1rem;
+}
+
+.standpunt-header h3 {
+  font-family: 'Aeonik', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #0A2CCA;
+  margin: 0;
+}
+
+.standpunt-content ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.standpunt-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.standpunt-content .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #0A2CCA;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.standpunt-content .btn:hover {
+  background-color: #0844c7;
+}
+
+@media (max-width: 768px) {
+  .standpunten-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* --- Call to Action Section --- */
 .cta {
@@ -2011,4 +2080,13 @@ button:focus-visible {
     font-weight: bold;
     text-align: center;
     padding: 2rem;
+}
+
+.standpunt-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.standpunt-item svg {
+  margin-bottom: 16px;
 }
