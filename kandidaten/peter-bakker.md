@@ -1,12 +1,12 @@
 ---
 naam: Peter Bakker # Hernoemd van 'title'
-rol: Raadslid # Hernoemd van 'role'
+rol: Steunfractielid # Hernoemd van 'role'
 volgorde: 3 # Hernoemd van 'order'
-foto: /images/DeWageningsSAMPLE.png # Hernoemd van 'photo'
+foto: /images/DeWageningsSAMPLE.jpg # Hernoemd van 'photo'
 # ---- Optionele Velden (pas aan of verwijder) ----
 email: peter.bakker@voorbeeld.nl
-linkedin: https://www.linkedin.com/in/peterbakker-voorbeeld/
-bio_kort: "Expert duurzaamheid en ruimtelijke ordening."
+website: https://twinpixel.nl
+bio_kort: "adasdasdasdsfgafasdsample"
 # ---------------------------------------------
 ---
 

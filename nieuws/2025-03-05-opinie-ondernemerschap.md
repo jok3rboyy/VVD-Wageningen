@@ -2,7 +2,7 @@
 title: Ondernemerschap verdient meer ruimte in Wageningen
 date: 2025-03-05T10:15:00+01:00
 category: opinie
-thumbnail: /images/DeWageningsSAMPLE.png
+thumbnail: /images/VVD-ALV.jpg
 description: In deze opinie pleit onze fractievoorzitter voor meer ruimte voor ondernemers in Wageningen. "Een bloeiend ondernemersklimaat is essentieel voor de toekomst van onze stad."
 ---
 

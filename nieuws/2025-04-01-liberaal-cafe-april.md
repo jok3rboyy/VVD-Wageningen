@@ -2,7 +2,7 @@
 title: Liberaal Café - Duurzaamheid & Ondernemerschap
 date: 2025-04-01T09:00:00+01:00
 category: agenda
-thumbnail: /images/DeWageningsSAMPLE.png
+thumbnail: /images/VVD-ALV.jpg
 description: Op 20 april organiseren we een Liberaal Café over de combinatie van duurzaamheid en ondernemerschap. Met interessante sprekers en volop ruimte voor discussie.
 ---
 

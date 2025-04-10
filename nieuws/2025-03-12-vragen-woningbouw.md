@@ -2,7 +2,7 @@
 title: VVD stelt vragen over woningbouw in Wageningen
 date: 2025-03-12T14:30:00+01:00
 category: raadswerk
-thumbnail: /images/DeWageningsSAMPLE.png
+thumbnail: /images/VVD-ALV.jpg
 description: De VVD-fractie heeft vragen gesteld aan het college over de voortgang van woningbouwprojecten in Wageningen. De partij maakt zich zorgen over het tempo waarin nieuwe woningen worden gerealiseerd.
 ---
 

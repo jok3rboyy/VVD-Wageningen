@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="team-member">
                         <a href="${kandidaat.path}" class="team-member-link" aria-label="Lees meer over ${kandidaat.naam}">
                             <img
-                                src="${kandidaat.foto || '/images/default-kandidaat.png'}" <!-- Controleer fallback pad -->
-                                alt="" <!-- Alt is leeg omdat de afbeelding deel uitmaakt van een link -->
+                                src="${kandidaat.foto || '/images/default-kandidaat.png'}" 
+                                alt="" 
                                 class="team-photo"
                                 loading="lazy"
                              >

@@ -76,35 +76,139 @@ function createNieuwsHtmlPage(data, htmlContent) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="${data.excerpt || data.title || 'Nieuws van VVD Wageningen'}">
   <title>${data.title || "Nieuws"} - VVD Wageningen</title>
-  <link rel="stylesheet" href="/style.css"> <!-- Controleer pad -->
-  <link rel="icon" href="/favicon_io/favicon.ico"> <!-- Controleer pad -->
-  <!-- Voeg hier andere VVD head elementen toe -->
+  <!-- Gebruik root-relatieve paden -->
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="/favicon_io/site.webmanifest" /> <!-- Controleer dit pad -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header>
-    <!-- PLAATS HIER JE VVD HEADER -->
-    <h1>VVD Wageningen - Nieuws</h1>
-    <nav> <a href="/">Home</a> | <a href="/actueel.html">Actueel</a> </nav> <!-- Controleer paden -->
+  <header class="header">
+    <nav class="navbar container">
+      <a href="/" class="logo">
+        <img src="/images/VVD_Logo_01_RGB_Kleur_1200DPI.png" alt="Logo VVD Wageningen" />
+        <span>WAGENINGEN</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu openen/sluiten" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+         <!-- Navigatie zonder 'active' class hier -->
+          <li><a href="/">Home</a></li>
+          <li><a href="/over-ons.html">Over Ons</a></li>
+          <li class="dropdown">
+            <a href="/standpunten.html" class="nav-link">Standpunten <span class="dropdown-arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/standpunten.html">Onze standpunten</a></li>
+              <li><a href="/actiepunten.html">Actiepunten</a></li>
+            </ul>
+          </li>
+          <li><a href="/actueel.html">Actueel</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <article class="nieuws-artikel"> <!-- Pas classes aan -->
-      <h1>${data.title || "Geen titel"}</h1>
-      <p class="datum">Gepubliceerd op: ${formattedDate}</p>
-      ${data.thumbnail ? `<img src="${data.thumbnail}" alt="${data.title || 'Nieuwsbeeld'}" class="jouw-artikel-afbeelding-class">` : ""} <!-- Pas class/stijl aan -->
-      <div class="nieuws-content"> <!-- Pas class aan -->
-        ${htmlContent}
+    <section class="page-header">
+      <div class="container">
+        <h1>${data.title || "Geen titel"}</h1>
+        <p class="artikel-meta"> <!-- Nieuwe class voor styling -->
+          Gepubliceerd op: ${formattedDate}
+          ${data.category ? ` | Categorie: ${data.category.charAt(0).toUpperCase() + data.category.slice(1)}` : ''}
+        </p>
       </div>
-      <a href="/actueel.html">← Terug naar overzicht</a> <!-- Controleer pad -->
-    </article>
+    </section>
+
+    <section class="section-padding">
+      <div class="container artikel-container"> <!-- Nieuwe class voor styling -->
+        ${data.thumbnail ? `<img src="${data.thumbnail}" alt="${data.title || 'Nieuwsbeeld'}" class="artikel-thumbnail">` : ""} <!-- Nieuwe class voor styling -->
+        <div class="artikel-inhoud text-content"> <!-- Hergebruik text-content of maak nieuwe class -->
+          ${htmlContent} <!-- Hier komt de markdown inhoud -->
+        </div>
+        <div class="artikel-navigatie"> <!-- Nieuwe class voor styling -->
+           <a href="/actueel.html" class="terug-knop link-arrow">← Terug naar Actueel</a> <!-- Controleer pad/class -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Optioneel: Je kunt hier de CTA sectie toevoegen als je die op elke nieuws pagina wilt -->
+    <!--
+    <section class="cta section-padding">
+        ... CTA inhoud ...
+    </section>
+    -->
   </main>
 
-  <footer>
-    <!-- PLAATS HIER JE VVD FOOTER -->
-    <p>© ${new Date().getFullYear()} VVD Wageningen</p>
-  </footer>
+    <footer class="footer">
+      <!-- Inhoud van je footer hier -->
+      <div class="container">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3>VVD Wageningen</h3>
+            <ul>
+              <li><a href="/over-ons.html">Over Ons & Mensen</a></li>
+              <!-- .html? -->
+              <li><a href="/standpunten.html">Onze Standpunten</a></li>
+              <!-- .html? -->
+              <li><a href="/fractie">Raadsfractie</a></li>
+              <li><a href="/bestuur">Bestuur</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Actueel</h3>
+            <ul>
+              <li><a href="/actueel.html">Actueel</a></li>
+              <!-- .html? -->
+              <li><a href="/agenda">Agenda</a></li>
+              <li><a href="/nieuwsbrief">Nieuwsbrief</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Doe Mee</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://www.vvd.nl/word-lid"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Word Lid</a
+                >
+              </li>
+              <li><a href="/doneren">Doneren</a></li>
+              <li><a href="/vrijwilliger">Vrijwilliger Worden</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <!-- .html? -->
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Volg Ons</h3>
+            <ul class="social-links">
+              <li>
+                <a href="https://www.facebook.com/VVDWageningen/"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://x.com/vvdwageningen"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/vvdwageningen/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/vvd/"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
 
-  <!-- <script src="/js/main.js"></script> --> <!-- Controleer pad -->
+  <!-- Algemeen script voor bv. nav toggle -->
+  <script src="/js/main.js"></script>
+  <!-- Geen pagina-specifieke scripts hier nodig -->
 </body>
 </html>
 `;
@@ -134,57 +238,152 @@ function createKandidaatHtmlPage(data, htmlBioContent) {
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="${data.bio_kort || `Lees meer over ${data.naam}, ${data.rol} bij VVD Wageningen.`}">
-  <title>${data.naam || "Kandidaat"} - VVD Wageningen</title>
-  <link rel="stylesheet" href="/style.css"> <!-- Controleer pad -->
-  <link rel="icon" href="/favicon_io/favicon.ico"> <!-- Controleer pad -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> <!-- Als je FontAwesome gebruikt -->
-  <!-- Voeg hier andere VVD head elementen toe -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="${data.bio_kort || `Lees meer over ${data.naam}, ${data.rol || ''} bij VVD Wageningen.`}">
+    <title>${data.naam || "Kandidaat"} - VVD Wageningen</title>
+    <!-- Gebruik root-relatieve paden -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" /> <!-- Controleer dit pad -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header>
-    <!-- PLAATS HIER JE VVD HEADER -->
-    <h1>${data.naam || "Kandidaat"}</h1>
-    <nav> <a href="/">Home</a> | <a href="/over-ons.html">Over Ons</a> </nav> <!-- Controleer paden -->
-  </header>
+    <header class="header">
+      <nav class="navbar container">
+        <a href="/" class="logo">
+          <img src="/images/VVD_Logo_01_RGB_Kleur_1200DPI.png" alt="Logo VVD Wageningen" />
+          <span>WAGENINGEN</span>
+        </a>
+        <button class="nav-toggle" aria-label="Menu openen/sluiten" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+           <!-- Navigatie zonder 'active' class hier -->
+           <li><a href="/">Home</a></li>
+           <li><a href="/over-ons.html">Over Ons</a></li>
+           <li class="dropdown">
+             <a href="/standpunten.html" class="nav-link">Standpunten <span class="dropdown-arrow">▼</span></a>
+             <ul class="dropdown-menu">
+               <li><a href="/standpunten.html">Onze standpunten</a></li>
+               <li><a href="/actiepunten.html">Actiepunten</a></li>
+             </ul>
+           </li>
+           <li><a href="/actueel.html">Actueel</a></li>
+           <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section class="kandidaat-detail section-padding"> <!-- Pas classes aan -->
-        <div class="container kandidaat-detail-container"> <!-- Pas classes aan -->
-             <div class="kandidaat-detail-foto">
-                 <img src="${data.foto || '/images/default-kandidaat.png'}" alt="Foto van ${data.naam}" class="detail-foto"> <!-- Pas class aan -->
-             </div>
-             <div class="kandidaat-detail-info">
-                 <h2 class="kandidaat-naam-detail">${data.naam || "Onbekende kandidaat"}</h2>
-                 ${data.rol ? `<p class="kandidaat-rol-detail">${data.rol}</p>` : ''} <!-- Pas class aan -->
+    <main>
+        <section class="page-header">
+          <div class="container">
+            <h1>${data.naam || "Kandidaat"}</h1>
+             ${data.rol ? `<p class="intro-text kandidaat-rol-detail">${data.rol}</p>` : ''} <!-- Stijl deze class -->
+          </div>
+        </section>
 
-                 <div class="kandidaat-socials detail-socials"> <!-- Pas class aan -->
-                    ${createSocialLink(data.email, 'fas fa-envelope', 'E-mail')}
-                    ${createSocialLink(data.linkedin, 'fab fa-linkedin', 'LinkedIn')}
-                    ${createSocialLink(data.twitter, 'fab fa-twitter', 'Twitter/X')}
-                    ${createSocialLink(data.instagram, 'fab fa-instagram', 'Instagram')}
-                    ${createSocialLink(data.facebook, 'fab fa-facebook', 'Facebook')}
-                    ${createSocialLink(data.website, 'fas fa-globe', 'Website')}
+        <section class="section-padding">
+            <div class="container kandidaat-detail-container"> <!-- Class voor layout (bv. grid/flex) -->
+                 <div class="kandidaat-detail-foto">
+                     <img src="${data.foto || '/images/default-kandidaat.png'}" alt="Foto van ${data.naam}" class="detail-foto"> <!-- Stijl deze class -->
                  </div>
+                 <div class="kandidaat-detail-info">
+                      <!-- Naam/Rol staan nu in header, hier de socials & bio -->
+                     <div class="kandidaat-socials detail-socials"> <!-- Stijl deze class -->
+                        ${createSocialLink(data.email, 'fas fa-envelope', 'E-mail')}
+                        ${createSocialLink(data.linkedin, 'fab fa-linkedin', 'LinkedIn')}
+                        ${createSocialLink(data.twitter, 'fab fa-twitter', 'Twitter/X')}
+                        ${createSocialLink(data.instagram, 'fab fa-instagram', 'Instagram')}
+                        ${createSocialLink(data.facebook, 'fab fa-facebook', 'Facebook')}
+                        ${createSocialLink(data.website, 'fas fa-globe', 'Website')}
+                     </div>
 
-                 <div class="kandidaat-bio-volledig"> <!-- Pas class aan -->
-                     ${htmlBioContent} <!-- Hier komt de volledige bio -->
+                     <h2 class="section-title-small">Over ${data.naam ? data.naam.split(' ')[0] : 'deze kandidaat'}</h2> <!-- Subkopje -->
+                     <div class="kandidaat-bio-volledig text-content"> <!-- Stijl deze class (kan text-content hergebruiken) -->
+                         ${htmlBioContent} <!-- Hier komt de markdown bio -->
+                     </div>
+
+                     <div class="artikel-navigatie"> <!-- Hergebruik class? -->
+                         <a href="/over-ons.html" class="terug-knop link-arrow">← Terug naar Team</a> <!-- Controleer pad/tekst -->
+                     </div>
                  </div>
+            </div>
+        </section>
 
-                 <a href="/over-ons.html" class="terug-knop">← Terug naar overzicht</a> <!-- Controleer pad -->
-             </div>
-        </div>
-    </section>
-  </main>
+        <!-- Optioneel: CTA sectie hier ook? -->
 
-  <footer>
-    <!-- PLAATS HIER JE VVD FOOTER -->
-    <p>© ${new Date().getFullYear()} VVD Wageningen</p>
-  </footer>
+    </main>
 
-  <!-- <script src="/js/main.js"></script> --> <!-- Controleer pad -->
+      <footer class="footer">
+      <!-- Inhoud van je footer hier -->
+      <div class="container">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3>VVD Wageningen</h3>
+            <ul>
+              <li><a href="/over-ons.html">Over Ons & Mensen</a></li>
+              <!-- .html? -->
+              <li><a href="/standpunten.html">Onze Standpunten</a></li>
+              <!-- .html? -->
+              <li><a href="/fractie">Raadsfractie</a></li>
+              <li><a href="/bestuur">Bestuur</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Actueel</h3>
+            <ul>
+              <li><a href="/actueel.html">Actueel</a></li>
+              <!-- .html? -->
+              <li><a href="/agenda">Agenda</a></li>
+              <li><a href="/nieuwsbrief">Nieuwsbrief</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Doe Mee</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://www.vvd.nl/word-lid"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Word Lid</a
+                >
+              </li>
+              <li><a href="/doneren">Doneren</a></li>
+              <li><a href="/vrijwilliger">Vrijwilliger Worden</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <!-- .html? -->
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Volg Ons</h3>
+            <ul class="social-links">
+              <li>
+                <a href="https://www.facebook.com/VVDWageningen/"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://x.com/vvdwageningen"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/vvdwageningen/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/vvd/"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+
+    <!-- Algemeen script voor bv. nav toggle -->
+    <script src="/js/main.js"></script>
+     <!-- Geen pagina-specifieke scripts hier nodig -->
 </body>
 </html>
 `;

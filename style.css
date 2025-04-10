@@ -2236,3 +2236,407 @@ button:focus-visible {
   content: ' ▼';
   font-size: 0.7rem;
 }
+/* ============================================= */
+/* CSS voor Actueel Overzicht (actueel.html)     */
+/* ============================================= */
+
+/* --- Filter Knoppen --- */
+.nieuws-filter {
+  display: flex;
+  flex-wrap: wrap; /* Knoppen mogen naar volgende regel */
+  gap: 0.75rem; /* Ruimte tussen knoppen */
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.filter-btn:hover {
+  background-color: #e9e9e9;
+  border-color: #bbb;
+}
+
+.filter-btn.active {
+  background-color: #005baa; /* VVD Blauw? */
+  color: #fff;
+  border-color: #004a8c;
+}
+
+/* --- Nieuws Grid Layout --- */
+.nieuws-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive kolommen */
+  gap: 2rem; /* Ruimte tussen nieuwsitems */
+}
+
+/* --- Individueel Nieuws Item (Preview) --- */
+.nieuws-item-preview {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column; /* Zorgt dat content onder afbeelding komt */
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.nieuws-item-preview:hover {
+   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Thumbnail Link & Afbeelding/Placeholder */
+.nieuws-preview-thumb-link {
+   display: block; /* Zorgt dat de link ruimte inneemt */
+   text-decoration: none;
+}
+
+.nieuws-preview-thumb {
+  display: block;
+  width: 100%;
+  height: 200px; /* Vaste hoogte voor consistentie, of gebruik aspect-ratio */
+  object-fit: cover; /* Voorkomt vervorming */
+}
+
+.nieuws-preview-thumb-placeholder {
+  display: block;
+  width: 100%;
+  height: 200px;
+  background-color: #f0f0f0; /* Lichte placeholder kleur */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  /* Optioneel: icoon voor placeholder */
+  /* content: "\f03e"; /* Font Awesome image icon */
+  /* font-family: "Font Awesome 6 Free"; */
+  /* font-weight: 900; */
+  /* font-size: 3rem; */
+}
+
+
+/* Content van de preview kaart */
+.nieuws-preview-content {
+  padding: 1rem 1.5rem;
+  flex-grow: 1; /* Zorgt dat content ruimte vult als kaarten niet even hoog zijn */
+  display: flex;
+  flex-direction: column;
+}
+
+.nieuws-preview-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.nieuws-preview-content h3 a {
+  text-decoration: none;
+  color: #003366; /* Donker VVD Blauw? */
+}
+
+.nieuws-preview-content h3 a:hover {
+  text-decoration: underline;
+}
+
+.nieuws-preview-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.nieuws-preview-meta .datum {
+  /* Evt. extra styling voor datum */
+}
+.nieuws-preview-meta .category {
+   display: inline-block;
+   margin-left: 0.5em;
+   padding: 0.1em 0.5em;
+   background-color: #eee;
+   border-radius: 3px;
+   font-size: 0.8em;
+}
+
+
+.nieuws-preview-excerpt {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1; /* Duwt de knop naar beneden */
+}
+
+.lees-meer-knop {
+  /* Stijl deze knop consistent met andere knoppen/links op je site */
+  display: inline-block; /* Of block als je wilt dat hij volle breedte inneemt */
+  text-decoration: none;
+  color: #005baa; /* VVD Blauw? */
+  font-weight: bold;
+  margin-top: auto; /* Zorgt dat knop onderaan uitlijnt */
+  align-self: flex-start; /* Lijn links uit */
+}
+
+.lees-meer-knop:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================= */
+/* CSS voor Over Ons (Kandidaten - over-ons.html)*/
+/* ============================================= */
+
+.team-grid { /* Hergebruik van je class naam */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem; /* Ruimte onder de introductietekst */
+}
+
+.team-member { /* Hergebruik van je class naam */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center; /* Centreer tekst binnen kaart */
+  display: flex;
+  flex-direction: column; /* Zorgt dat socials onder info komen */
+}
+
+/* De link die de foto en basisinfo omvat */
+a.team-member-link {
+    text-decoration: none;
+    color: inherit; /* Neemt standaard tekstkleur over */
+    display: block; /* Zorgt dat de link de ruimte inneemt */
+    transition: background-color 0.1s ease-in-out;
+}
+a.team-member-link:hover {
+    background-color: #f9f9f9; /* Licht effect bij hover */
+}
+
+
+.team-photo { /* Hergebruik van je class naam */
+  display: block;
+  width: 100%;
+  height: 280px; /* Pas aan naar wens */
+  object-fit: cover;
+  object-position: top; /* Focus op bovenkant foto (vaak gezicht) */
+}
+
+.team-info { /* Hergebruik van je class naam */
+  padding: 1rem 1.5rem 0.5rem; /* Minder padding onderaan voor socials */
+}
+
+.team-info h3 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  color: #003366;
+}
+
+.team-role { /* Hergebruik van je class naam */
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.team-bio { /* Hergebruik van je class naam */
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Socials specifiek voor de kaart */
+.team-member .kandidaat-socials {
+  margin-top: 0.5rem; /* Ruimte boven socials */
+  padding: 0.75rem 1rem; /* Padding rond socials */
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem; /* Ruimte tussen iconen */
+}
+
+.team-member .social-link {
+  color: #005baa;
+  font-size: 1.4rem; /* Iets kleiner op kaart */
+  transition: color 0.2s ease-in-out;
+}
+
+.team-member .social-link:hover {
+  color: #003366;
+}
+
+
+/* ============================================= */
+/* CSS voor Detail Pagina's (Nieuws & Kandidaten)*/
+/* ============================================= */
+
+/* --- Nieuws Detail Pagina --- */
+.artikel-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+.artikel-meta span { /* Voor eventuele losse spans binnen meta */
+    margin-right: 1em;
+}
+
+.artikel-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    display: block; /* Voorkom extra ruimte onder afbeelding */
+}
+
+.artikel-inhoud {
+    /* Stijl hier de elementen binnen de gegenereerde markdown */
+    line-height: 1.7; /* Goede leesbaarheid */
+}
+.artikel-inhoud p {
+    margin-bottom: 1.25em;
+}
+.artikel-inhoud h2, .artikel-inhoud h3 {
+    margin-top: 2em;
+    margin-bottom: 0.75em;
+    color: #003366;
+}
+.artikel-inhoud ul, .artikel-inhoud ol {
+    margin-bottom: 1.25em;
+    padding-left: 1.5em;
+}
+.artikel-inhoud li {
+    margin-bottom: 0.5em;
+}
+.artikel-inhoud a {
+    color: #005baa;
+    text-decoration: underline;
+}
+.artikel-inhoud a:hover {
+    text-decoration: none;
+}
+
+.artikel-navigatie {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+/* --- Kandidaat Detail Pagina --- */
+.kandidaat-detail-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Standaard voor mobiel */
+    gap: 2rem;
+    align-items: start; /* Lijn bovenkanten uit */
+}
+
+@media (min-width: 768px) { /* Twee kolommen op grotere schermen */
+    .kandidaat-detail-container {
+        grid-template-columns: 1fr 2fr; /* Foto 1/3, info 2/3 */
+        /* Of bv. 300px 1fr; */
+        gap: 3rem;
+    }
+}
+
+.kandidaat-detail-foto {
+    /* Styling voor de fotocontainer indien nodig */
+}
+
+.detail-foto {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Afgeronde hoeken */
+    display: block;
+}
+
+.kandidaat-detail-info {
+    /* Styling voor de info kolom */
+}
+
+.kandidaat-rol-detail { /* De rol onder de H1 in de header */
+    /* Geen specifieke styling nodig als intro-text class ok is */
+}
+
+.kandidaat-detail-info .kandidaat-socials {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee; /* Lijn onder socials */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Lijn links uit */
+    gap: 1rem 1.5rem; /* Ruimte verticaal en horizontaal */
+}
+
+.kandidaat-detail-info .social-link {
+    color: #005baa;
+    font-size: 1.6rem; /* Iets groter op detailpagina */
+    transition: color 0.2s ease-in-out;
+}
+.kandidaat-detail-info .social-link:hover {
+    color: #003366;
+}
+
+.section-title-small { /* Voor het "Over [Naam]" kopje */
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #003366;
+}
+
+.kandidaat-bio-volledig {
+    /* Hergebruik stijlen van .artikel-inhoud of definieer apart */
+    line-height: 1.7;
+}
+.kandidaat-bio-volledig p { margin-bottom: 1.25em; }
+.kandidaat-bio-volledig h2, .kandidaat-bio-volledig h3 { margin-top: 2em; margin-bottom: 0.75em; color: #003366; }
+/* Voeg styling toe voor andere markdown elementen indien nodig */
+
+/* --- Algemeen & Hulpmiddelen --- */
+.terug-knop {
+  /* Stijl deze consistent met .link-arrow of andere terug links */
+   display: inline-block;
+   margin-top: 1.5rem;
+   color: #005baa;
+   text-decoration: none;
+   font-weight: bold;
+}
+.terug-knop:hover {
+   text-decoration: underline;
+}
+
+/* Stijl voor foutmeldingen uit JavaScript */
+.foutmelding {
+    color: #cc0000; /* Rood */
+    background-color: #f8d7da; /* Lichtrode achtergrond */
+    border: 1px solid #f5c6cb; /* Rode rand */
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* Voor toegankelijkheid (tekst verbergen maar beschikbaar voor screenreaders) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

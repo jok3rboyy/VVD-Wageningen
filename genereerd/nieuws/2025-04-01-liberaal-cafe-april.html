@@ -6,24 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Liberaal Café - Duurzaamheid & Ondernemerschap">
   <title>Liberaal Café - Duurzaamheid & Ondernemerschap - VVD Wageningen</title>
-  <link rel="stylesheet" href="/style.css"> <!-- Controleer pad -->
-  <link rel="icon" href="/favicon_io/favicon.ico"> <!-- Controleer pad -->
-  <!-- Voeg hier andere VVD head elementen toe -->
+  <!-- Gebruik root-relatieve paden -->
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="/favicon_io/site.webmanifest" /> <!-- Controleer dit pad -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header>
-    <!-- PLAATS HIER JE VVD HEADER -->
-    <h1>VVD Wageningen - Nieuws</h1>
-    <nav> <a href="/">Home</a> | <a href="/actueel.html">Actueel</a> </nav> <!-- Controleer paden -->
+  <header class="header">
+    <nav class="navbar container">
+      <a href="/" class="logo">
+        <img src="/images/VVD_Logo_01_RGB_Kleur_1200DPI.png" alt="Logo VVD Wageningen" />
+        <span>WAGENINGEN</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu openen/sluiten" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+         <!-- Navigatie zonder 'active' class hier -->
+          <li><a href="/">Home</a></li>
+          <li><a href="/over-ons.html">Over Ons</a></li>
+          <li class="dropdown">
+            <a href="/standpunten.html" class="nav-link">Standpunten <span class="dropdown-arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/standpunten.html">Onze standpunten</a></li>
+              <li><a href="/actiepunten.html">Actiepunten</a></li>
+            </ul>
+          </li>
+          <li><a href="/actueel.html">Actueel</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <article class="nieuws-artikel"> <!-- Pas classes aan -->
-      <h1>Liberaal Café - Duurzaamheid & Ondernemerschap</h1>
-      <p class="datum">Gepubliceerd op: 1 april 2025</p>
-      <img src="/images/DeWageningsSAMPLE.png" alt="Liberaal Café - Duurzaamheid & Ondernemerschap" class="jouw-artikel-afbeelding-class"> <!-- Pas class/stijl aan -->
-      <div class="nieuws-content"> <!-- Pas class aan -->
-        <h1>Liberaal Café: Duurzaamheid &amp; Ondernemerschap</h1>
+    <section class="page-header">
+      <div class="container">
+        <h1>Liberaal Café - Duurzaamheid & Ondernemerschap</h1>
+        <p class="artikel-meta"> <!-- Nieuwe class voor styling -->
+          Gepubliceerd op: 1 april 2025
+           | Categorie: Agenda
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container artikel-container"> <!-- Nieuwe class voor styling -->
+        <img src="/images/VVD-ALV.jpg" alt="Liberaal Café - Duurzaamheid & Ondernemerschap" class="artikel-thumbnail"> <!-- Nieuwe class voor styling -->
+        <div class="artikel-inhoud text-content"> <!-- Hergebruik text-content of maak nieuwe class -->
+          <h1>Liberaal Café: Duurzaamheid &amp; Ondernemerschap</h1>
 <p><strong>Op 20 april organiseren we een Liberaal Café over de combinatie van duurzaamheid en ondernemerschap. Met interessante sprekers en volop ruimte voor discussie.</strong></p>
 <p>De VVD Wageningen nodigt u van harte uit voor een nieuwe editie van het Liberaal Café. Deze keer staat het thema &quot;Duurzaamheid &amp; Ondernemerschap&quot; centraal. Hoe kunnen we duurzaamheidsdoelen bereiken zonder ondernemers onnodig te belasten? En welke kansen biedt de energietransitie voor innovatieve ondernemers?</p>
 <h2>Programma</h2>
@@ -41,17 +74,88 @@
 <h2>Over het Liberaal Café</h2>
 <p>Het Liberaal Café is een terugkerend evenement van de VVD Wageningen, waarbij we in een informele setting met elkaar in gesprek gaan over actuele thema&#39;s. Het is een open bijeenkomst, dus ook niet-leden zijn van harte welkom.</p>
 <p>We hopen u op 20 april te mogen verwelkomen!</p>
-
+ <!-- Hier komt de markdown inhoud -->
+        </div>
+        <div class="artikel-navigatie"> <!-- Nieuwe class voor styling -->
+           <a href="/actueel.html" class="terug-knop link-arrow">← Terug naar Actueel</a> <!-- Controleer pad/class -->
+        </div>
       </div>
-      <a href="/actueel.html">← Terug naar overzicht</a> <!-- Controleer pad -->
-    </article>
+    </section>
+
+    <!-- Optioneel: Je kunt hier de CTA sectie toevoegen als je die op elke nieuws pagina wilt -->
+    <!--
+    <section class="cta section-padding">
+        ... CTA inhoud ...
+    </section>
+    -->
   </main>
 
-  <footer>
-    <!-- PLAATS HIER JE VVD FOOTER -->
-    <p>© 2025 VVD Wageningen</p>
-  </footer>
+    <footer class="footer">
+      <!-- Inhoud van je footer hier -->
+      <div class="container">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3>VVD Wageningen</h3>
+            <ul>
+              <li><a href="/over-ons.html">Over Ons & Mensen</a></li>
+              <!-- .html? -->
+              <li><a href="/standpunten.html">Onze Standpunten</a></li>
+              <!-- .html? -->
+              <li><a href="/fractie">Raadsfractie</a></li>
+              <li><a href="/bestuur">Bestuur</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Actueel</h3>
+            <ul>
+              <li><a href="/actueel.html">Actueel</a></li>
+              <!-- .html? -->
+              <li><a href="/agenda">Agenda</a></li>
+              <li><a href="/nieuwsbrief">Nieuwsbrief</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Doe Mee</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://www.vvd.nl/word-lid"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Word Lid</a
+                >
+              </li>
+              <li><a href="/doneren">Doneren</a></li>
+              <li><a href="/vrijwilliger">Vrijwilliger Worden</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <!-- .html? -->
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Volg Ons</h3>
+            <ul class="social-links">
+              <li>
+                <a href="https://www.facebook.com/VVDWageningen/"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://x.com/vvdwageningen"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/vvdwageningen/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/vvd/"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
 
-  <!-- <script src="/js/main.js"></script> --> <!-- Controleer pad -->
+  <!-- Algemeen script voor bv. nav toggle -->
+  <script src="/js/main.js"></script>
+  <!-- Geen pagina-specifieke scripts hier nodig -->
 </body>
 </html>

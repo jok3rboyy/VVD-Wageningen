@@ -2,7 +2,7 @@
 title: VVD Wageningen presenteert nieuwe kandidaten
 date: 2025-03-01T11:00:00+01:00
 category: aankondiging
-thumbnail: /images/DeWageningsSAMPLE.png
+thumbnail: /images/VVD-ALV.jpg
 description: De VVD Wageningen heeft haar nieuwe kandidaten voor de gemeenteraadsverkiezingen gepresenteerd. Een divers team van betrokken Wageningers staat klaar om de stad vooruit te helpen.
 ---
 

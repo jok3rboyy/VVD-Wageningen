@@ -2,11 +2,12 @@
 naam: Jan de Vries # Hernoemd van 'title' naar 'naam'
 rol: Fractievoorzitter # Hernoemd van 'role' naar 'rol'
 volgorde: 1 # Hernoemd van 'order' naar 'volgorde'
-foto: /images/DeWageningsSAMPLE.png # Hernoemd van 'photo' naar 'foto'
+foto: /images/DeWageningsSAMPLE.jpg # Hernoemd van 'photo' naar 'foto'
 # Je kunt hier ook optionele velden toevoegen als je wilt:
 email: jan.devries@voorbeeld.nl
 linkedin: https://linkedin.com/...
-bio_kort: "Ervaren fractievoorzitter..."
+instagram: https://instagram.nl
+bio_kort: "woont al zijn hele leven in wageningen"
 ---
 
 Jan de Vries is sinds 2018 fractievoorzitter van de VVD in de gemeenteraad van Wageningen. Met zijn achtergrond in het bedrijfsleven brengt hij waardevolle ervaring mee naar de lokale politiek.

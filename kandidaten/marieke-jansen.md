@@ -2,11 +2,11 @@
 naam: Marieke Jansen # Hernoemd van 'title'
 rol: Raadslid # Hernoemd van 'role'
 volgorde: 2 # Hernoemd van 'order'
-foto: /images/DeWageningsSAMPLE.png # Hernoemd van 'photo'
+foto: /images/DeWageningsSAMPLE.jpg # Hernoemd van 'photo'
 # Optioneel: voeg hier andere velden toe zoals email, linkedin, bio_kort
 email: jan.devries@voorbeeld.nl
 linkedin: https://linkedin.com/...
-bio_kort: "Ervaren fractievoorzitter..."
+bio_kort: "LIBERAAL LOKAAL AAAA"
 ---
 
 Marieke Jansen is sinds 2022 raadslid voor de VVD in de gemeenteraad van Wageningen. Als geboren en getogen Wageningse kent ze de stad als geen ander.
