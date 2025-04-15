@@ -2354,9 +2354,7 @@ button:focus-visible {
   margin-bottom: 0.75rem;
 }
 
-.nieuws-preview-meta .datum {
-  /* Evt. extra styling voor datum */
-}
+
 .nieuws-preview-meta .category {
    display: inline-block;
    margin-left: 0.5em;
@@ -2551,9 +2549,7 @@ a.team-member-link:hover {
     }
 }
 
-.kandidaat-detail-foto {
-    /* Styling voor de fotocontainer indien nodig */
-}
+
 
 .detail-foto {
     max-width: 100%;
