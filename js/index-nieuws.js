@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Optioneel: Functie om datum te formatteren (als je die wilt tonen)
-    /*
+    
     function formatteerDatum(isoDatum) {
         if (!isoDatum || isoDatum.startsWith('1970')) return '';
         try {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         } catch (e) { return ''; }
     }
-    */
+    
 
     // Haal de nieuwsindex op
     fetch('/genereerd/data/nieuws-index.json') // Pad naar de JSON
@@ -43,26 +43,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Maak HTML voor elke kaart
             laatsteDrie.forEach(item => {
-                // Gebruik de categorie voor het label, of 'Nieuws' als fallback
                 const labelText = item.category ? item.category.charAt(0).toUpperCase() + item.category.slice(1) : 'Nieuws';
-                // Gebruik de titel voor de hoofdtekst, excerpt is vaak te lang voor een kaart
                 const cardText = item.title || 'Geen titel';
-                // Gebruik een placeholder afbeelding als thumbnail mist
-                const imageUrl = item.thumbnail || '/images/default-nieuws-placeholder.png'; // Maak evt. een placeholder aan!
-
+                const imageUrl = item.thumbnail || '/images/default-nieuws-placeholder.png';
+                const formattedDate = formatteerDatum(item.date); // <-- hier!
+            
                 const cardHtml = `
                     <div class="card">
                       <a href="${item.path}" aria-label="Lees meer over ${item.title || 'dit nieuws'}">
-                         <img src="${imageUrl}" alt="" loading="lazy" />
-                         <!-- Alt tekst leeg want het is decoratief binnen een link -->
+                        <img src="${imageUrl}" alt="" loading="lazy" />
                       </a>
                       <div class="card-content">
                         <p class="label">${labelText}</p>
-                        <p class="text">${cardText}</p>
+                         <p class="text">${cardText}</p>
+                        <p class="datum">${formattedDate}</p>
                         <a class="btn btn-small" href="${item.path}">Lees meer</a>
                       </div>
                     </div>
                 `;
+            
                 nieuwsContainer.innerHTML += cardHtml;
             });
 

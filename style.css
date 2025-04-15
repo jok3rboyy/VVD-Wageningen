@@ -2696,3 +2696,171 @@ a.team-member-link:hover {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
 }
+
+.page-header h1,
+.page-header .artikel-meta {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+
+}
+.hero-content h1,
+.hero-content .hero-subtitle {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+.btn-hero {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+/* === Kandidaat detail styling === */
+
+.detail-socials a {
+  display: inline-block;
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+  color: #0A2CCA;
+  padding: 0.4rem;
+  border-radius: 50%;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.detail-socials a:hover {
+  background: #e6eaff;
+  transform: scale(1.1);
+}
+
+/* Bulletlijsten in bio */
+.kandidaat-bio-volledig ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Citaten in bio */
+.kandidaat-bio-volledig blockquote {
+  border-left: 4px solid #0A2CCA;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #333;
+}
+
+/* Responsive layout voor mobiele weergave */
+@media (max-width: 768px) {
+  .kandidaat-detail-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .kandidaat-detail-foto img {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .kandidaat-detail-info {
+    margin-top: 2rem;
+  }
+}
+.card .text {
+  color: #0A2CCA;          /* VVD-blauw voor herkenbaarheid */
+  font-weight: bold;       /* Zichtbaarder */
+  font-size: 1.05rem;      /* Iets groter voor leesbaarheid */
+  line-height: 1.5;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.nieuws-item-preview h3 a {
+  color: #0A2CCA;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.nieuws-item-preview h3 a:hover {
+  text-decoration: underline;
+}
+.page-header h1 {
+  color: #0A2CCA;
+  font-weight: bold;
+  font-size: 2.5rem; /* pas aan naar wens */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* optioneel, voor leesbaarheid op afbeelding */
+}
+.page-header .artikel-meta {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 0.95rem;
+}
+.btn {
+  background-color: #0A2CCA;
+  color: #fff;
+  padding: 0.65rem 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #0830b8; /* iets donkerder blauw bij hover */
+}
+
+.btn-small {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+.kandidaat-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f1f1f1;
+  color: #0A2CCA;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.kandidaat-socials a:hover {
+  background-color: #e05a00;
+  color: #fff;
+  transform: scale(1.05);
+}
+.btn {
+  background-color: #0A2CCA;
+  color: white;
+  padding: 0.5em 1.25em;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #0839b1; /* iets donkerder blauw */
+}
+
+.btn-small {
+  font-size: 0.9rem;
+  padding: 0.4em 1em;
+}
+.standpunt-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.standpunt-item:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
