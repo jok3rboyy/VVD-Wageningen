@@ -177,8 +177,6 @@ ul {
   color: --color-primary; /* donkerblauw tekstkleur */
 }
 
-
-
 .intro-text {
   font-size: 1.2rem;
 }
@@ -555,10 +553,10 @@ textarea:focus {
 }
 
 .standpunt-header h3 {
-  font-family: 'Aeonik', Arial, sans-serif;
+  font-family: "Aeonik", Arial, sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
-  color: #0A2CCA;
+  color: #0a2cca;
   margin: 0;
 }
 
@@ -576,7 +574,7 @@ textarea:focus {
 .standpunt-content .btn {
   display: inline-block;
   margin-top: 1rem;
-  background-color: #0A2CCA;
+  background-color: #0a2cca;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -1233,6 +1231,42 @@ button:focus-visible {
   color: var(--color-text-light);
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.kandidaat-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+  justify-content: center; /* of flex-start als je ze links wilt */
+}
+
+.kandidaat-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #ccc; /* standaardkleur van het icoon */
+  font-size: 1.4rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.kandidaat-socials a svg {
+  fill: currentColor;
+  transition: fill 0.3s ease;
+}
+.kandidaat-socials a:hover {
+  background-color: accent !important;
+  color: white !important;
+}
+
+.kandidaat-socials a i {
+  color: inherit; /* Zorg dat het i-element de kleur van de a-tag overneemt */
+  transition: color 0.3s ease;
 }
 
 /* === FOOTER === */
@@ -2092,7 +2126,10 @@ button:focus-visible {
 
 .kandidaten-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Responsive grid */
   gap: 2rem; /* Ruimte tussen kaarten */
   margin-top: 2rem;
 }
@@ -2102,7 +2139,7 @@ button:focus-visible {
   border-radius: 8px;
   overflow: hidden; /* Zorgt dat afbeelding binnen kaart blijft */
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex; /* Maakt het mogelijk om info naast foto te zetten OF onder */
   flex-direction: column; /* Standaard: info onder foto */
   text-align: center;
@@ -2134,9 +2171,9 @@ button:focus-visible {
 }
 
 .kandidaat-bio-kort {
-    font-size: 0.9rem;
-    color: #333;
-    margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
 .kandidaat-socials {
@@ -2173,10 +2210,10 @@ button:focus-visible {
 
 /* Foutmelding styling */
 .foutmelding {
-    color: red;
-    font-weight: bold;
-    text-align: center;
-    padding: 2rem;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem;
 }
 
 .standpunt-item {
@@ -2198,7 +2235,7 @@ button:focus-visible {
   color: --color-primary;
   font-weight: bold;
   cursor: pointer;
-  font-family: 'Aeonik', Arial, sans-serif;
+  font-family: "Aeonik", Arial, sans-serif;
   padding: 0.5rem 1rem;
 }
 
@@ -2233,7 +2270,7 @@ button:focus-visible {
 
 /* Optioneel: pijl toevoegen aan knop */
 .dropdown-button::after {
-  content: ' ▼';
+  content: " ▼";
   font-size: 0.7rem;
 }
 /* ============================================= */
@@ -2275,7 +2312,10 @@ button:focus-visible {
 /* --- Nieuws Grid Layout --- */
 .nieuws-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive kolommen */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive kolommen */
   gap: 2rem; /* Ruimte tussen nieuwsitems */
 }
 
@@ -2285,20 +2325,20 @@ button:focus-visible {
   border-radius: 8px;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column; /* Zorgt dat content onder afbeelding komt */
   transition: box-shadow 0.2s ease-in-out;
 }
 
 .nieuws-item-preview:hover {
-   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Thumbnail Link & Afbeelding/Placeholder */
 .nieuws-preview-thumb-link {
-   display: block; /* Zorgt dat de link ruimte inneemt */
-   text-decoration: none;
+  display: block; /* Zorgt dat de link ruimte inneemt */
+  text-decoration: none;
 }
 
 .nieuws-preview-thumb {
@@ -2323,7 +2363,6 @@ button:focus-visible {
   /* font-weight: 900; */
   /* font-size: 3rem; */
 }
-
 
 /* Content van de preview kaart */
 .nieuws-preview-content {
@@ -2354,16 +2393,14 @@ button:focus-visible {
   margin-bottom: 0.75rem;
 }
 
-
 .nieuws-preview-meta .category {
-   display: inline-block;
-   margin-left: 0.5em;
-   padding: 0.1em 0.5em;
-   background-color: #eee;
-   border-radius: 3px;
-   font-size: 0.8em;
+  display: inline-block;
+  margin-left: 0.5em;
+  padding: 0.1em 0.5em;
+  background-color: #eee;
+  border-radius: 3px;
+  font-size: 0.8em;
 }
-
 
 .nieuws-preview-excerpt {
   font-size: 0.95rem;
@@ -2387,24 +2424,25 @@ button:focus-visible {
   text-decoration: underline;
 }
 
-
 /* ============================================= */
 /* CSS voor Over Ons (Kandidaten - over-ons.html)*/
 /* ============================================= */
 
-.team-grid { /* Hergebruik van je class naam */
+.team-grid {
+  /* Hergebruik van je class naam */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem; /* Ruimte onder de introductietekst */
 }
 
-.team-member { /* Hergebruik van je class naam */
+.team-member {
+  /* Hergebruik van je class naam */
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   text-align: center; /* Centreer tekst binnen kaart */
   display: flex;
   flex-direction: column; /* Zorgt dat socials onder info komen */
@@ -2412,17 +2450,17 @@ button:focus-visible {
 
 /* De link die de foto en basisinfo omvat */
 a.team-member-link {
-    text-decoration: none;
-    color: inherit; /* Neemt standaard tekstkleur over */
-    display: block; /* Zorgt dat de link de ruimte inneemt */
-    transition: background-color 0.1s ease-in-out;
+  text-decoration: none;
+  color: inherit; /* Neemt standaard tekstkleur over */
+  display: block; /* Zorgt dat de link de ruimte inneemt */
+  transition: background-color 0.1s ease-in-out;
 }
 a.team-member-link:hover {
-    background-color: #f9f9f9; /* Licht effect bij hover */
+  background-color: #f9f9f9; /* Licht effect bij hover */
 }
 
-
-.team-photo { /* Hergebruik van je class naam */
+.team-photo {
+  /* Hergebruik van je class naam */
   display: block;
   width: 100%;
   height: 280px; /* Pas aan naar wens */
@@ -2430,7 +2468,8 @@ a.team-member-link:hover {
   object-position: top; /* Focus op bovenkant foto (vaak gezicht) */
 }
 
-.team-info { /* Hergebruik van je class naam */
+.team-info {
+  /* Hergebruik van je class naam */
   padding: 1rem 1.5rem 0.5rem; /* Minder padding onderaan voor socials */
 }
 
@@ -2441,17 +2480,19 @@ a.team-member-link:hover {
   color: #003366;
 }
 
-.team-role { /* Hergebruik van je class naam */
+.team-role {
+  /* Hergebruik van je class naam */
   font-size: 0.9rem;
   color: #555;
   margin-bottom: 0.75rem;
   font-style: italic;
 }
 
-.team-bio { /* Hergebruik van je class naam */
-    font-size: 0.9rem;
-    color: #333;
-    line-height: 1.4;
+.team-bio {
+  /* Hergebruik van je class naam */
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.4;
 }
 
 /* Socials specifiek voor de kaart */
@@ -2474,147 +2515,155 @@ a.team-member-link:hover {
   color: #003366;
 }
 
-
 /* ============================================= */
 /* CSS voor Detail Pagina's (Nieuws & Kandidaten)*/
 /* ============================================= */
 
 /* --- Nieuws Detail Pagina --- */
 .artikel-meta {
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 0.5rem;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
-.artikel-meta span { /* Voor eventuele losse spans binnen meta */
-    margin-right: 1em;
+.artikel-meta span {
+  /* Voor eventuele losse spans binnen meta */
+  margin-right: 1em;
 }
 
 .artikel-thumbnail {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 2rem;
-    display: block; /* Voorkom extra ruimte onder afbeelding */
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  display: block; /* Voorkom extra ruimte onder afbeelding */
 }
 
 .artikel-inhoud {
-    /* Stijl hier de elementen binnen de gegenereerde markdown */
-    line-height: 1.7; /* Goede leesbaarheid */
+  /* Stijl hier de elementen binnen de gegenereerde markdown */
+  line-height: 1.7; /* Goede leesbaarheid */
 }
 .artikel-inhoud p {
-    margin-bottom: 1.25em;
+  margin-bottom: 1.25em;
 }
-.artikel-inhoud h2, .artikel-inhoud h3 {
-    margin-top: 2em;
-    margin-bottom: 0.75em;
-    color: #003366;
+.artikel-inhoud h2,
+.artikel-inhoud h3 {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  color: #003366;
 }
-.artikel-inhoud ul, .artikel-inhoud ol {
-    margin-bottom: 1.25em;
-    padding-left: 1.5em;
+.artikel-inhoud ul,
+.artikel-inhoud ol {
+  margin-bottom: 1.25em;
+  padding-left: 1.5em;
 }
 .artikel-inhoud li {
-    margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 .artikel-inhoud a {
-    color: #005baa;
-    text-decoration: underline;
+  color: #005baa;
+  text-decoration: underline;
 }
 .artikel-inhoud a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .artikel-navigatie {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #eee;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
 }
 
 /* --- Kandidaat Detail Pagina --- */
 .kandidaat-detail-container {
-    display: grid;
-    grid-template-columns: 1fr; /* Standaard voor mobiel */
-    gap: 2rem;
-    align-items: start; /* Lijn bovenkanten uit */
+  display: grid;
+  grid-template-columns: 1fr; /* Standaard voor mobiel */
+  gap: 2rem;
+  align-items: start; /* Lijn bovenkanten uit */
 }
 
-@media (min-width: 768px) { /* Twee kolommen op grotere schermen */
-    .kandidaat-detail-container {
-        grid-template-columns: 1fr 2fr; /* Foto 1/3, info 2/3 */
-        /* Of bv. 300px 1fr; */
-        gap: 3rem;
-    }
+@media (min-width: 768px) {
+  /* Twee kolommen op grotere schermen */
+  .kandidaat-detail-container {
+    grid-template-columns: 1fr 2fr; /* Foto 1/3, info 2/3 */
+    /* Of bv. 300px 1fr; */
+    gap: 3rem;
+  }
 }
-
-
 
 .detail-foto {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Afgeronde hoeken */
-    display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Afgeronde hoeken */
+  display: block;
 }
 
-
 .kandidaat-detail-info .kandidaat-socials {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee; /* Lijn onder socials */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; /* Lijn links uit */
-    gap: 1rem 1.5rem; /* Ruimte verticaal en horizontaal */
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee; /* Lijn onder socials */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Lijn links uit */
+  gap: 1rem 1.5rem; /* Ruimte verticaal en horizontaal */
 }
 
 .kandidaat-detail-info .social-link {
-    color: #005baa;
-    font-size: 1.6rem; /* Iets groter op detailpagina */
-    transition: color 0.2s ease-in-out;
+  color: #005baa;
+  font-size: 1.6rem; /* Iets groter op detailpagina */
+  transition: color 0.2s ease-in-out;
 }
 .kandidaat-detail-info .social-link:hover {
-    color: #003366;
+  color: #003366;
 }
 
-.section-title-small { /* Voor het "Over [Naam]" kopje */
-    font-size: 1.4rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    color: #003366;
+.section-title-small {
+  /* Voor het "Over [Naam]" kopje */
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #003366;
 }
 
 .kandidaat-bio-volledig {
-    /* Hergebruik stijlen van .artikel-inhoud of definieer apart */
-    line-height: 1.7;
+  /* Hergebruik stijlen van .artikel-inhoud of definieer apart */
+  line-height: 1.7;
 }
-.kandidaat-bio-volledig p { margin-bottom: 1.25em; }
-.kandidaat-bio-volledig h2, .kandidaat-bio-volledig h3 { margin-top: 2em; margin-bottom: 0.75em; color: #003366; }
+.kandidaat-bio-volledig p {
+  margin-bottom: 1.25em;
+}
+.kandidaat-bio-volledig h2,
+.kandidaat-bio-volledig h3 {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  color: #003366;
+}
 /* Voeg styling toe voor andere markdown elementen indien nodig */
 
 /* --- Algemeen & Hulpmiddelen --- */
 .terug-knop {
   /* Stijl deze consistent met .link-arrow of andere terug links */
-   display: inline-block;
-   margin-top: 1.5rem;
-   color: #005baa;
-   text-decoration: none;
-   font-weight: bold;
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #005baa;
+  text-decoration: none;
+  font-weight: bold;
 }
 .terug-knop:hover {
-   text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Stijl voor foutmeldingen uit JavaScript */
 .foutmelding {
-    color: #cc0000; /* Rood */
-    background-color: #f8d7da; /* Lichtrode achtergrond */
-    border: 1px solid #f5c6cb; /* Rode rand */
-    padding: 1rem;
-    border-radius: 4px;
-    text-align: center;
-    margin: 1rem 0;
+  color: #cc0000; /* Rood */
+  background-color: #f8d7da; /* Lichtrode achtergrond */
+  border: 1px solid #f5c6cb; /* Rode rand */
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 /* Voor toegankelijkheid (tekst verbergen maar beschikbaar voor screenreaders) */
@@ -2667,7 +2716,12 @@ a.team-member-link:hover {
   opacity: 0.85;
 }
 .page-header-met-afbeelding::before {
-  background: rgba(0, 0, 0, 0.55); /* was 0.4 – iets donkerder maakt de tekst sterker */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.55
+  ); /* was 0.4 – iets donkerder maakt de tekst sterker */
 }
 .page-header-met-afbeelding {
   min-height: 300px;
@@ -2689,7 +2743,6 @@ a.team-member-link:hover {
 .page-header h1,
 .page-header .artikel-meta {
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-
 }
 .hero-content h1,
 .hero-content .hero-subtitle {
@@ -2698,7 +2751,6 @@ a.team-member-link:hover {
 .btn-hero {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-
 
 /* === Kandidaat detail styling === */
 
@@ -2750,9 +2802,9 @@ a.team-member-link:hover {
   }
 }
 .card .text {
-  color: --color-primary;          /* VVD-blauw voor herkenbaarheid */
-  font-weight: bold;       /* Zichtbaarder */
-  font-size: 1.05rem;      /* Iets groter voor leesbaarheid */
+  color: --color-primary; /* VVD-blauw voor herkenbaarheid */
+  font-weight: bold; /* Zichtbaarder */
+  font-size: 1.05rem; /* Iets groter voor leesbaarheid */
   line-height: 1.5;
   margin: 0.75rem 0 0.5rem;
 }
@@ -2792,8 +2844,6 @@ a.team-member-link:hover {
   transition: background-color 0.2s ease;
 }
 
-
-
 .btn-small {
   font-size: 0.9rem;
   padding: 0.5rem 1rem;
@@ -2816,8 +2866,6 @@ a.team-member-link:hover {
   color: #fff;
   transform: scale(1.05);
 }
-
-
 
 .btn-small {
   font-size: 0.9rem;
