@@ -2803,9 +2803,7 @@ a.team-member-link:hover {
   transition: background-color 0.2s ease;
 }
 
-.btn:hover {
-  background-color: #0830b8; /* iets donkerder blauw bij hover */
-}
+
 
 .btn-small {
   font-size: 0.9rem;
@@ -2829,20 +2827,8 @@ a.team-member-link:hover {
   color: #fff;
   transform: scale(1.05);
 }
-.btn {
-  background-color: #0A2CCA;
-  color: white;
-  padding: 0.5em 1.25em;
-  border-radius: 0.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.2s ease;
-}
 
-.btn:hover {
-  background-color: #0839b1; /* iets donkerder blauw */
-}
+
 
 .btn-small {
   font-size: 0.9rem;
