@@ -2778,12 +2778,13 @@ a.team-member-link:hover {
 
 /* Citaten in bio */
 .kandidaat-bio-volledig blockquote {
-  border-left: 4px solid --color-primary;
+  border-left: 4px solid #0A2CCA;
   padding-left: 1rem;
   margin: 1.5rem 0;
   font-style: italic;
   color: #333;
 }
+
 
 /* Responsive layout voor mobiele weergave */
 @media (max-width: 768px) {
