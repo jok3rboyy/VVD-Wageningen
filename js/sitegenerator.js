@@ -112,19 +112,18 @@ function createNieuwsHtmlPage(data, htmlContent) {
   </header>
 
   <main>
-    <section class="page-header">
-      <div class="container">
-        <h1>${data.title || "Geen titel"}</h1>
-        <p class="artikel-meta"> <!-- Nieuwe class voor styling -->
-          Gepubliceerd op: ${formattedDate}
-          ${data.category ? ` | Categorie: ${data.category.charAt(0).toUpperCase() + data.category.slice(1)}` : ''}
-        </p>
-      </div>
-    </section>
+    <section class="page-header${data.thumbnail ? ' page-header-met-afbeelding' : ''}"${data.thumbnail ? ` style="background-image: url('${data.thumbnail}');"` : ''}>
+  <div class="container">
+    <h1>${data.title || "Geen titel"}</h1>
+    <p class="artikel-meta">
+      Gepubliceerd op: ${formattedDate}
+      ${data.category ? ` | Categorie: ${data.category.charAt(0).toUpperCase() + data.category.slice(1)}` : ''}
+    </p>
+  </div>
+</section>
 
     <section class="section-padding">
       <div class="container artikel-container"> <!-- Nieuwe class voor styling -->
-        ${data.thumbnail ? `<img src="${data.thumbnail}" alt="${data.title || 'Nieuwsbeeld'}" class="artikel-thumbnail">` : ""} <!-- Nieuwe class voor styling -->
         <div class="artikel-inhoud text-content"> <!-- Hergebruik text-content of maak nieuwe class -->
           ${htmlContent} <!-- Hier komt de markdown inhoud -->
         </div>
