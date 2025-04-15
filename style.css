@@ -166,7 +166,7 @@ ul {
 .page-header {
   position: relative;
   background-color: #e6f2ff; /* zacht lichtblauw */
-  color: #002f87; /* donkerblauw voor tekst */
+  color: --color-primary; /* donkerblauw voor tekst */
   padding: 4rem 1rem;
   text-align: center;
   overflow: hidden;
@@ -174,7 +174,7 @@ ul {
 
 .page-header h1,
 .page-header .intro-text {
-  color: #002f87; /* donkerblauw tekstkleur */
+  color: --color-primary; /* donkerblauw tekstkleur */
 }
 
 
@@ -2195,7 +2195,7 @@ button:focus-visible {
 .dropdown-button {
   background: none;
   border: none;
-  color: #0A2CCA;
+  color: --color-primary;
   font-weight: bold;
   cursor: pointer;
   font-family: 'Aeonik', Arial, sans-serif;
@@ -2217,7 +2217,7 @@ button:focus-visible {
 .dropdown-menu li a {
   display: block;
   padding: 0.75rem 1rem;
-  color: #0A2CCA;
+  color: --color-primary;
   text-decoration: none;
   font-weight: bold;
 }
@@ -2562,13 +2562,6 @@ a.team-member-link:hover {
     display: block;
 }
 
-.kandidaat-detail-info {
-    /* Styling voor de info kolom */
-}
-
-.kandidaat-rol-detail { /* De rol onder de H1 in de header */
-    /* Geen specifieke styling nodig als intro-text class ok is */
-}
 
 .kandidaat-detail-info .kandidaat-socials {
     margin-bottom: 2rem;
@@ -2717,7 +2710,7 @@ a.team-member-link:hover {
   display: inline-block;
   margin-right: 0.75rem;
   font-size: 1.2rem;
-  color: #0A2CCA;
+  color: --color-primary;
   padding: 0.4rem;
   border-radius: 50%;
   transition: background 0.2s ease, transform 0.2s ease;
@@ -2737,7 +2730,7 @@ a.team-member-link:hover {
 
 /* Citaten in bio */
 .kandidaat-bio-volledig blockquote {
-  border-left: 4px solid #0A2CCA;
+  border-left: 4px solid --color-primary;
   padding-left: 1rem;
   margin: 1.5rem 0;
   font-style: italic;
@@ -2761,7 +2754,7 @@ a.team-member-link:hover {
   }
 }
 .card .text {
-  color: #0A2CCA;          /* VVD-blauw voor herkenbaarheid */
+  color: --color-primary;          /* VVD-blauw voor herkenbaarheid */
   font-weight: bold;       /* Zichtbaarder */
   font-size: 1.05rem;      /* Iets groter voor leesbaarheid */
   line-height: 1.5;
@@ -2769,7 +2762,7 @@ a.team-member-link:hover {
 }
 
 .nieuws-item-preview h3 a {
-  color: #0A2CCA;
+  color: --color-primary;
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: none;
@@ -2780,7 +2773,7 @@ a.team-member-link:hover {
   text-decoration: underline;
 }
 .page-header h1 {
-  color: #0A2CCA;
+  color: --color-primary;
   font-weight: bold;
   font-size: 2.5rem; /* pas aan naar wens */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* optioneel, voor leesbaarheid op afbeelding */
@@ -2791,7 +2784,7 @@ a.team-member-link:hover {
   font-size: 0.95rem;
 }
 .btn {
-  background-color: #0A2CCA;
+  background-color: --color-primary;
   color: #fff;
   padding: 0.65rem 1.2rem;
   font-weight: bold;
@@ -2816,7 +2809,7 @@ a.team-member-link:hover {
   width: 40px;
   height: 40px;
   background-color: #f1f1f1;
-  color: #0A2CCA;
+  color: --color-primary;
   border-radius: 50%;
   text-decoration: none;
   transition: background-color 0.2s ease, transform 0.2s ease;

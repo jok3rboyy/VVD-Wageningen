@@ -17,6 +17,6 @@ Marieke focust zich binnen de fractie op:
 - Cultuur en evenementen
 - Sociale zaken en participatie
 
-"Wageningen is een prachtige stad met een rijke geschiedenis en een diverse bevolking. Ik zet me in voor een stad waar iedereen mee kan doen en waar we oog hebben voor elkaar, zonder dat de overheid alles bepaalt."
+> "Wageningen is een prachtige stad met een rijke geschiedenis en een diverse bevolking. Ik zet me in voor een stad waar iedereen mee kan doen en waar we oog hebben voor elkaar, zonder dat de overheid alles bepaalt."
 
 Marieke heeft een achtergrond in het onderwijs en werkt als docent aan een middelbare school in de regio. Ze woont met haar partner in het centrum van Wageningen.

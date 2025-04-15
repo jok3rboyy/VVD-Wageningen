@@ -18,6 +18,6 @@ Peter's speerpunten zijn:
 - Verbetering van de ruimtelijke kwaliteit in Wageningen
 - Behoud van het groene karakter van de stad
 
-"Als VVD'er geloof ik in een pragmatische aanpak van duurzaamheid. We moeten ambitieuze doelen nastreven, maar wel met beide benen op de grond blijven staan. Duurzaamheid moet voor iedereen haalbaar en betaalbaar zijn."
+> "Als VVD'er geloof ik in een pragmatische aanpak van duurzaamheid. We moeten ambitieuze doelen nastreven, maar wel met beide benen op de grond blijven staan. Duurzaamheid moet voor iedereen haalbaar en betaalbaar zijn."
 
 Peter heeft een achtergrond in de stedenbouw en werkt als adviseur bij een ingenieursbureau. Hij woont met zijn gezin in de wijk Wageningen-Hoog.
