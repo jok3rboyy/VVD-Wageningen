@@ -508,9 +508,11 @@ textarea:focus {
     box-shadow var(--transition-speed) ease-out;
 }
 .standpunt-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.03); /* lichte highlight */
 }
+
 
 .standpunt-item img {
   height: 55px; /* Iets groter */
