@@ -1,7 +1,7 @@
 ---
 naam: Jan de Vries # Hernoemd van 'title' naar 'naam'
 rol: Fractievoorzitter # Hernoemd van 'role' naar 'rol'
-volgorde: 1 # Hernoemd van 'order' naar 'volgorde'
+volgorde: 4 # Hernoemd van 'order' naar 'volgorde'
 foto: /images/DeWageningsSAMPLE.jpg # Hernoemd van 'photo' naar 'foto'
 # Je kunt hier ook optionele velden toevoegen als je wilt:
 email: jan.devries@voorbeeld.nl

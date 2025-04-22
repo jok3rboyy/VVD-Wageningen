@@ -45,7 +45,7 @@ collections:
     label: "Kandidaten"
     folder: "kandidaten" # Waarschijnlijk zonder "VVD-Wageningen/" ervoor
     create: true
-    slug: "{{slug}}" # Wordt meestal afgeleid van het 'naam' veld
+    slug: "{{fields.naam | slug}}" # Wordt meestal afgeleid van het 'naam' veld
     fields:
       # --- !! BELANGRIJK: Keys aangepast aan script/MD !! ---
       - { label: "Volledige Naam", name: "naam", widget: "string" } # Key = naam
