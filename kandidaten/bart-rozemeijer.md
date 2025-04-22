@@ -6,6 +6,8 @@ foto: /images/uploads/220103-vvd_65.jpg
 email: bjarozemeijer@gmail.com
 linkedin: https://www.linkedin.com/in/bartrozemeijer/
 twitter: https://twitter.com/bjarozemeijer
+bio_kort: Fractievoorzitter met jarenlange ervaring in volkshuisvesting en een
+  hart voor Wageningen
 ---
 <!--StartFragment-->
 
