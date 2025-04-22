@@ -2469,12 +2469,11 @@ a.team-member-link:hover {
 }
 
 .team-photo {
-  /* Hergebruik van je class naam */
   display: block;
   width: 100%;
-  height: 280px; /* Pas aan naar wens */
-  object-fit: cover;
-  object-position: top; /* Focus op bovenkant foto (vaak gezicht) */
+  height: 280px;       /* Vaste hoogte is prima */
+  object-fit: cover; /* <<< DEZE REGEL TOEVOEGEN */
+  object-position: top; /* Optioneel: bepaalt welk deel zichtbaar blijft (top, center, etc.) */
 }
 
 .team-info {
