@@ -18,6 +18,6 @@ Jan zet zich met name in voor:
 - Versnelling van woningbouwprojecten
 - Een efficiënte gemeentelijke organisatie
 
-"Als VVD Wageningen willen we dat iedereen in onze stad de vrijheid heeft om het beste uit zichzelf te halen. Dat betekent dat we ruimte geven aan ondernemers, zorgen voor voldoende woningen en verstandig omgaan met belastinggeld."
+> "Als VVD Wageningen willen we dat iedereen in onze stad de vrijheid heeft om het beste uit zichzelf te halen. Dat betekent dat we ruimte geven aan ondernemers, zorgen voor voldoende woningen en verstandig omgaan met belastinggeld."
 
 Jan is geboren en getogen in Wageningen en woont met zijn gezin in de wijk Noordwest. In zijn vrije tijd is hij actief als vrijwilliger bij de lokale hockeyclub.
