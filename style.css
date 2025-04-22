@@ -2511,6 +2511,8 @@ a.team-member-link:hover {
   display: flex;
   justify-content: center;
   gap: 1.25rem; /* Ruimte tussen iconen */
+  /* <<< VOEG DE VOLGENDE REGEL TOE >>> */
+  margin-top: auto; /* Duwt deze sectie naar de bodem */
 }
 
 .team-member .social-link {
