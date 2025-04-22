@@ -453,7 +453,7 @@ function generateNieuws() {
           date: data.date || new Date(0).toISOString(),
           excerpt: data.excerpt || "",
           thumbnail: data.thumbnail || "/images/VVD_Logo_01_RGB_Kleur_1200DPI.png", // Controleer fallback
-          path: `/genereerd/nieuws/${slug}.html`,
+          path: `/nieuws/${slug}.html`,
           category: data.category || "algemeen" // Categorie voor filteren
         });
          console.log(`   [Nieuws] Item toegevoegd aan index (totaal nu: ${index.length})`);
@@ -547,7 +547,7 @@ function generateKandidaten() {
           facebook: data.facebook || null,
           website: data.website || null,
           bio_kort: data.bio_kort || "",
-          path: `/genereerd/kandidaten/${slug}.html` // Pad naar de detailpagina
+          path: `/kandidaten/${slug}.html` // Pad naar de detailpagina
         });
          console.log(`   [Kandidaten] Item toegevoegd aan JSON lijst (totaal nu: ${kandidatenLijst.length})`);
          // --- Einde toevoegen aan JSON lijst ---

@@ -9,3 +9,13 @@
   for = "/genereerd/data/*.json"
   [headers.values]
     Content-Type = "application/json"
+
+[[redirects]]
+  from = "/kandidaten/:slug.html"
+  to = "/genereerd/kandidaten/:slug.html"
+  status = 200 
+
+[[redirects]]
+  from = "/nieuws/:slug.html"
+  to = "/genereerd/nieuws/:slug.html"
+  status = 200
