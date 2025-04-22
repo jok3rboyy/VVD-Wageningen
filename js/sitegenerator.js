@@ -141,28 +141,22 @@ function createNieuwsHtmlPage(data, htmlContent) {
     -->
   </main>
 
-    <footer class="footer">
-      <!-- Inhoud van je footer hier -->
+ <footer class="footer">
       <div class="container">
         <div class="footer-columns">
           <div class="footer-column">
             <h3>VVD Wageningen</h3>
             <ul>
-              <li><a href="/over-ons.html">Over Ons & Mensen</a></li>
-              <!-- .html? -->
-              <li><a href="/standpunten.html">Onze Standpunten</a></li>
-              <!-- .html? -->
-              <li><a href="/fractie">Raadsfractie</a></li>
-              <li><a href="/bestuur">Bestuur</a></li>
+              <li><a href="over-ons.html">Over Ons & Mensen</a></li>
+              <li><a href="standpunten.html">Onze Standpunten</a></li>
+              <li><a href="actiepunten.html">Onze Actiepunten</a></li>
             </ul>
           </div>
           <div class="footer-column">
             <h3>Actueel</h3>
             <ul>
-              <li><a href="/actueel.html">Actueel</a></li>
-              <!-- .html? -->
-              <li><a href="/agenda">Agenda</a></li>
-              <li><a href="/nieuwsbrief">Nieuwsbrief</a></li>
+              <li><a href="actueel.html">Actueel</a></li>
+              <li><a href="https://www.vvd.nl/evenementen/" target="_blank" rel="noopener noreferrer">Agenda</a></li>
             </ul>
           </div>
           <div class="footer-column">
@@ -176,10 +170,7 @@ function createNieuwsHtmlPage(data, htmlContent) {
                   >Word Lid</a
                 >
               </li>
-              <li><a href="/doneren">Doneren</a></li>
-              <li><a href="/vrijwilliger">Vrijwilliger Worden</a></li>
-              <li><a href="/contact.html">Contact</a></li>
-              <!-- .html? -->
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
           <div class="footer-column">
@@ -204,7 +195,37 @@ function createNieuwsHtmlPage(data, htmlContent) {
                 <a href="https://www.linkedin.com/company/vvd/"
                   ><i class="fab fa-linkedin-in"></i
                 ></a>
-
+              </li>
+              <li>
+                <a href="https://www.youtube.com/vvdtube"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-inner">
+            <p>
+              ©
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              VVD Wageningen - Alle rechten voorbehouden.
+            </p>
+            <p class="made-by">
+              Website door
+              <a
+                href="https://twinpixel.nl"
+                target="_blank"
+                rel="noopener noreferrer"
+                >TwinPixel</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   <!-- Algemeen script voor bv. nav toggle -->
   <script src="/js/main.js"></script>
   <!-- Geen pagina-specifieke scripts hier nodig -->
@@ -317,27 +338,21 @@ function createKandidaatHtmlPage(data, htmlBioContent) {
     </main>
 
       <footer class="footer">
-      <!-- Inhoud van je footer hier -->
       <div class="container">
         <div class="footer-columns">
           <div class="footer-column">
             <h3>VVD Wageningen</h3>
             <ul>
-              <li><a href="/over-ons.html">Over Ons & Mensen</a></li>
-              <!-- .html? -->
-              <li><a href="/standpunten.html">Onze Standpunten</a></li>
-              <!-- .html? -->
-              <li><a href="/fractie">Raadsfractie</a></li>
-              <li><a href="/bestuur">Bestuur</a></li>
+              <li><a href="over-ons.html">Over Ons & Mensen</a></li>
+              <li><a href="standpunten.html">Onze Standpunten</a></li>
+              <li><a href="actiepunten.html">Onze Actiepunten</a></li>
             </ul>
           </div>
           <div class="footer-column">
             <h3>Actueel</h3>
             <ul>
-              <li><a href="/actueel.html">Actueel</a></li>
-              <!-- .html? -->
-              <li><a href="/agenda">Agenda</a></li>
-              <li><a href="/nieuwsbrief">Nieuwsbrief</a></li>
+              <li><a href="actueel.html">Actueel</a></li>
+              <li><a href="https://www.vvd.nl/evenementen/" target="_blank" rel="noopener noreferrer">Agenda</a></li>
             </ul>
           </div>
           <div class="footer-column">
@@ -351,10 +366,7 @@ function createKandidaatHtmlPage(data, htmlBioContent) {
                   >Word Lid</a
                 >
               </li>
-              <li><a href="/doneren">Doneren</a></li>
-              <li><a href="/vrijwilliger">Vrijwilliger Worden</a></li>
-              <li><a href="/contact.html">Contact</a></li>
-              <!-- .html? -->
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
           <div class="footer-column">
@@ -379,6 +391,37 @@ function createKandidaatHtmlPage(data, htmlBioContent) {
                 <a href="https://www.linkedin.com/company/vvd/"
                   ><i class="fab fa-linkedin-in"></i
                 ></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/vvdtube"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-inner">
+            <p>
+              ©
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              VVD Wageningen - Alle rechten voorbehouden.
+            </p>
+            <p class="made-by">
+              Website door
+              <a
+                href="https://twinpixel.nl"
+                target="_blank"
+                rel="noopener noreferrer"
+                >TwinPixel</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Algemeen script voor bv. nav toggle -->
     <script src="/js/main.js"></script>

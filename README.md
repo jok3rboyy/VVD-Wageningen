@@ -1,3 +1,4 @@
 to-do:
--templates aanpassen in site generator en css ervoor fixen
+-fix contact pagina back-end + gegevens daar
 -config.yml aanpassen naar site domein
+-vraag op socials raadsleden
