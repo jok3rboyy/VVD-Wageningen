@@ -2469,11 +2469,11 @@ a.team-member-link:hover {
 }
 
 .team-photo {
-  display: block;
   width: 100%;
-  height: 280px;
+  height: auto; /* of vaste hoogte als je cards consistent wil */
+  aspect-ratio: 1 / 1; /* als je vierkante foto's wil */
   object-fit: cover;
-  object-position: center; /* <<< GEWIJZIGD VAN 'top' NAAR 'center' */
+  border-radius: 0.5rem; /* of wat je ook hebt gebruikt */
 }
 
 .team-info {
