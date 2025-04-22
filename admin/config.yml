@@ -41,11 +41,13 @@ collections:
         }
       - { label: "Volledige Inhoud", name: "body", widget: "markdown" } # 'body' is standaard voor hoofdinhoud
 
+
+
   - name: "kandidaten"
     label: "Kandidaten"
     folder: "kandidaten" # Waarschijnlijk zonder "VVD-Wageningen/" ervoor
     create: true
-    slug: "{{fields.naam | slug}}" # Wordt meestal afgeleid van het 'naam' veld
+    slug: "{{fields.naam}}" # Wordt meestal afgeleid van het 'naam' veld
     fields:
       # --- !! BELANGRIJK: Keys aangepast aan script/MD !! ---
       - { label: "Volledige Naam", name: "naam", widget: "string" } # Key = naam
