@@ -2,7 +2,7 @@
 naam: Bart Rozemeijer
 rol: Fractievoorzitter/Raadslid
 volgorde: 1
-foto: /images/uploads/220103-vvd_65.jpg
+foto: /images/uploads/220103-vvd_65_l-1-.jpg
 email: bjarozemeijer@gmail.com
 linkedin: https://www.linkedin.com/in/bartrozemeijer/
 twitter: https://twitter.com/bjarozemeijer
