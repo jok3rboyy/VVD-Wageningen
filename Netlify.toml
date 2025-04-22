@@ -1,0 +1,11 @@
+[build]
+  command = "npm install && npm run generate"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/genereerd/data/*.json"
+  [headers.values]
+    Content-Type = "application/json"
