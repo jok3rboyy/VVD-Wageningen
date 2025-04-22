@@ -2,7 +2,7 @@
 naam: Esther Koenders-Jollie
 rol: Raadslid
 volgorde: 2
-foto: /images/uploads/220103-vvd_23.jpg
+foto: /images/uploads/220103-vvd_21_l.jpg
 email: " ekoendersjollie@gmail.com"
 linkedin: https://www.linkedin.com/in/ejollie/
 twitter: https://twitter.com/EstherKoenders
