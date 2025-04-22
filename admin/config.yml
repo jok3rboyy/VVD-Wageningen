@@ -36,12 +36,10 @@ collections:
       - {
           label: "Korte Samenvatting (excerpt)", # Duidelijker label & naam
           name: "excerpt", # Naam gebruikt in script voor index
-          widget: "text",
+          widget: "hidden",
           required: false, # Maak optioneel
         }
       - { label: "Volledige Inhoud", name: "body", widget: "markdown" } # 'body' is standaard voor hoofdinhoud
-
-
 
   - name: "kandidaten"
     label: "Kandidaten"
