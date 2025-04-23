@@ -3,6 +3,8 @@ naam: Jesse van Deinsen
 rol: Steunfractielid
 volgorde: 3
 foto: /images/uploads/220103-vvd_11_l-1-.jpg
+email: vandeinsenjesse@gmail.com
+instagram: https://www.instagram.com/jessevandeinsen/
 bio_kort: "Duidelijk, betrokken en niet bang om iets te zeggen "
 ---
 <!--StartFragment-->
