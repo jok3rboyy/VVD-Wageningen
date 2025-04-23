@@ -23,9 +23,13 @@
       href="favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="favicon_io/site.webmanifest" />
+    <!-- Font Awesome voor iconen -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
@@ -51,7 +55,7 @@
         <ul class="nav-links" id="nav-menu">
           <li><a href="/">Home</a></li>
           <li><a href="over-ons.html">Over Ons</a></li>
-    
+
           <li class="dropdown">
             <a href="standpunten.html" class="nav-link">Standpunten <span class="dropdown-arrow">▼</span></a>
             <ul class="dropdown-menu">
@@ -59,7 +63,7 @@
               <li><a href="actiepunten.html">Actiepunten</a></li>
             </ul>
           </li>
-    
+
           <li><a href="actueel.html">Actueel</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
@@ -69,45 +73,89 @@
     <main>
       <section class="page-header">
         <div class="container">
-          <h1>Contact</h1>
-          <p class="intro-text">Neem contact op met VVD Wageningen</p>
+          <h1>Contact met VVD Wageningen</h1>
+          <!-- *** VERDERE VERBETERING INTRODUCTIETEKST *** -->
+          <p class="intro-text">
+            Heeft u vragen over ons beleid, wilt u uw zorgen over de buurt delen, een idee voor Wageningen aandragen of gewoon eens van gedachten wisselen? De VVD Wageningen staat voor u klaar. Hieronder vindt u hoe u ons kunt bereiken.
+          </p>
         </div>
       </section>
-    
+
       <section class="section-padding">
         <div class="container form-container">
           <div class="contact-info">
             <h2>Contactgegevens</h2>
+
+
+            <h3>Algemeen</h3>
+            <p>Voor algemene vragen of organisatorische zaken.</p>
             <p>
-              Email:
-              <a href="mailto:vvdwageningen@gmail.com">vvdwageningen@gmail.com</a>
+              <i class="fas fa-envelope" aria-hidden="true"></i> 
+
+              Email: <a href="vvdwageningen@gmail.com">vvdwageningen@gmail.com</a>
             </p>
-            <p>Telefoon: <a href="tel:+31612345678">06-12345678</a></p>
+
+            <h3>Fractie (Raadsleden)</h3>
+            <p>Voor politiek-inhoudelijke vragen of contact met onze gemeenteraadsleden.</p>
+            <p>
+              <i class="fas fa-users" aria-hidden="true"></i> 
+              Contact: <a href="over-ons.html">Vind contactgegevens van onze raadsleden</a>
+            </p>
           </div>
-    
-          <!-- gebruik Formsubmit -->
+
           <div class="contact-form">
-            <h2>Contactformulier</h2>
-            <form id="contact-form">
-              <div class="form-group">
-                <label for="name">Naam</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-group">
-                <label for="message">Bericht</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn">Versturen</button>
+            <h2>Stel uw vraag via het formulier</h2>
+            <p>Voor algemene vragen kunt u ook onderstaand formulier invullen.</p>
+            <form id="contact-form" action="https://formsubmit.co/your@email.com" method="POST">
+                <!-- Vervang your@email.com hierboven! -->
+                <input type="hidden" name="_subject" value="Nieuw bericht via Contactformulier VVD Wageningen">
+
+                <div class="form-group">
+                    <label for="name">Naam</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="subject">Onderwerp</label>
+                    <input type="text" id="subject" name="subject" />
+                </div>
+                <div class="form-group">
+                    <label for="message">Bericht</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <input type="text" name="_honey" style="display:none">
+
+
+                <button type="submit" class="btn">Versturen</button>
             </form>
+            <p><small><a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer"></a></small></p>
           </div>
         </div>
       </section>
+
+
+      <!-- <section class="section-padding map-section">
+        <div class="container">
+          <h2>Onze Locatie</h2>
+          <p>Hier kunt u ons wekelijks vinden:</p>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2468.056485168859!2d5.665366177084799!3d51.968605071920266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7ae0d5f9a7a8f%3A0x9505e45e9d37925d!2sGemeentehuis%20Wageningen!5e0!3m2!1snl!2snl!4v1716479566224!5m2!1snl!2snl"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Locatie Gemeentehuis Wageningen">
+            </iframe>
+          </div>
+        </div>
+      </section> -->
     </main>
-    
 
     <footer class="footer">
       <div class="container">
@@ -145,27 +193,27 @@
             <h3>Volg Ons</h3>
             <ul class="social-links">
               <li>
-                <a href="https://www.facebook.com/VVDWageningen/"
+                <a href="https://www.facebook.com/VVDWageningen/" target="_blank" rel="noopener noreferrer" aria-label="VVD Wageningen op Facebook"
                   ><i class="fab fa-facebook-f"></i
                 ></a>
               </li>
               <li>
-                <a href="https://x.com/vvdwageningen"
+                <a href="https://x.com/vvdwageningen" target="_blank" rel="noopener noreferrer" aria-label="VVD Wageningen op X (Twitter)"
                   ><i class="fab fa-twitter"></i
                 ></a>
               </li>
               <li>
-                <a href="https://www.instagram.com/vvdwageningen/"
+                <a href="https://www.instagram.com/vvdwageningen/" target="_blank" rel="noopener noreferrer" aria-label="VVD Wageningen op Instagram"
                   ><i class="fab fa-instagram"></i
                 ></a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/company/vvd/"
+                <a href="https://www.linkedin.com/company/vvd/" target="_blank" rel="noopener noreferrer" aria-label="VVD op LinkedIn"
                   ><i class="fab fa-linkedin-in"></i
                 ></a>
               </li>
               <li>
-                <a href="https://www.youtube.com/vvdtube"
+                <a href="https://www.youtube.com/vvdtube" target="_blank" rel="noopener noreferrer" aria-label="VVD op YouTube"
                   ><i class="fab fa-youtube"></i
                 ></a>
               </li>
@@ -196,5 +244,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <!-- Eventuele extra JS voor formulier validatie of interacties -->
   </body>
 </html>
