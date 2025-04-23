@@ -27,10 +27,14 @@
       href="favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="favicon_io/site.webmanifest" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+     />
   </head>
   <body>
     <header class="header">
@@ -55,7 +59,7 @@
         <ul class="nav-links" id="nav-menu">
           <li><a href="/">Home</a></li>
           <li><a href="over-ons.html">Over Ons</a></li>
-    
+
           <li class="dropdown">
             <a href="standpunten.html"  class="nav-link active">Standpunten <span class="dropdown-arrow">▼</span></a>
             <ul class="dropdown-menu">
@@ -63,7 +67,7 @@
               <li><a href="actiepunten.html">Actiepunten</a></li>
             </ul>
           </li>
-    
+
           <li><a href="actueel.html">Actueel</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -80,10 +84,11 @@
           </p>
         </div>
       </section>
-    
+
       <section class="section-padding">
         <div class="container">
           <div class="standpunten-intro text-content">
+            <!-- *** Tekst licht aangepast voor context *** -->
             <p>
               De VVD Wageningen staat voor een stad waar iedereen de vrijheid
               heeft om het beste uit zichzelf te halen. Wij geloven in een
@@ -93,37 +98,38 @@
             <p>
               Onze standpunten zijn gebaseerd op liberale waarden: vrijheid,
               verantwoordelijkheid, verdraagzaamheid, sociale rechtvaardigheid
-              en gelijkwaardigheid. Vanuit deze waarden werken wij aan een
-              Wageningen waar het prettig wonen, werken en recreëren is.
+              en gelijkwaardigheid. Hieronder vindt u een overzicht van onze belangrijkste speerpunten voor Wageningen.
             </p>
           </div>
         </div>
       </section>
+
       <section class="section-padding bg-light">
         <div class="container">
           <h2 class="section-title">Speerpunten</h2>
-      
+
           <div class="standpunten-grid">
-      
-            <!-- Wonen & Bereikbaarheid Card (nu een link) -->
+
+            <!-- Wonen & Bereikbaarheid Card -->
             <a href="standpunt-wonen.html" class="standpunt-card" id="wonen">
               <div class="standpunt-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- *** ARIA-HIDDEN TOEGEVOEGD *** -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M3 9L12 2l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z" />
                   <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
                 <h3>Wonen & Bereikbaarheid</h3>
               </div>
               <div class="standpunt-content">
-                <!-- 'a' vervangen door 'span' om de stijl te behouden maar de link te verwijderen -->
                 <span class="btn">Lees meer</span>
               </div>
-            </a> <!-- Einde van de klikbare kaart -->
-      
-            <!-- Economie & Innovatie Card (nu een link) -->
+            </a>
+
+            <!-- Economie & Innovatie Card -->
             <a href="standpunt-economie.html" class="standpunt-card" id="economie">
               <div class="standpunt-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <!-- *** ARIA-HIDDEN TOEGEVOEGD *** -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true">
                   <path d="M4 10h12"/>
                   <path d="M4 14h9"/>
                   <path d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2"/>
@@ -133,12 +139,13 @@
               <div class="standpunt-content">
                 <span class="btn">Lees meer</span>
               </div>
-            </a> <!-- Einde van de klikbare kaart -->
-      
-            <!-- Veiligheid & Leefbaarheid Card (nu een link) -->
+            </a>
+
+            <!-- Veiligheid & Leefbaarheid Card -->
             <a href="standpunt-veiligheid.html" class="standpunt-card" id="veiligheid">
               <div class="standpunt-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                 <!-- *** ARIA-HIDDEN TOEGEVOEGD *** -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   <path d="m9 12 2 2 4-4" />
                 </svg>
@@ -147,12 +154,13 @@
               <div class="standpunt-content">
                 <span class="btn">Lees meer</span>
               </div>
-            </a> <!-- Einde van de klikbare kaart -->
-      
-            <!-- Duurzaamheid & Groen Card (nu een link) -->
+            </a>
+
+            <!-- Duurzaamheid & Groen Card -->
             <a href="standpunt-duurzaamheid.html" class="standpunt-card" id="duurzaamheid">
               <div class="standpunt-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf-icon lucide-leaf">
+                 <!-- *** ARIA-HIDDEN TOEGEVOEGD *** -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf-icon lucide-leaf" aria-hidden="true">
                   <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
                   <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
                 </svg>
@@ -161,12 +169,13 @@
               <div class="standpunt-content">
                 <span class="btn">Lees meer</span>
               </div>
-            </a> <!-- Einde van de klikbare kaart -->
-      
-            <!-- Onderwijs & Cultuur Card (nu een link) -->
+            </a>
+
+            <!-- Onderwijs & Cultuur Card -->
             <a href="standpunt-onderwijs.html" class="standpunt-card" id="onderwijs">
               <div class="standpunt-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                 <!-- *** ARIA-HIDDEN TOEGEVOEGD *** -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true">
                   <circle cx="12" cy="10" r="1"/>
                   <path d="M22 20V8h-4l-6-4-6 4H2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2"/>
                   <path d="M6 17v.01"/>
@@ -180,12 +189,13 @@
               <div class="standpunt-content">
                 <span class="btn">Lees meer</span>
               </div>
-            </a> <!-- Einde van de klikbare kaart -->
-      
-            <!-- Bestuur & Financiën Card (nu een link) -->
+            </a>
+
+            <!-- Bestuur & Financiën Card -->
             <a href="standpunt-bestuur.html" class="standpunt-card" id="bestuur">
               <div class="standpunt-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-check-icon lucide-file-check">
+                 <!-- *** ARIA-HIDDEN TOEGEVOEGD *** -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-check-icon lucide-file-check" aria-hidden="true">
                   <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
                   <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
                   <path d="m9 15 2 2 4-4"/>
@@ -195,18 +205,20 @@
               <div class="standpunt-content">
                 <span class="btn">Lees meer</span>
               </div>
-            </a> <!-- Einde van de klikbare kaart -->
-      
+            </a>
+
           </div> <!-- end standpunten-grid -->
         </div> <!-- end container -->
       </section> <!-- end section-padding -->
+
+      <!-- CTA Sectie -->
       <section class="cta section-padding">
         <div class="container cta-container">
           <div class="cta-content">
-            <h2 class="cta-title">Praat mee over onze standpunten!</h2>
+            <h2 class="cta-title">Heeft u vragen of ideeën?</h2>
             <p class="cta-text">
-              Wil je meedenken over de toekomst van Wageningen? Neem contact met
-              ons op of word lid van de VVD.
+              Uw mening over onze standpunten is belangrijk. Neem contact met
+              ons op om mee te denken over de toekomst van Wageningen.
             </p>
           </div>
           <div class="cta-buttons">
@@ -216,7 +228,7 @@
         </div>
       </section>
     </main>
-    
+
 
     <footer class="footer">
       <div class="container">
@@ -254,29 +266,29 @@
             <h3>Volg Ons</h3>
             <ul class="social-links">
               <li>
-                <a href="https://www.facebook.com/VVDWageningen/"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
+                <a href="https://www.facebook.com/VVDWageningen/" target="_blank" rel="noopener noreferrer" aria-label="VVD Wageningen op Facebook">
+                  <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
               </li>
               <li>
-                <a href="https://x.com/vvdwageningen"
-                  ><i class="fab fa-twitter"></i
-                ></a>
+                <a href="https://x.com/vvdwageningen" target="_blank" rel="noopener noreferrer" aria-label="VVD Wageningen op X (Twitter)">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/vvdwageningen/"
-                  ><i class="fab fa-instagram"></i
-                ></a>
+                <a href="https://www.instagram.com/vvdwageningen/" target="_blank" rel="noopener noreferrer" aria-label="VVD Wageningen op Instagram">
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/company/vvd/"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
+                <a href="https://www.linkedin.com/company/vvd/" target="_blank" rel="noopener noreferrer" aria-label="VVD op LinkedIn">
+                  <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/vvdtube"
-                  ><i class="fab fa-youtube"></i
-                ></a>
+                <a href="https://www.youtube.com/vvdtube" target="_blank" rel="noopener noreferrer" aria-label="VVD op YouTube">
+                  <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
               </li>
             </ul>
           </div>
@@ -284,20 +296,11 @@
         <div class="footer-bottom">
           <div class="footer-bottom-inner">
             <p>
-              ©
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              VVD Wageningen - Alle rechten voorbehouden.
+              © <script>document.write(new Date().getFullYear());</script> VVD Wageningen - Alle rechten voorbehouden.
             </p>
             <p class="made-by">
               Website door
-              <a
-                href="https://twinpixel.nl"
-                target="_blank"
-                rel="noopener noreferrer"
-                >TwinPixel</a
-              >
+              <a href="https://twinpixel.nl" target="_blank" rel="noopener noreferrer">TwinPixel</a>
             </p>
           </div>
         </div>

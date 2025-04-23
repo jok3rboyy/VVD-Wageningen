@@ -2969,9 +2969,7 @@ a.team-member-link:hover {
     flex-basis: 50%; /* Iets minder ruimte, formulieren hebben vaak minder nodig */
 }
 
-.contact-form h2 {
-    /* Eventueel consistent maken met .contact-info h2 */
-}
+
 
 .contact-form p {
   /* Styling voor de tekst onder het formulier (FormSubmit vermelding) */
@@ -3014,10 +3012,7 @@ label {
     color: var(--color-text);
 }
 
-/* --- Optionele Kaart Sectie Styles --- */
-.map-section {
-    /* Als je .section-padding gebruikt, is hier geen extra padding nodig */
-}
+
 
 .map-container {
     position: relative;
@@ -3044,9 +3039,7 @@ label {
     .form-container {
         gap: 2rem;
     }
-    .contact-info, .contact-form {
-       /* Behoud flex-basis tot ze echt stacken */
-    }
+
 }
 
 @media (max-width: 767px) {
@@ -3060,4 +3053,47 @@ label {
     .contact-info h3 {
         margin-top: 1.5rem; /* Iets minder ruimte op mobiel */
     }
+}
+
+/* ============================================= */
+/* Knop Styling (Hover/Focus)                   */
+/* ============================================= */
+
+.btn:hover,
+.btn:focus,
+.btn-cta:hover,
+.btn-cta:focus,
+.standpunt-card:hover .btn, /* Zorgt dat btn binnen kaart mee kleurt */
+.standpunt-card:focus .btn { /* Focus stijl voor toegankelijkheid */
+  background-color: var(--color-accent); /* VVD Oranje */
+  border-color: var(--color-accent);     /* Zorg dat border ook meekleurt */
+  color: var(--color-text-light);      /* Witte tekst voor contrast */
+  text-decoration: none;              /* Geen underline op knoppen */
+  /* Eventuele andere hover effecten zoals transform of box-shadow kunnen hier blijven */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Specifiek voor de .standpunt-card link zelf (optioneel, als je de HELE kaart een effect wilt geven) */
+.standpunt-card:hover,
+.standpunt-card:focus {
+    /* Bijvoorbeeld een sterkere schaduw of een lichte border */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px); /* Of hetzelfde lift effect als knop */
+    outline: 2px solid transparent; /* Zorg voor ruimte voor focus outline */
+}
+.standpunt-card:focus-visible {
+    outline: 3px solid var(--color-accent); /* Duidelijke focus indicator */
+    outline-offset: 2px;
+}
+
+/* Zorg dat de .btn-light zijn eigen hover/focus behoudt */
+.btn-cta.btn-light:hover,
+.btn-cta.btn-light:focus {
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+  color: var(--color-primary);
+  /* Behoud of reset transform/shadow indien nodig */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
