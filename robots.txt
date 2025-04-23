@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vvdwageningen.netlify.app/sitemap.xml
