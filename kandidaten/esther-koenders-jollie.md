@@ -7,7 +7,7 @@ email: " ekoendersjollie@gmail.com"
 linkedin: https://www.linkedin.com/in/ejollie/
 twitter: https://twitter.com/EstherKoenders
 instagram: https://www.instagram.com/estjol86/
-facebook: https://www.facebook.com/VVDWageningen
+facebook: ""
 bio_kort: IT-projectmanager met een sporthart en een drive om Wageningen
   eerlijker, veiliger en bruisender te maken.
 ---
