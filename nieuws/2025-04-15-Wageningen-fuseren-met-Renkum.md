@@ -1,9 +1,11 @@
 ---
 title: Wageningen fuseren met Renkum?
 date: 2025-04-15T09:00:00+01:00
-category: nieuws
+category: opinie
 thumbnail: /images/GemeenteRenkum.png
-description: De gemeenteraad van Wageningen laat een impactanalyse uitvoeren naar mogelijke herindeling met Renkum. De VVD vraagt zich af of Renkum met haar bestuurlijke en financiële problemen een geschikte fusiepartner is.
+description: De gemeenteraad van Wageningen laat een impactanalyse uitvoeren
+  naar mogelijke herindeling met Renkum. De VVD vraagt zich af of Renkum met
+  haar bestuurlijke en financiële problemen een geschikte fusiepartner is.
 ---
 
 ## Wageningen fuseren met Renkum?
