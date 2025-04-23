@@ -3,6 +3,9 @@ naam: Marco Hartman
 rol: Steunfractielid
 volgorde: 4
 foto: /images/uploads/220103-vvd_55.jpg
+email: marcohartman@gmail.com
+linkedin: https://www.linkedin.com/in/marcohartman/
+instagram: https://www.instagram.com/marcohartman/
 bio_kort: Sportieve IT-consultant met een passie voor data, buitenlucht en
   Wageningse betrokkenheid.
 ---
