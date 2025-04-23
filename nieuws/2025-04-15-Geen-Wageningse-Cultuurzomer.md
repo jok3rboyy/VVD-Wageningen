@@ -1,11 +1,12 @@
 ---
 title: Wel Broedplaats maar geen Wageningse Cultuurzomer
 date: 2025-04-15T10:00:00+01:00
-category: nieuws
+category: opinie
 thumbnail: /images/cultuur-wageningen.jpg
-description: De subsidie voor de Wageningse Cultuurzomer is fors verlaagd, waardoor het festival in 2025 niet doorgaat. De VVD stelt vragen over deze keuze van het college.
+description: De subsidie voor de Wageningse Cultuurzomer is fors verlaagd,
+  waardoor het festival in 2025 niet doorgaat. De VVD stelt vragen over deze
+  keuze van het college.
 ---
-
 ## Wel Broedplaats maar geen Wageningse Cultuurzomer
 
 **Het college van B&W blijft ons verbazen. Terwijl er miljoenen beschikbaar komen voor de Broedplaats, valt de succesvolle Wageningse Cultuurzomer buiten de boot.**
@@ -19,7 +20,3 @@ De VVD heeft hierover vragen gesteld aan het college van B&W. Wij vinden dat pub
 Opvallend is dat het college recent wél 2 miljoen euro heeft vrijgemaakt voor de Broedplaats, een plek waar kunstenaars Wageningers kennis willen laten maken met cultuur via workshops of exposities. Op zichzelf waardevol — maar waarom is er dan geen € 50.000,- over voor een festival dat duizenden mensen bereikt?
 
 De VVD vindt het onbegrijpelijk dat cultuur met bewezen impact het moet afleggen tegen een experimenteel initiatief voor een kleinere groep.
-
----
-
-Laat me weten als je een bijpassende thumbnail-afbeelding wil, of dit stukje ook in een kortere teaser voor social media wil.
