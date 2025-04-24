@@ -27,15 +27,15 @@
       href="favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="favicon_io/site.webmanifest" />
-    
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "VVD Wageningen",
-      "url": "https://vvdwageningen.netlify.app/",
-      "logo": "https://vvdwageningen.netlify.app/images/VVD_Logo_01_RGB_Kleur_1200DPI.png",
+      "url": "https://vvdwageningen.netlify.app/", /* Pas URL aan indien nodig */
+      "logo": "https://vvdwageningen.netlify.app/images/VVD_Logo_01_RGB_Kleur_1200DPI.png", /* Pas URL aan indien nodig */
       "sameAs": [
         "https://www.facebook.com/VVDWageningen/",
         "https://x.com/vvdwageningen",
@@ -46,7 +46,7 @@
       "description": "VVD Wageningen is de liberale partij in de gemeenteraad van Wageningen. Wij zetten ons in voor vrijheid, verantwoordelijkheid en een sterke lokale gemeenschap."
     }
     </script>
-    
+
     <!-- Font Awesome voor iconen -->
     <link
       rel="stylesheet"
@@ -55,7 +55,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
      />
-     <!-- Correcte integrity hash voor FA 6.5.0 -->
   </head>
   <body>
     <header class="header">
@@ -97,23 +96,50 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-overlay"></div>
+      <!-- === FLYER HERO SECTIE (NU EERST) === -->
+      <section class="hero hero-flyer">
         <img
-          src="images/SampleBanner.jpg"
-          alt="Banner VVD Wageningen: Voor een Ondernemend & Groen Wageningen"
+          src="images/SampleBanner.jpg" 
+          alt="Blauwe lucht met wolken - VVD Wageningen"
           fetchpriority="high"
+          class="hero-background-image"
         />
+        <div class="hero-overlay"></div>
         <div class="hero-content container">
-          <h1>Samen werken aan een sterker Wageningen</h1>
-          <p class="hero-subtitle">
-            Ontdek waar de VVD Wageningen voor staat en wat wij voor u kunnen
-            betekenen.
-          </p>
-          <a href="standpunten.html" class="btn btn-hero">Onze Standpunten</a>
+          <div class="flyer-text-wrapper">
+            <img
+              src="images/VVD_Pijl_01_RGB_Kleur_1200DPI.png" 
+              alt=""
+              class="flyer-arrow"
+              aria-hidden="true"
+            />
+            <h1 class="flyer-title">
+              <span class="flyer-text-blue">Voor een sterker</span>
+              <span class="flyer-text-orange">Wageningen.</span>
+            </h1>
+          </div>
         </div>
       </section>
+      <!-- === EINDE FLYER HERO SECTIE === -->
 
+      <!-- === ACTUEEL SECTIE (NU HIER) === -->
+      <section class="nieuws section-padding">
+        <div class="container">
+          <h2 class="section-title">Actueel</h2>
+          <div class="cards-container" id="laatste-nieuws-container">
+            <p>Laatste nieuws wordt geladen...</p>
+            <noscript>
+                <p>Het laatste nieuws kan momenteel niet worden weergegeven. U heeft mogelijk JavaScript uitgeschakeld. Bekijk onze <a href="actueel.html">Actueel pagina</a> voor alle berichten.</p>
+            </noscript>
+          </div>
+          <div class="center-button-wrapper">
+            <a href="actueel.html" class="link-arrow">Meer actueel →</a>
+          </div>
+        </div>
+      </section>
+      <!-- === EINDE ACTUEEL SECTIE === -->
+
+      <!-- === INTRO SECTIE === -->
       <section class="intro section-padding">
         <div class="container intro-container">
           <div class="intro-text-center">
@@ -124,97 +150,49 @@
               onze inwoners, studenten en ondernemers. Samen bouwen we aan een
               welvarend en prettig Wageningen voor iedereen.
             </p>
-            
-            <div class="text-content">
-              <h3>Samen werken aan een sterker Wageningen</h3>
-            </div>
-            
             <a href="over-ons.html" class="link-arrow"
               >Lees meer over ons team en onze waarden →</a
             >
           </div>
         </div>
       </section>
+      <!-- === EINDE INTRO SECTIE === -->
 
+      <!-- === STANDPUNTEN SECTIE === -->
       <section class="standpunten section-padding bg-light">
         <div class="container">
           <h2 class="section-title">Waar Wij Voor Staan</h2>
           <div class="standpunt-grid">
-
+            <!-- Standpunt items -->
             <a href="standpunt-wonen.html" class="standpunt-item">
-              <!-- Lucide: home -->
-              <!-- *** ARIA-HIDDEN TOEGEVOEGD *** -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M3 9L12 2l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-              </svg>
-              <!-- *** H4 VERVANGEN DOOR H3 *** -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9L12 2l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
               <h3>Wonen & Bereikbaarheid</h3>
               <p>Inzetten op voldoende woningen en een goede infrastructuur.</p>
             </a>
-
-            <a href="standpunt-economie.html"  class="standpunt-item">
-              <!-- Lucide: euro -->
-              <!-- *** ARIA-HIDDEN TOEGEVOEGD *** -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true">
-                <path d="M4 10h12"/>
-                <path d="M4 14h9"/>
-                <path d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2"/>
-              </svg>
-              <!-- *** H4 VERVANGEN DOOR H3 *** -->
-              <h3>Economie & Ondernemen</h3>
-              <p>Stimuleren van lokaal ondernemerschap en kennisontwikkeling.</p>
-            </a>
-
-            <a href="standpunt-veiligheid.html"  class="standpunt-item">
-              <!-- Lucide: shield-check -->
-              <!-- *** ARIA-HIDDEN TOEGEVOEGD *** -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-              <!-- *** H4 VERVANGEN DOOR H3 *** -->
-              <h3>Veiligheid & Leefbaarheid</h3>
-              <p>Zorgen voor veilige buurten en een prettige leefomgeving.</p>
-            </a>
-
-            <a href="standpunt-duurzaamheid.html"  class="standpunt-item">
-              <!-- Lucide: leaf -->
-              <!-- *** ARIA-HIDDEN TOEGEVOEGD *** -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf-icon lucide-leaf" aria-hidden="true">
-                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-              </svg>
-              <!-- *** H4 VERVANGEN DOOR H3 *** -->
-              <h3>Duurzaamheid & Groen</h3>
-              <p>Werken aan een duurzame toekomst met oog voor realisme.</p>
-            </a>
-
+             <a href="standpunt-economie.html" class="standpunt-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true"><path d="M4 10h12"/><path d="M4 14h9"/><path d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2"/></svg>
+                <h3>Economie & Ondernemen</h3>
+                <p>Stimuleren van lokaal ondernemerschap en kennisontwikkeling.</p>
+              </a>
+              <a href="standpunt-veiligheid.html" class="standpunt-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></svg>
+                  <h3>Veiligheid & Leefbaarheid</h3>
+                  <p>Zorgen voor veilige buurten en een prettige leefomgeving.</p>
+              </a>
+              <a href="standpunt-duurzaamheid.html" class="standpunt-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf-icon lucide-leaf" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" /><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" /></svg>
+                  <h3>Duurzaamheid & Groen</h3>
+                  <p>Werken aan een duurzame toekomst met oog voor realisme.</p>
+              </a>
           </div>
-
           <div class="center-button-wrapper">
             <a href="standpunten.html" class="btn">Bekijk alle standpunten</a>
           </div>
         </div>
       </section>
+      <!-- === EINDE STANDPUNTEN SECTIE === -->
 
-
-      <section class="nieuws section-padding">
-        <div class="container">
-          <h2 class="section-title">Actueel</h2>
-          <!-- Container voor dynamische nieuwskaarten -->
-          <div class="cards-container" id="laatste-nieuws-container">
-            <!-- Kaarten worden hier via JavaScript geladen -->
-            <p>Laatste nieuws wordt geladen...</p>
-            <!-- Zorg voor fallback/error handling in je JS! -->
-          </div>
-          <!-- Einde cards-container -->
-          <div class="center-button-wrapper">
-            <a href="actueel.html" class="link-arrow">Meer actueel →</a>
-          </div>
-        </div>
-      </section>
-
+      <!-- === CTA SECTIE === -->
       <section class="cta section-padding">
         <div class="container cta-container">
           <div class="cta-content">
@@ -236,99 +214,61 @@
           </div>
         </div>
       </section>
+      <!-- === EINDE CTA SECTIE === -->
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <div class="footer-columns">
-          <div class="footer-column">
-            <h3>VVD Wageningen</h3>
-            <ul>
-              <li><a href="over-ons.html">Over Ons & Mensen</a></li>
-              <li><a href="standpunten.html">Onze Standpunten</a></li>
-              <li><a href="actiepunten.html">Onze Actiepunten</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Actueel</h3>
-            <ul>
-              <li><a href="actueel.html">Actueel</a></li>
-              <!-- *** TARGET EN REL TOEGEVOEGD *** -->
-              <li><a href="https://www.vvd.nl/evenementen/" target="_blank" rel="noopener noreferrer">Agenda</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Doe Mee</h3>
-            <ul>
-              <li>
-                <a
-                  href="https://www.vvd.nl/word-lid"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Word Lid</a
-                >
-              </li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Volg Ons</h3>
-            <ul class="social-links">
-              <!-- *** TARGET, REL EN ARIA-LABEL TOEGEVOEGD AAN SOCIAL LINKS *** -->
-              <li>
-                <a href="https://www.facebook.com/VVDWageningen/" target="_blank" rel="noopener noreferrer" aria-label="VVD Wageningen op Facebook">
-                  <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://x.com/vvdwageningen" target="_blank" rel="noopener noreferrer" aria-label="VVD Wageningen op X (Twitter)">
-                  <i class="fab fa-twitter" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/vvdwageningen/" target="_blank" rel="noopener noreferrer" aria-label="VVD Wageningen op Instagram">
-                  <i class="fab fa-instagram" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/company/vvd/" target="_blank" rel="noopener noreferrer" aria-label="VVD op LinkedIn">
-                  <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/vvdtube" target="_blank" rel="noopener noreferrer" aria-label="VVD op YouTube">
-                  <i class="fab fa-youtube" aria-hidden="true"></i>
-                </a>
-              </li>
-            </ul>
+       <!-- Footer inhoud blijft hetzelfde -->
+       <div class="container">
+         <div class="footer-columns">
+            <div class="footer-column">
+              <h3>VVD Wageningen</h3>
+              <ul>
+                <li><a href="over-ons.html">Over Ons & Mensen</a></li>
+                <li><a href="standpunten.html">Onze Standpunten</a></li>
+                <li><a href="actiepunten.html">Onze Actiepunten</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Actueel</h3>
+              <ul>
+                <li><a href="actueel.html">Actueel</a></li>
+                <li><a href="https://www.vvd.nl/evenementen/" target="_blank" rel="noopener noreferrer">Agenda</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Doe Mee</h3>
+              <ul>
+                <li><a href="https://www.vvd.nl/word-lid" target="_blank" rel="noopener noreferrer">Word Lid</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Volg Ons</h3>
+              <ul class="social-links">
+                 <li><a href="https://www.facebook.com/VVDWageningen/" target="_blank" rel="noopener noreferrer" aria-label="VVD Wageningen op Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                 <li><a href="https://x.com/vvdwageningen" target="_blank" rel="noopener noreferrer" aria-label="VVD Wageningen op X (Twitter)"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                 <li><a href="https://www.instagram.com/vvdwageningen/" target="_blank" rel="noopener noreferrer" aria-label="VVD Wageningen op Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                 <li><a href="https://www.linkedin.com/company/vvd/" target="_blank" rel="noopener noreferrer" aria-label="VVD op LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                 <li><a href="https://www.youtube.com/vvdtube" target="_blank" rel="noopener noreferrer" aria-label="VVD op YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+         </div>
+          <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+              <p>
+                 © <script>document.write(new Date().getFullYear());</script> VVD Wageningen - Alle rechten voorbehouden.
+                 <span class="footer-separator" aria-hidden="true">|</span>
+              </p>
+              <p class="made-by">
+                 Website door <a href="https://twinpixel.nl" target="_blank" rel="noopener noreferrer">TwinPixel</a>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <div class="footer-bottom-inner">
-            <p>
-              ©
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              VVD Wageningen - Alle rechten voorbehouden.
-            </p>
-            <p class="made-by">
-              Website door
-              <a
-                href="https://twinpixel.nl"
-                target="_blank"
-                rel="noopener noreferrer"
-                >TwinPixel</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <!-- Als je deze hebt voor algemene dingen zoals nav toggle & dropdown -->
     <script src="js/index-nieuws.js"></script>
-    <!-- Laad het nieuws script -->
   </body>
 </html>
