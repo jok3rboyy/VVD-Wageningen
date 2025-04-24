@@ -3309,3 +3309,14 @@ label {
       font-size: clamp(2.2rem, 9vw, 3rem);
   }
 }
+
+.hero.hero-flyer {
+  /* ... andere stijlen ... */
+  align-items: flex-start; /* Lijn bovenaan uit */
+}
+
+.hero.hero-flyer .hero-content {
+   /* ... andere stijlen ... */
+  padding-top: 10vh; /* Experimenteer met deze waarde (bv. 8vh, 12vh, 5rem, etc.) */
+  /* padding-bottom: 5vh; /* Eventueel ook onderaan wat padding */
+}
