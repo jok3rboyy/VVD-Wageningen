@@ -3424,3 +3424,120 @@ label {
 }
 
 /* EINDE @media (max-width: 767px) { ... } */
+
+/* ======================================== */
+/* MOBIELE DROPDOWN STYLING (BINNEN MEDIA QUERY) */
+/* ======================================== */
+
+/* Zorg dat de .dropdown li de volledige breedte inneemt */
+.nav-links .dropdown {
+  width: 100%;
+}
+
+/* De hoofdlink van de dropdown */
+.nav-links .dropdown > .nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.5rem; /* Jouw bestaande mobiele link padding */
+  font-size: 1.1rem; /* Jouw bestaande mobiele link font-size */
+  text-transform: none; /* Jouw bestaande mobiele link text-transform */
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+  color: var(--color-primary); /* Zeker stellen dat kleur goed is */
+  background-color: transparent; /* Zeker stellen dat achtergrond goed is */
+  text-align: left; /* Forceer links uitlijnen */
+}
+
+/* Pijltje styling */
+.nav-links .dropdown .dropdown-arrow {
+   display: inline-block;
+   margin-left: 0.5em;
+   transition: transform 0.3s ease-out;
+   font-size: 0.8em;
+   pointer-events: none;
+}
+
+/* --- HET DROPDOWN MENU ZELF --- */
+.nav-links .dropdown .dropdown-menu {
+  position: static !important; /* !!! FORCEER STATIC POSITIE OP MOBIEL !!! */
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: #f8f9fa; /* Lichte achtergrond voor onderscheid */
+  padding: 0; /* Reset padding */
+  margin: 0; /* Reset margin */
+  list-style: none; /* Zeker stellen geen list styles */
+  opacity: 0;
+  transition: max-height 0.35s ease-out, opacity 0.35s ease-out, margin-top 0.35s ease-out, padding-top 0.35s ease-out, padding-bottom 0.35s ease-out;
+  /* Voeg extra transitie toe voor padding/margin als je die gebruikt bij openen */
+}
+
+/* --- WANNEER DROPDOWN OPEN IS --- */
+.nav-links .dropdown.open > .dropdown-menu {
+  max-height: 500px; /* Ruime max hoogte (pas aan indien nodig) */
+  opacity: 1;
+  /* Voeg eventueel padding toe voor interne ruimte */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  /* Subtiele border aan de bovenkant KAN, maar check overlap */
+  /* border-top: 1px solid var(--color-border); */
+  /* margin-top: -1px; /* Compenseer voor border overlap */
+}
+
+/* --- LINKS BINNEN HET MOBIELE DROPDOWN MENU --- */
+.nav-links .dropdown .dropdown-menu li {
+  /* Geen specifieke styling nodig op de li zelf meestal */
+}
+
+.nav-links .dropdown .dropdown-menu li a {
+  display: block;
+  width: 100%; /* Zorgt dat de link de ruimte vult */
+  padding: 0.8rem 1.5rem 0.8rem 2.5rem; /* Indent sub-items */
+  font-size: 1rem;
+  color: var(--color-primary);
+  /* Geen border-bottom hier, of alleen een hele lichte */
+  border-bottom: none; /* Verwijder individuele borders */
+  background-color: transparent;
+  text-align: left;
+  font-weight: normal;
+  text-decoration: none; /* Zeker stellen geen underline */
+}
+/* Eventueel een lijn TUSSEN de items */
+.nav-links .dropdown .dropdown-menu li:not(:last-child) a {
+   border-bottom: 1px solid #eee; /* Lichte lijn tussen items */
+}
+
+
+/* Hover/Focus voor sub-items */
+.nav-links .dropdown .dropdown-menu li a:hover,
+.nav-links .dropdown .dropdown-menu li a:focus {
+  background-color: #e9ecef;
+  color: var(--color-accent);
+}
+
+/* Roteer pijl wanneer open */
+.nav-links .dropdown.open > .nav-link .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Schakel desktop hover uit op mobiel */
+@media (hover: none) and (pointer: coarse) {
+  .nav-links .dropdown:hover > .dropdown-menu {
+     display: none !important; /* Forceer verbergen */
+     max-height: 0 !important;
+     opacity: 0 !important;
+  }
+}
+/* Fallback voor oudere browsers/strict check */
+.nav-links .dropdown:hover > .dropdown-menu {
+   /* Standaard is nu display: block door .open class */
+   /* Dus geen expliciete display: none hier meer nodig
+      tenzij het specifiek voor desktop hover is BINNEN de mobiele query */
+}
+
+/* EINDE @media (max-width: 767px) { ... } */
