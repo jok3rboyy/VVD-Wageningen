@@ -3320,3 +3320,107 @@ label {
   padding-top: 10vh; /* Experimenteer met deze waarde (bv. 8vh, 12vh, 5rem, etc.) */
   /* padding-bottom: 5vh; /* Eventueel ook onderaan wat padding */
 }
+/* BINNEN @media (max-width: 767px) { ... } */
+
+/* Zorg ervoor dat de .dropdown li de volledige breedte inneemt */
+.nav-links .dropdown {
+  width: 100%;
+  /* position: relative; /* Meestal niet nodig hier, maar check */
+}
+
+/* De hoofdlink van de dropdown */
+.nav-links .dropdown > .nav-link {
+  /* Behoud je standaard mobiele linkstijl */
+  display: flex; /* Maak flex om pijl goed uit te lijnen */
+  justify-content: space-between; /* Ruimte tussen tekst en pijl */
+  align-items: center;
+  width: 100%; /* Zorg dat het de <li> vult */
+  /* padding, font-size, etc. zoals andere mobiele links */
+   padding: 1rem 1.5rem;
+   font-size: 1.1rem;
+   text-transform: none;
+   border-bottom: 1px solid var(--color-border);
+   cursor: pointer; /* Maak duidelijk dat het klikbaar is */
+}
+
+/* Pijltje styling (indien nodig aanpassen) */
+.nav-links .dropdown .dropdown-arrow {
+   display: inline-block;
+   margin-left: 0.5em;
+   transition: transform 0.3s ease-out;
+   font-size: 0.8em; /* Maak pijl iets kleiner */
+   pointer-events: none; /* Zorg dat pijl niet klik onderschept */
+}
+
+/* --- BELANGRIJK: Het dropdown menu zelf op mobiel --- */
+.nav-links .dropdown .dropdown-menu {
+  position: static; /* !!! Cruciaal: haal uit absolute positionering */
+  display: block;   /* Gebruik max-height voor open/sluiten animatie */
+  max-height: 0;    /* Begin gesloten */
+  overflow: hidden; /* Verberg inhoud als gesloten */
+  width: 100%;      /* Volledige breedte */
+  box-shadow: none; /* Geen desktop schaduw */
+  border-radius: 0; /* Geen desktop afronding */
+  background-color: #f8f9fa; /* Lichte achtergrond voor onderscheid? */
+  padding-left: 0;  /* Reset eventuele desktop padding */
+  margin-top: 0;    /* Reset eventuele desktop margin */
+  border-bottom: none; /* Geen extra border onder het hele blok */
+  opacity: 0; /* Begin onzichtbaar */
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out; /* Animatie */
+}
+
+/* Wanneer de dropdown open is (via JS class 'open') */
+.nav-links .dropdown.open > .dropdown-menu {
+  max-height: 500px; /* Ruime max hoogte voor items */
+  opacity: 1; /* Maak zichtbaar */
+  /* Eventueel subtiele border aan de bovenkant */
+  border-top: 1px solid var(--color-border);
+  margin-top: -1px; /* Compenseer voor border overlap met link border */
+}
+
+/* Styling voor de links BINNEN het mobiele dropdown menu */
+.nav-links .dropdown .dropdown-menu li a {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1.5rem 0.8rem 2.5rem; /* Indent de sub-items */
+  font-size: 1rem; /* Iets kleiner dan hoofditems */
+  color: var(--color-primary); /* Behoud kleur */
+  border-bottom: 1px solid var(--color-border);
+  background-color: transparent; /* Of dezelfde als dropdown-menu bg */
+  text-align: left; /* Zorg voor linkse uitlijning */
+  font-weight: normal; /* Minder bold dan hoofditems */
+}
+
+.nav-links .dropdown .dropdown-menu li:last-child a {
+  border-bottom: none; /* Geen lijn onder laatste sub-item */
+}
+
+/* Hover/Focus voor sub-items */
+.nav-links .dropdown .dropdown-menu li a:hover,
+.nav-links .dropdown .dropdown-menu li a:focus {
+  background-color: #e9ecef; /* Lichte hover achtergrond */
+  color: var(--color-accent);
+}
+
+/* Roteer pijl wanneer open */
+.nav-links .dropdown.open > .nav-link .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Schakel desktop hover uit op mobiel */
+@media (hover: none) and (pointer: coarse) { /* Detecteert touch devices */
+  .nav-links .dropdown:hover > .dropdown-menu {
+     display: none; /* Voorkomt onbedoeld openen bij touch */
+     max-height: 0;
+     opacity: 0;
+  }
+}
+
+/* Specifiek voor max-width 767px (fallback als hover media query niet werkt) */
+.nav-links .dropdown:hover > .dropdown-menu {
+   display: none; /* Voorkomt hover effect */
+   max-height: 0;
+   opacity: 0;
+}
+
+/* EINDE @media (max-width: 767px) { ... } */
