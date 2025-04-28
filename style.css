@@ -2573,19 +2573,31 @@ a.team-member-link:hover {
   display: block; /* Voorkom extra ruimte onder afbeelding */
 }
 
+/* ============================================= */
+/* CSS voor Detail Pagina's (Nieuws & Kandidaten)*/
+/* ============================================= */
+
+/* ... (andere detail page styles zoals .artikel-meta) ... */
+
 .artikel-inhoud {
-  /* Stijl hier de elementen binnen de gegenereerde markdown */
-  line-height: 1.7; /* Goede leesbaarheid */
+  line-height: 1.7;
 }
 .artikel-inhoud p {
   margin-bottom: 1.25em;
 }
+
+/* --- DEZE REGEL AANPASSEN --- */
+/* Zorgt ervoor dat ALLE koppen (H1, H2, H3) binnen een artikel de VVD kleur krijgen */
+.artikel-inhoud h1,
 .artikel-inhoud h2,
 .artikel-inhoud h3 {
-  margin-top: 2em;
+  margin-top: 1.5em; /* Iets minder ruimte boven koppen */
   margin-bottom: 0.75em;
-  color: var(--color-primary);
+  color: var(--color-primary); /* <-- NU DE CORRECTE VVD KLEUR */
+  line-height: 1.3; /* Zorg voor consistente regelhoogte */
 }
+/* --- EINDE AANPASSING --- */
+
 .artikel-inhoud ul,
 .artikel-inhoud ol {
   margin-bottom: 1.25em;
@@ -2595,12 +2607,15 @@ a.team-member-link:hover {
   margin-bottom: 0.5em;
 }
 .artikel-inhoud a {
-  color: #005baa;
+  color: var(--color-primary); /* Links binnen tekst ook primair */
   text-decoration: underline;
 }
 .artikel-inhoud a:hover {
+  color: var(--color-accent);
   text-decoration: none;
 }
+
+/* ... (rest van de detail pagina stijlen) ... */
 
 .artikel-navigatie {
   margin-top: 3rem;
