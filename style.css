@@ -3098,127 +3098,21 @@ label {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+
+
+
+
 /* ============================================= */
-/* Nieuwe Flyer Hero Styling                   */
-/* ============================================= */
-
-.hero.hero-flyer {
-  position: relative; /* Noodzakelijk voor absolute positionering van img/overlay */
-  min-height: 450px;  /* Pas hoogte naar wens aan */
-  display: flex;      /* Gebruik flexbox voor uitlijning */
-  align-items: center; /* Centreer inhoud verticaal */
-  justify-content: flex-start; /* Lijn inhoud links uit (container zorgt voor marge) */
-  overflow: hidden;   /* Voorkom dat elementen buiten de sectie vallen */
-  color: var(--color-primary); /* Standaard VVD blauw voor tekst */
-}
-
-.hero.hero-flyer .hero-background-image {
-  position: absolute;
-  inset: 0; /* Bedekt de hele sectie (top:0, right:0, bottom:0, left:0) */
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Zorgt dat afbeelding vult zonder vervorming */
-  z-index: 0; /* Achter de overlay en content */
-  /* Optioneel: filter voor helderheid/contrast */
-  /* filter: brightness(0.95); */
-}
-
-.hero.hero-flyer .hero-overlay {
-  position: absolute;
-  inset: 0;
-  /* Zeer subtiele overlay, pas aan indien nodig voor contrast */
-  background: rgba(0, 0, 0, 0.05);
-  z-index: 1; /* Boven achtergrond, onder content */
-}
-
-.hero.hero-flyer .hero-content {
-  position: relative; /* Boven overlay */
-  z-index: 2;
-  /* '.container' regelt max-width en horizontale padding */
-  text-align: left; /* Zorg voor linkse uitlijning */
-}
-
-.hero.hero-flyer .flyer-text-wrapper {
-  display: flex;
-  align-items: flex-start; /* Lijn bovenkant pijl uit met bovenkant tekst */
-  gap: 1rem; /* Ruimte tussen pijl en tekstblok */
-  max-width: 600px; /* Voorkom dat tekst te breed wordt */
-}
-
-.hero.hero-flyer .flyer-arrow {
-  flex-shrink: 0; /* Voorkom dat pijl krimpt */
-  width: 35px; /* Pas grootte aan naar wens */
-  height: auto;
-  /* Kleine verticale aanpassing voor perfecte uitlijning met tekst */
-  margin-top: 0.3em;
-}
-
-.hero.hero-flyer .flyer-title {
-  font-size: clamp(2.8rem, 7vw, 4.5rem); /* Responsive lettergrootte */
-  font-weight: 700; /* Standaard bold */
-  line-height: 1.1; /* Strakke regelafstand */
-  margin: 0; /* Geen extra ruimte rond H1 */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtiele schaduw voor leesbaarheid */
-}
-
-.hero.hero-flyer .flyer-text-blue,
-.hero.hero-flyer .flyer-text-orange {
-  display: block; /* Zorgt dat elke span op een nieuwe regel begint */
-}
-
-.hero.hero-flyer .flyer-text-blue {
-  color: var(--color-primary); /* VVD Blauw */
-}
-
-.hero.hero-flyer .flyer-text-orange {
-  color: var(--color-accent); /* VVD Oranje */
-  font-weight: 700; /* Of een hogere waarde indien beschikbaar (bv 800/900) */
-  /* Optioneel: iets groter maken */
-  /* font-size: 1.05em; */
-}
-
-/* Verberg oude elementen die niet in het nieuwe design passen */
-.hero.hero-flyer .hero-subtitle,
-.hero.hero-flyer .btn-hero {
-  display: none;
-}
-
-/* --- Responsive aanpassingen voor Flyer Hero --- */
-@media (max-width: 767px) {
-  .hero.hero-flyer {
-      min-height: 350px; /* Iets minder hoog op mobiel */
-      /* Behoud flex-start of wijzig naar center indien gewenst */
-      justify-content: center; /* Centreer content container */
-      text-align: center; /* Centreer tekst binnen container */
-  }
-
-  .hero.hero-flyer .flyer-text-wrapper {
-      flex-direction: column; /* Stapel pijl en tekst */
-      align-items: center; /* Centreer pijl en tekstblok */
-      gap: 0.75rem;
-  }
-
-  .hero.hero-flyer .flyer-arrow {
-      width: 30px; /* Iets kleinere pijl */
-      margin-top: 0;
-      margin-bottom: 0.5rem; /* Ruimte onder pijl */
-  }
-
-  .hero.hero-flyer .flyer-title {
-      font-size: clamp(2.2rem, 9vw, 3rem); /* Pas mobiele fontgrootte aan */
-      text-align: center;
-  }
-}
-/* ============================================= */
-/* Flyer Hero Styling                          */
+/* Flyer Hero Styling (Met Vaste Regelafbreking) */
 /* ============================================= */
 
 .hero.hero-flyer {
   position: relative;
-  min-height: 450px; /* Of andere gewenste hoogte */
+  min-height: 450px; /* Hoogte desktop */
   display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Lijn links uit op desktop */
+  align-items: flex-start; /* Lijn bovenkant content uit */
+  justify-content: flex-start; /* Lijn links uit */
   overflow: hidden;
   color: var(--color-primary);
 }
@@ -3230,93 +3124,123 @@ label {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  /* filter: brightness(0.95); */ /* Optioneel */
 }
 
 .hero.hero-flyer .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.05); /* Zeer lichte overlay */
+  background: rgba(0, 0, 0, 0.05); /* Subtiele overlay */
   z-index: 1;
 }
 
 .hero.hero-flyer .hero-content {
   position: relative;
   z-index: 2;
-  text-align: left; /* Standaard links */
+  text-align: left;
+  padding-top: clamp(8vh, 10vh, 12vh); /* Responsive padding top */
+  padding-bottom: 5vh;
+  /* De .container class hierin regelt max-width en padding */
 }
 
 .hero.hero-flyer .flyer-text-wrapper {
   display: flex;
-  align-items: flex-start; /* Lijn pijl boven uit */
-  gap: 1rem;
-  max-width: 600px; /* Max breedte voor leesbaarheid */
+  align-items: flex-start; /* Lijn bovenkant pijl uit met bovenkant tekstblok */
+  gap: 1rem; /* Ruimte tussen pijl en tekst */
+  max-width: 600px; /* Max breedte */
+  flex-wrap: nowrap; /* Voorkom wrappen */
 }
 
 .hero.hero-flyer .flyer-arrow {
   flex-shrink: 0;
-  width: 35px; /* Pas aan indien nodig */
+  width: 35px; /* Grootte pijl desktop */
   height: auto;
-  margin-top: 0.3em; /* Fijnafstelling verticale positie */
+  /* Kleine marge om exact uit te lijnen met 'Voor' */
+  margin-top: 0.2em; /* Experimenteer hiermee */
 }
 
+/* H1 voor de titel nu */
 .hero.hero-flyer .flyer-title {
   font-size: clamp(2.8rem, 7vw, 4.5rem);
-  font-weight: 700; /* Of specifieker font-weight als beschikbaar */
-  line-height: 1.1;
+  font-weight: 700;
+  line-height: 1.15; /* Iets meer ruimte voor meerdere regels */
   margin: 0;
-  text-shadow: none; /* *** SCHADUW VERWIJDERD *** */
+  text-shadow: none;
+  text-align: left;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Klein, donker, beetje blur */
 }
 
-.hero.hero-flyer .flyer-text-blue,
-.hero.hero-flyer .flyer-text-orange {
-  display: block;
+/* *** NIEUW: Regel voor elke tekstregel *** */
+.hero.hero-flyer .flyer-text-line {
+  display: block; /* Forceer elke span op een nieuwe regel */
 }
 
+/* Kleuren blijven hetzelfde */
 .hero.hero-flyer .flyer-text-blue {
-  color: var(--color-primary); /* VVD Blauw */
+  color: var(--color-primary);
 }
 
 .hero.hero-flyer .flyer-text-orange {
-  color: var(--color-accent); /* VVD Oranje */
-  /* Font-weight blijft 700 tenzij je een zwaarder gewicht hebt */
+  color: var(--color-accent);
 }
 
-/* --- Responsive aanpassingen voor Flyer Hero --- */
+/* --- Responsive aanpassingen voor Flyer Hero (Pijl blijft links) --- */
 @media (max-width: 767px) {
   .hero.hero-flyer {
-      min-height: 350px;
-      justify-content: center; /* Centreer op mobiel */
+      min-height: 300px; /* Minder hoog op mobiel */
+      /* Centreer de content container verticaal en horizontaal */
+      align-items: center;
+      justify-content: center;
   }
 
   .hero.hero-flyer .hero-content {
-      text-align: center; /* Centreer tekst op mobiel */
+     padding-top: 0; /* Reset padding, centreren via align-items */
+     padding-bottom: 0;
+     width: 90%; /* Geef wat ademruimte */
+     max-width: 500px; /* Max breedte op mobiel, afhankelijk van hoe smal je wilt gaan */
   }
 
   .hero.hero-flyer .flyer-text-wrapper {
-      flex-direction: column; /* Stapel op mobiel */
-      align-items: center; /* Centreer pijl en tekst */
-      gap: 0.75rem;
+      /* BELANGRIJK: GEEN flex-direction: column; */
+      /* flex-direction: row; is default */
+      align-items: flex-start;  /* Lijn bovenkant pijl met bovenkant 'Voor' */
+      justify-content: center; /* Centreer pijl en tekst horizontaal */
+      gap: 0.6rem; /* Kleinere ruimte */
+      width: 100%; /* Laat wrapper de content breedte gebruiken */
   }
 
   .hero.hero-flyer .flyer-arrow {
-      width: 30px;
-      margin-top: 0;
-      margin-bottom: 0.5rem;
+      width: 28px; /* Kleinere pijl */
+      /* Pas marge aan voor uitlijning met 'Voor' */
+      margin-top: 0.15em; /* Experimenteer hiermee (kleinere font size = kleinere em) */
   }
 
+  /* Titel op mobiel */
   .hero.hero-flyer .flyer-title {
-      font-size: clamp(2.2rem, 9vw, 3rem);
+      font-size: clamp(1.8rem, 7vw, 2.4rem); /* Pas fontgrootte aan */
+      line-height: 1.15; /* Iets meer ruimte */
+      text-align: left; /* Houd tekst links binnen de H1 */
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Klein, donker, beetje blur */
   }
+
+   /* De display: block voor .flyer-text-line blijft gelden */
 }
 
-.hero.hero-flyer {
-  /* ... andere stijlen ... */
-  align-items: flex-start; /* Lijn bovenaan uit */
-}
-
-.hero.hero-flyer .hero-content {
-   /* ... andere stijlen ... */
-  padding-top: 10vh; /* Experimenteer met deze waarde (bv. 8vh, 12vh, 5rem, etc.) */
-  /* padding-bottom: 5vh; /* Eventueel ook onderaan wat padding */
+/* Extra breakpoint voor hele kleine schermen */
+@media (max-width: 480px) {
+   .hero.hero-flyer {
+      min-height: 250px;
+   }
+   .hero.hero-flyer .flyer-title {
+      font-size: clamp(1.5rem, 8vw, 2rem);
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Klein, donker, beetje blur */
+   }
+   .hero.hero-flyer .flyer-arrow {
+      width: 22px;
+      margin-top: 0.1em; /* Nog kleinere marge */
+   }
+    .hero.hero-flyer .flyer-text-wrapper {
+      gap: 0.4rem; /* Nog kleinere gap */
+      /* Optioneel: forceer links uitlijnen als centreren niet past */
+      /* justify-content: flex-start; */
+  }
 }
