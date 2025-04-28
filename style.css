@@ -2248,17 +2248,39 @@ button:focus-visible {
   padding: 0.5rem 1rem;
 }
 
+/* Mobiel standaard weergave */
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
   display: none;
-  min-width: 220px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
-  z-index: 999;
+  position: static;
+  padding-left: 1rem;
+  flex-direction: column;
 }
+
+/* Als dropdown 'open' is, tonen */
+.dropdown.open .dropdown-menu {
+  display: flex;
+}
+
+/* Desktop gedrag */
+@media (min-width: 769px) {
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 0.5rem 1rem;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
 
 .dropdown-menu li a {
   display: block;
@@ -3225,22 +3247,13 @@ label {
    /* De display: block voor .flyer-text-line blijft gelden */
 }
 
-/* Extra breakpoint voor hele kleine schermen */
-@media (max-width: 480px) {
-   .hero.hero-flyer {
-      min-height: 250px;
-   }
-   .hero.hero-flyer .flyer-title {
-      font-size: clamp(1.5rem, 8vw, 2rem);
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Klein, donker, beetje blur */
-   }
-   .hero.hero-flyer .flyer-arrow {
-      width: 22px;
-      margin-top: 0.1em; /* Nog kleinere marge */
-   }
-    .hero.hero-flyer .flyer-text-wrapper {
-      gap: 0.4rem; /* Nog kleinere gap */
-      /* Optioneel: forceer links uitlijnen als centreren niet past */
-      /* justify-content: flex-start; */
-  }
+.hero.hero-flyer {
+  /* ... andere stijlen ... */
+  align-items: flex-start; /* Lijn bovenaan uit */
+}
+
+.hero.hero-flyer .hero-content {
+   /* ... andere stijlen ... */
+  padding-top: 10vh; /* Experimenteer met deze waarde (bv. 8vh, 12vh, 5rem, etc.) */
+  /* padding-bottom: 5vh; /* Eventueel ook onderaan wat padding */
 }

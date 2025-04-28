@@ -4,30 +4,82 @@
  * Algemene JavaScript functionaliteit voor de VVD Wageningen website.
  */
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
+document.addEventListener('DOMContentLoaded', () => {
+    // Hamburger menu functionaliteit (bestaande code)
     const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('#nav-menu');
+    const navMenu = document.querySelector('.nav-links');
     const body = document.body;
 
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
-            body.classList.toggle('nav-open');
             const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
             navToggle.setAttribute('aria-expanded', !isExpanded);
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (event) => {
-            const isClickInsideNav = navMenu.contains(event.target);
-            const isClickOnToggle = navToggle.contains(event.target);
-
-            if (!isClickInsideNav && !isClickOnToggle && body.classList.contains('nav-open')) {
-                body.classList.remove('nav-open');
-                navToggle.setAttribute('aria-expanded', 'false');
+            body.classList.toggle('nav-open');
+             // Belangrijk: sluit dropdowns als hoofdmenu sluit
+            if (!body.classList.contains('nav-open')) {
+                closeAllMobileDropdowns();
             }
         });
     }
+
+    // --- NIEUW: Mobiele Dropdown Functionaliteit ---
+    const dropdownToggles = document.querySelectorAll('.nav-links .dropdown > .nav-link');
+
+    // Functie om alle mobiele dropdowns te sluiten
+    function closeAllMobileDropdowns(exceptThisOne = null) {
+        document.querySelectorAll('.nav-links .dropdown.open').forEach(openDropdown => {
+            if (openDropdown !== exceptThisOne) {
+                openDropdown.classList.remove('open');
+                const link = openDropdown.querySelector('.nav-link');
+                if(link) link.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    dropdownToggles.forEach(toggle => {
+        // Voeg aria-expanded toe indien nog niet aanwezig
+        if (!toggle.hasAttribute('aria-expanded')) {
+            toggle.setAttribute('aria-expanded', 'false');
+        }
+
+        toggle.addEventListener('click', (event) => {
+            // Alleen activeren als het mobiele menu zichtbaar is
+            // Controleer een stijl die specifiek is voor het mobiele menu,
+            // bijv. de display van de nav-toggle of de position van nav-links
+            const isMobileView = window.getComputedStyle(navToggle).display === 'block';
+
+            if (isMobileView) {
+                event.preventDefault(); // Voorkom navigatie door de hoofdlink op mobiel
+
+                const parentLi = toggle.closest('.dropdown'); // Vind de parent <li>
+                const currentlyExpanded = parentLi.classList.contains('open');
+
+                // Sluit eerst alle andere dropdowns
+                closeAllMobileDropdowns(parentLi);
+
+                // Toggle de huidige dropdown
+                parentLi.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', !currentlyExpanded);
+            }
+            // Op desktop: laat de link normaal navigeren (geen preventDefault)
+        });
+    });
+
+    // Optioneel: sluit dropdowns bij klikken buiten het menu op mobiel
+    document.addEventListener('click', (event) => {
+        const isMobileView = window.getComputedStyle(navToggle).display === 'block';
+        if (isMobileView && body.classList.contains('nav-open')) {
+            const target = event.target;
+            // Check if the click is outside the nav menu entirely
+            if (!navMenu.contains(target) && !navToggle.contains(target)) {
+                 body.classList.remove('nav-open');
+                 navToggle.setAttribute('aria-expanded', 'false');
+                 closeAllMobileDropdowns();
+            }
+        }
+    });
+
+});
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -94,4 +146,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-});
+
