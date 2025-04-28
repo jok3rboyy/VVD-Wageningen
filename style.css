@@ -3153,16 +3153,27 @@ label {
   text-shadow: none;    /* Zeker stellen geen ongewenste tekstschaduw */
   font-weight: 700;
   /* Behoud hover effecten van .btn of definieer opnieuw */
+  display: inline-block;
+  border: 2px solid var(--color-accent); /* Zorg dat je een border hebt */
+  border-radius: 8px; /* Of je voorkeur */
+
+  /* BELANGRIJK: De Transitie */
+  transition: background-color 0.25s ease-out,
+              border-color 0.25s ease-out,
+              color 0.25s ease-out,
+              transform 0.25s ease-out,
+              box-shadow 0.25s ease-out;
 }
 
 /* Hover/Focus stijl specifiek voor deze knop (als je het anders wilt dan standaard .btn:hover) */
 .hero-cta-button:hover,
 .hero-cta-button:focus {
-  background-color: #e65a00; /* Iets donkerder oranje */
-  border-color: #e65a00;
-  color: var(--color-text-light);
-  transform: translateY(-3px) scale(1.02); /* Iets meer effect */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Duidelijkere schaduw */
+  background-color: var(--color-background); /* Wit */
+  border-color: var(--color-accent);         /* Oranje rand blijft/wordt oranje */
+  color: var(--color-accent);                /* Oranje tekst */
+  transform: translateY(-3px);               /* Lichte lift */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Subtiele schaduw */
+  text-decoration: none;
 }
 
 /* --- Responsive aanpassingen voor de knop --- */
