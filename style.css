@@ -3124,15 +3124,16 @@ label {
     outline-offset: 2px;
 }
 
-/* Zorg dat de .btn-light zijn eigen hover/focus behoudt */
+/* AANGEPASTE Hover/Focus stijl voor de lichte CTA knop */
 .btn-cta.btn-light:hover,
 .btn-cta.btn-light:focus {
-  background-color: #f1f1f1;
-  border-color: #f1f1f1;
-  color: var(--color-primary);
-  /* Behoud of reset transform/shadow indien nodig */
+  background-color: var(--color-accent); /* NU VVD Oranje */
+  border-color: var(--color-accent);     /* Border ook oranje */
+  color: var(--color-text-light);      /* Tekst wit voor contrast */
+  text-decoration: none;              /* Geen underline */
+  /* Behoud effecten */
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Iets sterkere shadow misschien? */
 }
 
 
