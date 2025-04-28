@@ -96,31 +96,36 @@
     </header>
 
     <main>
-      <section class="hero hero-flyer">
-        <img
-          src="images/SampleBanner.jpg" 
-          alt="Banner VVD Wageningen" 
-          fetchpriority="high"
-          class="hero-background-image"
-        />
-        <div class="hero-overlay"></div>
-        <div class="hero-content container">
-          <div class="flyer-text-wrapper">
+           <!-- === FLYER HERO SECTIE (met CTA knop) === -->
+           <section class="hero hero-flyer">
             <img
-              src="images/VVD_Pijl_01_RGB_Kleur_1200DPI.png" 
-              alt=""
-              class="flyer-arrow"
-              aria-hidden="true"
+              src="images/SampleBanner.jpg" <!-- Pas achtergrond aan -->
+              alt="Banner VVD Wageningen" <!-- Pas alt tekst aan -->
+              fetchpriority="high"
+              class="hero-background-image"
             />
-            <h1 class="flyer-title">
-              <span class="flyer-text-line flyer-text-blue">Voor een</span>
-              <span class="flyer-text-line flyer-text-blue">sterker</span>
-              <span class="flyer-text-line flyer-text-orange">Wageningen.</span>
-            </h1>
-            <a href="#contact" class="flyer-cta-button">Doe mee.</a>
-          </div>
-        </div>
-      </section>
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+              <div class="flyer-text-wrapper">
+                <img
+                  src="images/VVD_Pijl_01_RGB_Kleur_1200DPI.png" <!-- Pad naar pijl -->
+                  alt=""
+                  class="flyer-arrow"
+                  aria-hidden="true"
+                />
+                <h1 class="flyer-title">
+                  <span class="flyer-text-line flyer-text-blue">Voor een</span>
+                  <span class="flyer-text-line flyer-text-blue">sterker</span>
+                  <span class="flyer-text-line flyer-text-orange">Wageningen.</span>
+                </h1>
+              </div>
+              <!-- Knop HIER geplaatst, na de text-wrapper -->
+              <!-- Gebruik de .btn class + een specifieke class -->
+              <!-- href="#contact" linkt naar een ID op dezelfde pagina. Moet dit contact.html zijn? -->
+              <a href="#contact" class="btn hero-cta-button">Doe mee</a>
+            </div>
+          </section>
+          <!-- === EINDE FLYER HERO SECTIE === -->
       
 
       <!-- === ACTUEEL SECTIE (NU HIER) === -->
