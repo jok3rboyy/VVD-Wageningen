@@ -2584,7 +2584,7 @@ a.team-member-link:hover {
 .artikel-inhoud h3 {
   margin-top: 2em;
   margin-bottom: 0.75em;
-  color: #003366;
+  color: var(--color-primary);
 }
 .artikel-inhoud ul,
 .artikel-inhoud ol {
