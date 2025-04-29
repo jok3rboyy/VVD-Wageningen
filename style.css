@@ -3313,55 +3313,59 @@ label {
   /* padding-bottom: 5vh; /* Eventueel ook onderaan wat padding */
 }
 
+/* ============================================= */
+/* Hero CTA Button Styling (met Blauwe Onderlaag) */
+/* ============================================= */
 
+/* Basisstijl Knop (Oranje deel) */
 .hero-cta-button {
-  /* ... andere basisstijlen zoals background, color, padding, etc ... */
+  /* ... andere basisstijlen zoals font, padding, margin-top ... */
   display: inline-block;
-  position: relative; /* BELANGRIJK: voor positionering pseudo-element */
-  z-index: 1;         /* Knop inhoud boven de 'schaduw' */
-  background-color: var(--color-accent);
-  border: 2px solid var(--color-accent);
-  color: var(--color-text-light);
-  border-radius: 8px; /* Of je gewenste radius */
+  position: relative; /* NODIG VOOR PSEUDO-ELEMENT POSITIONERING */
+  z-index: 1;         /* BELANGRIJK: Zorgt dat knopinhoud boven laag komt */
+  background-color: var(--color-accent); /* VVD Oranje */
+  border: 2px solid var(--color-accent); /* Oranje rand */
+  color: var(--color-text-light);      /* Witte tekst */
+  border-radius: 8px; /* Jouw border-radius */
   padding: 0.9rem 2.2rem;
   font-size: 1.05rem;
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  overflow: visible; /* Zorg dat pseudo-element niet wordt afgeknipt */
+  overflow: visible; /* Zeker stellen dat ::after niet geknipt wordt */
 
-  /* BELANGRIJK: Transitie voor knop-lift en pseudo-element */
+  /* Alleen transform animeren op de knop zelf */
   transition: transform 0.25s ease-out;
 }
 
-/* Voeg een pseudo-element toe (dit wordt de blauwe laag) */
+/* De Blauwe Onderlaag (Pseudo-element) */
 .hero-cta-button::after {
   content: '';
   position: absolute;
   /* top: 0; left: 0; width: 100%; height: 100%; */
-  inset: 0; /* Kortere manier voor bovenstaande */
+  inset: 0; /* Bedekt exact de knopruimte */
   background-color: var(--color-primary); /* VVD Blauw */
-  border-radius: inherit; /* Neem border-radius over */
-  z-index: -1; /* Plaats ACHTER de knopinhoud */
-  opacity: 0; /* Begin verborgen */
-  transform: translate(0px, 0px); /* Begin op dezelfde positie */
+  border-radius: inherit; /* Neem afronding over */
+  z-index: -1;        /* !!! CRUCIAAL: Plaats ACHTER de knop-inhoud/achtergrond !!! */
+  opacity: 0;         /* Start onzichtbaar */
+  transform: translate(0px, 0px); /* Start op dezelfde positie */
+
+  /* Animeren van de laag zelf */
   transition: transform 0.25s ease-out, opacity 0.25s ease-out;
 }
 
-/* --- Hover/Focus stijl voor Hero CTA - Blauwe Onderlaag --- */
+/* --- Hover/Focus effecten --- */
 .hero-cta-button:hover,
 .hero-cta-button:focus {
-  /* 1. Knop zelf gaat omhoog */
+  /* 1. Oranje knop gaat omhoog */
   transform: translateY(-4px); /* Lift effect (pas -4px aan naar wens) */
-  text-decoration: none; /* Voorkom underline */
-  /* Optioneel: kleine schaduw op de oranje knop zelf */
-  /* box-shadow: 0 6px 12px rgba(0,0,0,0.1); */
+  text-decoration: none;
 }
 
-/* 2. Het ::after element (blauwe laag) verschuift en wordt zichtbaar */
+/* 2. Blauwe laag ::after verschuift en wordt zichtbaar */
 .hero-cta-button:hover::after,
 .hero-cta-button:focus::after {
   opacity: 1; /* Maak zichtbaar */
-  /* Verschuif de laag - pas px waarden aan voor gewenst effect */
-  transform: translate(4px, 4px);
+  /* Verschuif de laag naar beneden en rechts */
+  transform: translate(4px, 4px); /* Pas px waarden aan voor gewenst effect */
 }
