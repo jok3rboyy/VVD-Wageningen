@@ -461,14 +461,6 @@ textarea:focus {
   margin: 0; /* Reset default margins */
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-text-light);
-  text-decoration: none;
-  transform: translateY(-2px); /* Klein lift effect */
-}
 
 /* --- Standpunten Section --- */
 .standpunt-grid {
@@ -918,6 +910,7 @@ ul {
   margin: 0;
 }
 
+
 /* === TYPOGRAPHY === */
 h1,
 h2,
@@ -1077,6 +1070,38 @@ button:focus-visible {
   z-index: 1;
 }
 
+
+
+
+/* HOUD DEZE BASIS .btn STIJL (of een vergelijkbare) */
+.btn {
+  display: inline-block; /* Belangrijk */
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  padding: 0.8rem 1.6rem; /* Of een andere standaard padding */
+  font-weight: 700;
+  font-size: 0.9rem; /* Of 1rem */
+  text-align: center;
+  text-decoration: none; /* Voeg toe */
+  border: 2px solid var(--color-primary); /* Consistent met bg */
+  border-radius: 8px; /* Gebruik misschien var(--border-radius)? Of je voorkeur */
+  cursor: pointer;
+  align-self: flex-start; /* OK als standaard */
+  /* Algemene transitie voor hover effecten */
+  transition: background-color 0.25s ease-out, border-color 0.25s ease-out, color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+
+/* HOUD DEZE HOVER .btn STIJL (of een vergelijkbare) */
+.btn:hover,
+.btn:focus {
+  background-color: var(--color-accent); /* Oranje bij hover */
+  border-color: var(--color-accent); /* Oranje rand bij hover */
+  color: var(--color-text-light); /* Tekst blijft wit */
+  transform: translateY(-2px); /* Kleine lift */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw */
+  text-decoration: none; /* Geen underline */
+  outline: none; /* Verwijder standaard focus outline */
+}
 /* === CARDS (NIEUWS) === */
 .cards-container {
   display: grid;
@@ -1125,29 +1150,6 @@ button:focus-visible {
   color: var(--color-text);
 }
 
-/* === BUTTONS === */
-.btn {
-  display: inline-block;
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
-  padding: 0.8rem 1.6rem;
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-align: center;
-  border: 2px solid var(--color-primary);
-  border-radius: var(--border-radius);
-  transition: all var(--transition-speed) ease-in-out;
-  cursor: pointer;
-  align-self: flex-start;
-}
-.btn:hover,
-.btn:focus {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-text-light);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 /* === STANDPUNTEN SECTION === */
 .standpunt-grid {
