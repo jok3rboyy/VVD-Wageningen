@@ -3136,16 +3136,7 @@ label {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Iets sterkere shadow misschien? */
 }
 
-/* 
-/* --- Responsive aanpassingen voor de knop --- */
-@media (max-width: 767px) {
-  .hero-cta-button {
-    margin-top: 1.5rem; /* Minder ruimte op mobiel */
-    padding: 0.8rem 1.8rem;
-    font-size: 1rem;
-    /* Knop centreert mee met .hero-content text-align: center */
-  }
-}
+
 
 
 
@@ -3282,8 +3273,9 @@ label {
   padding-top: 10vh; /* Experimenteer met deze waarde (bv. 8vh, 12vh, 5rem, etc.) */
   /* padding-bottom: 5vh; /* Eventueel ook onderaan wat padding */
 }
+
 /* ============================================= */
-/* Hero CTA Button Styling (met Blauwe Onderlaag - Correct Z-Index) */
+/* Hero CTA Button Styling (met Blauwe Onderlaag) */
 /* ============================================= */
 
 /* Basisstijl Knop (Oranje deel) */
@@ -3292,10 +3284,11 @@ label {
   position: relative;   /* Essentieel voor ::after positionering */
   z-index: 1;           /* Zorgt dat knop boven negatieve z-index ::after blijft */
   background-color: var(--color-accent); /* Oranje Achtergrond */
-  border: 2px solid var(--color-accent);
-  color: var(--color-text-light);
+  border: 2px solid var(--color-accent); /* Oranje rand */
+  color: var(--color-text-light);      /* Witte tekst */
   border-radius: 8px; /* Jouw voorkeur */
   padding: 0.9rem 2.2rem;
+  margin-top: 2rem;    /* Ruimte boven de knop */
   font-size: 1.05rem;
   font-weight: 700;
   text-decoration: none;
@@ -3333,4 +3326,24 @@ label {
 .hero-cta-button:focus::after {
   opacity: 1; /* Maak zichtbaar */
   transform: translate(4px, 4px); /* Verschuif (pas aan naar wens) */
+}
+
+/* --- Responsive aanpassingen voor de knop --- */
+@media (max-width: 767px) {
+  .hero-cta-button {
+    margin-top: 1.5rem; /* Minder ruimte op mobiel */
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    /* Knop centreert mee omdat .hero-content op mobiel text-align: center heeft */
+  }
+
+  /* Eventueel de verschuiving kleiner maken op mobiel */
+  .hero-cta-button:hover::after,
+  .hero-cta-button:focus::after {
+     transform: translate(3px, 3px);
+  }
+  .hero-cta-button:hover,
+  .hero-cta-button:focus {
+     transform: translateY(-3px);
+  }
 }
