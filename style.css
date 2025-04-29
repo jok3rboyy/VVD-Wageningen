@@ -242,22 +242,6 @@ textarea:focus {
   border-color: #005bac;
 }
 
-/* Submit button */
-.btn {
-  background-color: #005bac;
-  color: white;
-  border: none;
-  padding: 0.9rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  align-self: flex-start;
-}
-
-.btn:hover {
-  background-color: #004080;
-}
 /* --- Utility Classes --- */
 .container {
   width: 100%;
@@ -619,6 +603,20 @@ textarea:focus {
   color: var(--color-text-light); /* Zeker stellen dat het wit is */
 }
 
+.btn-cta {
+  /* Erft van .btn, maar met accentkleur */
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  padding: 0.8rem 2rem; /* Nog grotere padding */
+  font-size: 1.1rem; /* Groter font */
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+  background-color: #e05a00; /* Donkerder oranje */
+  border-color: #e05a00;
+  color: var(--color-text-light);
+}
 
 @media (min-width: 768px) {
   /* Naast elkaar vanaf tablet */
