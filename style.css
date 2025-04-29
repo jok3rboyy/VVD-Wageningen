@@ -3256,3 +3256,77 @@ label {
   /* Kleine knop (geen wijziging nodig meestal) */
   /* .btn-small { ... } */
 }
+/* ============================================= */
+/* Hero CTA Knop (Alternatieve Methode met Span) */
+/* ============================================= */
+
+/* Basisstijl Knop = ORANJE */
+.hero-cta-button {
+  /* Inherit basis .btn styles */
+  background-color: var(--color-accent); /* Oranje Basis */
+  border-color: var(--color-accent);
+  color: var(--color-text-light);
+  padding: 0.9rem 2.2rem;
+  margin-top: 2rem;
+  font-size: 1.05rem;
+  overflow: hidden; /* Knip ::before af */
+  position: relative; /* Context voor ::before en .btn-text */
+  z-index: 0; /* Geef een basis stacking context */
+}
+
+/* De Blauwe laag (met ::before) */
+.hero-cta-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-primary); /* BLAUWE laag */
+  border-radius: inherit;
+  z-index: 0;           /* !!! OP GELIJK NIVEAU ALS ORANJE BG !!! */
+  opacity: 0;
+  transform: translate(0px, 0px);
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+/* De tekst SPAN binnen de knop */
+.hero-cta-button .btn-text {
+    position: relative; /* Nodig om z-index te laten werken */
+    z-index: 1;         /* !!! TEKST BOVEN DE ::before LAAG !!! */
+    display: inline-block; /* Gedraagt zich als tekst */
+}
+
+/* --- Hover/Focus effecten --- */
+.hero-cta-button:hover,
+.hero-cta-button:focus {
+  /* 1. Oranje knop gaat omhoog */
+  transform: translateY(-4px);
+  /* Zorg dat basiskleuren niet veranderen door algemene .btn:hover */
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-text-light);
+  box-shadow: none;
+  outline: none;
+}
+
+/* 2. Blauwe laag ::before verschuift en wordt zichtbaar */
+.hero-cta-button:hover::before,
+.hero-cta-button:focus::before {
+  opacity: 1;
+  transform: translate(4px, 4px);
+}
+
+/* --- Responsive aanpassingen --- */
+@media (max-width: 767px) {
+    .hero-cta-button {
+        margin-top: 1.5rem;
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
+    }
+    .hero-cta-button:hover::before,
+    .hero-cta-button:focus::before {
+       transform: translate(3px, 3px);
+    }
+    .hero-cta-button:hover,
+    .hero-cta-button:focus {
+       transform: translateY(-3px);
+    }
+}
