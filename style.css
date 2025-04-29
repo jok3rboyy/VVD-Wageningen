@@ -3168,19 +3168,6 @@ label {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-
-/* De Blauwe Onderlaag */
-.hero-cta-button::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-primary); /* BLAUW */
-  border-radius: inherit;
-  z-index: -1;          /* !!! ACHTER de knop !!! */
-  opacity: 0;
-  transform: translate(0px, 0px);
-  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
-}
 /* --- Specifieke Hero CTA Knop (met blauwe onderlaag effect) --- */
 .hero-cta-button {
   /* Inherit .btn, maar overschrijf basiskleur naar ORANJE */
@@ -3197,6 +3184,18 @@ label {
   /* position: relative; is al gezet door .btn */
 }
 
+/* De Blauwe Onderlaag */
+.hero-cta-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-primary); /* BLAUW */
+  border-radius: inherit;
+  z-index: -1;          /* !!! ACHTER de knop !!! */
+  opacity: 0;
+  transform: translate(0px, 0px);
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+}
 
 /* Hover/Focus voor de Hero knop (alleen lift, GEEN kleurverandering) */
 /* Deze regel is specifieker dan .btn:hover en krijgt voorrang */
