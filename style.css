@@ -3077,31 +3077,30 @@ label {
 
 
 /* ============================================= */
-/* BUTTON STYLING (Basis & Varianten - v2)     */
+/* BUTTON STYLING (Basis & Varianten)          */
 /* ============================================= */
 
 /* --- Basis .btn Stijl --- */
 .btn {
-  display: inline-block;
-  position: relative;    /* Belangrijk voor positionering binnen de knop */
-  padding: 0.8rem 1.6rem;
+  display: inline-block; /* Maakt padding/margin mogelijk */
+  position: relative;    /* Voor eventuele pseudo-elementen in varianten */
+  z-index: 1;            /* Basis stapel context */
+  padding: 0.8rem 1.6rem; /* Standaard padding */
   font-family: var(--font-primary);
-  font-weight: 700;
-  font-size: 0.9rem;
-  line-height: 1.3;
+  font-weight: 700;      /* Standaard bold */
+  font-size: 0.9rem;     /* Standaard grootte */
+  line-height: 1.3;      /* Goede regelhoogte */
   text-align: center;
   text-decoration: none;
   color: var(--color-text-light);      /* Standaard witte tekst */
   background-color: var(--color-primary); /* Standaard VVD Blauw */
-  border: 2px solid var(--color-primary);
-  border-radius: 8px; /* Pas aan naar wens */
+  border: 2px solid var(--color-primary); /* Standaard VVD Blauwe rand */
+  border-radius: 8px; /* Afronding (pas aan indien gewenst, bv var(--border-radius)) */
   cursor: pointer;
-  overflow: hidden;      /* BELANGRIJK: Knip pseudo-elementen af bij de rand */
-  user-select: none;
-  vertical-align: middle; /* Betere uitlijning als inline-block */
-  -webkit-tap-highlight-color: transparent; /* Voorkom blauwe gloed bij tikken mobiel */
+  overflow: hidden;      /* Voorkomt dat effecten buiten rand lekken (meestal goed) */
+  user-select: none;     /* Voorkomt tekstselectie op knop */
 
-  /* Vloeiende overgang */
+  /* Vloeiende overgang voor alle animaties */
   transition: background-color 0.25s ease-out,
               border-color 0.25s ease-out,
               color 0.25s ease-out,
@@ -3109,24 +3108,19 @@ label {
               box-shadow 0.25s ease-out;
 }
 
-/* Span voor knoptekst (voor stacking context) */
-.btn .btn-text {
-    position: relative; /* Maakt z-index mogelijk */
-    z-index: 2;         /* Tekst boven eventuele pseudo-elementen */
-}
-
 /* --- Standaard Hover & Focus voor .btn --- */
 .btn:hover,
 .btn:focus {
   background-color: var(--color-accent); /* Wordt VVD Oranje */
-  border-color: var(--color-accent);
-  color: var(--color-text-light);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  outline: none;
+  border-color: var(--color-accent);     /* Rand wordt VVD Oranje */
+  color: var(--color-text-light);      /* Tekst blijft wit */
+  transform: translateY(-2px);         /* Kleine lift */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw */
+  text-decoration: none;               /* Geen underline */
+  outline: none;                       /* Geen browser outline */
 }
 
+/* Focus specifiek voor toetsenbordnavigatie (betere toegankelijkheid) */
 .btn:focus-visible {
    outline: 3px solid var(--color-accent);
    outline-offset: 2px;
@@ -3138,79 +3132,80 @@ label {
 
 /* --- Call-to-Action Knoppen (.btn-cta) --- */
 .btn-cta {
+  /* Inherit .btn, maar maak groter/opvallender */
   padding: 1rem 2.2rem;
   font-size: 1.1rem;
   /* Standaard .btn-cta (zonder .btn-light) is ORANJE */
   background-color: var(--color-accent);
   border-color: var(--color-accent);
 }
+
+/* Hover/Focus voor de standaard (oranje) .btn-cta */
 .btn-cta:hover,
 .btn-cta:focus {
   background-color: #E05A00; /* Donkerder Oranje */
   border-color: #E05A00;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  color: var(--color-text-light);
+  transform: translateY(-3px); /* Iets meer lift */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Iets meer schaduw */
 }
 
-/* --- Lichte Call-to-Action Knop (.btn-light) --- */
+/* --- Lichte Call-to-Action Knop (.btn-light binnen .btn-cta) --- */
 .btn-cta.btn-light {
   background-color: var(--color-background); /* Wit */
-  border-color: var(--color-border);
-  color: var(--color-primary); /* Blauwe tekst */
+  border-color: var(--color-border);         /* Subtiele grijze rand */
+  color: var(--color-primary);              /* VVD Blauwe tekst */
 }
+
+/* Hover/Focus voor de .btn-light */
 .btn-cta.btn-light:hover,
 .btn-cta.btn-light:focus {
   background-color: var(--color-accent); /* Wordt Oranje */
   border-color: var(--color-accent);
-  color: var(--color-text-light); /* Tekst wordt Wit */
+  color: var(--color-text-light);      /* Tekst wordt Wit */
+  /* Gebruik dezelfde transform/shadow als de oranje .btn-cta */
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* --- Specifieke Hero CTA Knop (met blauwe onderlaag effect - ALTERNATIEVE AANPAK) --- */
+/* --- Specifieke Hero CTA Knop (met blauwe onderlaag effect) --- */
 .hero-cta-button {
-  background-color: var(--color-accent); /* ORANJE Basis */
+  /* Inherit .btn, maar deze is ORANJE by default */
+  background-color: var(--color-accent);
   border-color: var(--color-accent);
-  color: var(--color-text-light); /* Witte tekst */
+  color: var(--color-text-light);
+  /* Grotere padding/font-size */
   padding: 0.9rem 2.2rem;
   margin-top: 2rem;
   font-size: 1.05rem;
-  overflow: hidden; /* BELANGRIJK: Knip pseudo-element af */
+  overflow: visible; /* BELANGRIJK: Laat pseudo-element zien */
 }
 
-/* De Blauwe laag (nu met z-index 0, binnen de knop) */
+/* De Blauwe Onderlaag */
 .hero-cta-button::after {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: var(--color-primary); /* BLAUWE laag */
-  border-radius: inherit;
-  z-index: 0;           /* !!! OP GELIJK NIVEAU ALS KNOP BG !!! */
-  opacity: 0;           /* Start onzichtbaar */
+  background-color: var(--color-primary); /* VVD Blauw */
+  border-radius: inherit; /* Match knop afronding */
+  z-index: -1; /* ACHTER de knop */
+  opacity: 0;
   transform: translate(0px, 0px);
   transition: transform 0.25s ease-out, opacity 0.25s ease-out;
 }
 
-/* De tekst SPAN binnen de knop */
-.hero-cta-button .btn-text {
-    position: relative; /* Nodig om z-index te laten werken */
-    z-index: 1;         /* !!! TEKST BOVEN DE ::after LAAG !!! */
-}
-
-/* --- Hover/Focus effecten voor Hero knop --- */
+/* Hover/Focus voor de Hero knop zelf (alleen lift) */
 .hero-cta-button:hover,
 .hero-cta-button:focus {
-  /* 1. Oranje knop zelf (verandert niet van kleur) gaat omhoog */
-  transform: translateY(-4px);
-  /* Verwijder hover-kleur van algemene .btn:hover */
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-text-light);
-  box-shadow: none; /* Geen extra schaduw hier */
+  background-color: var(--color-accent); /* Blijft oranje */
+  border-color: var(--color-accent);     /* Blijft oranje */
+  color: var(--color-text-light);      /* Blijft wit */
+  transform: translateY(-4px);         /* Alleen de lift */
+  box-shadow: none;                    /* Geen extra schaduw op oranje deel */
   outline: none;
 }
 
-/* 2. Blauwe laag ::after verschuift en wordt zichtbaar */
+/* Hover/Focus voor de blauwe ::after laag */
 .hero-cta-button:hover::after,
 .hero-cta-button:focus::after {
   opacity: 1; /* Maak blauwe laag zichtbaar */
@@ -3221,13 +3216,16 @@ label {
 .btn-small {
   padding: 0.5rem 1rem;
   font-size: 0.8rem;
+  /* Erft verder van .btn */
 }
 
 /* --- Knop in Standpunt Content --- */
 .standpunt-content .btn {
+  /* Specifieke aanpassingen voor knop in standpunt */
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  padding: 0.5rem 1rem; /* Kleiner dan standaard .btn */
+  font-size: 0.9rem;   /* Match standaard .btn */
+  /* Achtergrond/kleur erft van .btn, hover erft van .btn:hover */
 }
 
 /* ============================================= */
