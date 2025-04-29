@@ -619,20 +619,6 @@ textarea:focus {
   color: var(--color-text-light); /* Zeker stellen dat het wit is */
 }
 
-.btn-cta {
-  /* Erft van .btn, maar met accentkleur */
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  padding: 0.8rem 2rem; /* Nog grotere padding */
-  font-size: 1.1rem; /* Groter font */
-}
-
-.btn-cta:hover,
-.btn-cta:focus {
-  background-color: #e05a00; /* Donkerder oranje */
-  border-color: #e05a00;
-  color: var(--color-text-light);
-}
 
 @media (min-width: 768px) {
   /* Naast elkaar vanaf tablet */
