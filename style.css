@@ -3212,8 +3212,8 @@ label {
 /* Hover/Focus voor de blauwe ::after laag */
 .hero-cta-button:hover::after,
 .hero-cta-button:focus::after {
-  opacity: 1; /* Maak laag zichtbaar */
-  transform: translate(4px, 4px); /* Verschuif laag */
+  opacity: 1; /* Maak blauwe laag zichtbaar */
+  transform: translate(4px, 4px); /* Verschuif blauwe laag */
 }
 
 /* --- Kleine Knop (.btn-small) --- */
