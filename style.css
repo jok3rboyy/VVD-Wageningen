@@ -3312,3 +3312,56 @@ label {
   padding-top: 10vh; /* Experimenteer met deze waarde (bv. 8vh, 12vh, 5rem, etc.) */
   /* padding-bottom: 5vh; /* Eventueel ook onderaan wat padding */
 }
+
+
+.hero-cta-button {
+  /* ... andere basisstijlen zoals background, color, padding, etc ... */
+  display: inline-block;
+  position: relative; /* BELANGRIJK: voor positionering pseudo-element */
+  z-index: 1;         /* Knop inhoud boven de 'schaduw' */
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  color: var(--color-text-light);
+  border-radius: 8px; /* Of je gewenste radius */
+  padding: 0.9rem 2.2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: visible; /* Zorg dat pseudo-element niet wordt afgeknipt */
+
+  /* BELANGRIJK: Transitie voor knop-lift en pseudo-element */
+  transition: transform 0.25s ease-out;
+}
+
+/* Voeg een pseudo-element toe (dit wordt de blauwe laag) */
+.hero-cta-button::after {
+  content: '';
+  position: absolute;
+  /* top: 0; left: 0; width: 100%; height: 100%; */
+  inset: 0; /* Kortere manier voor bovenstaande */
+  background-color: var(--color-primary); /* VVD Blauw */
+  border-radius: inherit; /* Neem border-radius over */
+  z-index: -1; /* Plaats ACHTER de knopinhoud */
+  opacity: 0; /* Begin verborgen */
+  transform: translate(0px, 0px); /* Begin op dezelfde positie */
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+/* --- Hover/Focus stijl voor Hero CTA - Blauwe Onderlaag --- */
+.hero-cta-button:hover,
+.hero-cta-button:focus {
+  /* 1. Knop zelf gaat omhoog */
+  transform: translateY(-4px); /* Lift effect (pas -4px aan naar wens) */
+  text-decoration: none; /* Voorkom underline */
+  /* Optioneel: kleine schaduw op de oranje knop zelf */
+  /* box-shadow: 0 6px 12px rgba(0,0,0,0.1); */
+}
+
+/* 2. Het ::after element (blauwe laag) verschuift en wordt zichtbaar */
+.hero-cta-button:hover::after,
+.hero-cta-button:focus::after {
+  opacity: 1; /* Maak zichtbaar */
+  /* Verschuif de laag - pas px waarden aan voor gewenst effect */
+  transform: translate(4px, 4px);
+}
