@@ -3074,7 +3074,6 @@ label {
   padding-top: 10vh; /* Experimenteer met deze waarde (bv. 8vh, 12vh, 5rem, etc.) */
   /* padding-bottom: 5vh; /* Eventueel ook onderaan wat padding */
 }
-
 /* ============================================= */
 /* BUTTON STYLING (DEFINITIEF & OPGESCHOOND)   */
 /* ============================================= */
@@ -3096,7 +3095,7 @@ label {
   border: 2px solid var(--color-primary);
   border-radius: 8px; /* Jouw voorkeur, of var(--border-radius) */
   cursor: pointer;
-  overflow: hidden;     /* Knip eventuele pseudo-elementen af (tenzij anders nodig) */
+  overflow: visible; /* Veranderd van hidden naar visible voor ::after */
   user-select: none;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
@@ -3169,17 +3168,16 @@ label {
 }
 
 /* --- Specifieke Hero CTA Knop (met blauwe onderlaag effect) --- */
+/* Inherit van .btn, maar overschrijf basiskleur naar ORANJE */
 .hero-cta-button {
-  /* Inherit .btn, maar overschrijf basiskleur naar ORANJE */
-  background-color: var(--color-accent);
+  background-color: var(--color-accent); /* Basis = ORANJE */
   border-color: var(--color-accent);
   color: var(--color-text-light);
   /* Specifieke padding/margin/font-size */
   padding: 0.9rem 2.2rem;
   margin-top: 2rem;
   font-size: 1.05rem;
-  z-index: 1;   
-  overflow: visible; /* !!! BELANGRIJK: Nodig voor ::after !!! */
+  overflow: visible;    /* !!! BELANGRIJK: Laat ::after zien !!! */
   /* z-index: 1; is al gezet door .btn */
   /* position: relative; is al gezet door .btn */
 }
@@ -3213,7 +3211,7 @@ label {
 .hero-cta-button:hover::after,
 .hero-cta-button:focus::after {
   opacity: 1; /* Maak blauwe laag zichtbaar */
-  transform: translate(4px, 4px); /* Verschuif blauwe laag */
+  transform: translate(4px, 4px); /* Verschuif laag */
 }
 
 /* --- Kleine Knop (.btn-small) --- */
@@ -3256,69 +3254,4 @@ label {
      transform: translateY(-3px); /* Kleinere lift */
   }
 }
-/* ================================================= */
-/* Hero CTA Knop (z-index: -1 - Final Attempt)     */
-/* ================================================= */
 
-.hero-cta-button {
-  /* Erft van .btn (incl. position: relative, display: inline-block) */
-  /* Overschrijf alleen wat nodig is */
-  background-color: var(--color-accent); /* ORANJE */
-  border-color: var(--color-accent);
-  color: var(--color-text-light);
-  padding: 0.9rem 2.2rem;
-  margin-top: 2rem;
-  font-size: 1.05rem;
-  overflow: visible; /* Nodig om ::after te zien */
-  z-index: auto;     /* !!! VERWIJDER EXPLICIETE Z-INDEX 1 !!! */
-  /* transition komt van .btn */
-}
-
-/* De Blauwe Onderlaag */
-.hero-cta-button::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-primary); /* BLAUW */
-  border-radius: inherit;
-  z-index: -1;          /* !!! ACHTER de knop !!! */
-  opacity: 0;
-  transform: translate(0px, 0px);
-  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
-}
-
-/* Hover/Focus voor de Hero knop (alleen lift) */
-/* Overschrijft de algemene .btn:hover */
-.hero-cta-button:hover,
-.hero-cta-button:focus {
-  background-color: var(--color-accent); /* Blijft oranje */
-  border-color: var(--color-accent);
-  color: var(--color-text-light);
-  transform: translateY(-4px); /* Lift */
-  box-shadow: none; /* Geen extra schaduw */
-  outline: none;
-}
-
-/* Hover/Focus voor de blauwe ::after laag */
-.hero-cta-button:hover::after,
-.hero-cta-button:focus::after {
-  opacity: 1;
-  transform: translate(4px, 4px); /* Verschuif */
-}
-
-/* --- Responsive aanpassingen --- */
-@media (max-width: 767px) {
-    .hero-cta-button {
-        margin-top: 1.5rem;
-        padding: 0.8rem 1.8rem;
-        font-size: 1rem;
-    }
-    .hero-cta-button:hover::after,
-    .hero-cta-button:focus::after {
-       transform: translate(3px, 3px);
-    }
-    .hero-cta-button:hover,
-    .hero-cta-button:focus {
-       transform: translateY(-3px);
-    }
-}
