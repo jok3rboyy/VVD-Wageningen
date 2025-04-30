@@ -3247,5 +3247,11 @@ label {
   .hero-cta-button:focus {
      transform: translateY(-3px); /* Kleinere lift */
   }
+  .hero-cta-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
 }
 
