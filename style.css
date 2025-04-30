@@ -2153,9 +2153,7 @@ button:focus-visible {
   font-weight: bold;
 }
 
-.dropdown-menu li a:hover {
-  background-color: #f2f2f2;
-}
+
 
 /* Toon dropdown bij hover (desktop) */
 .dropdown:hover .dropdown-menu {
