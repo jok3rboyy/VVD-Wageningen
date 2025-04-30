@@ -3179,28 +3179,22 @@ label {
 /* --- Specifieke Hero CTA Knop (met blauwe onderlaag effect) --- */
 /* Inherit van .btn, maar overschrijf basiskleur naar ORANJE */
 .hero-cta-button {
-  position: relative;
   background-color: var(--color-accent); /* Oranje */
-  border: 2px solid var(--color-accent);
   color: var(--color-text-light);
-  padding: 0.9rem 2.2rem;
-  font-size: 1.05rem;
+  padding: 1rem 2.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  overflow: visible;
-  z-index: 2; /* ← Forceer de knop bovenaan */
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.hero-cta-button::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-primary); /* Blauw */
-  border-radius: inherit;
-  opacity: 0;
-  transform: translate(0, 0);
-  z-index: 1; /* ← NIET -1, maar ONDER de knop (want knop heeft nu 2) */
-  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
-  pointer-events: none;
+.hero-cta-button:hover {
+  box-shadow: 0 0 0 4px var(--color-primary), 0 0 0 8px rgba(10, 44, 202, 0.4);
+  transform: translateY(-2px);
 }
 
 /* Hover-effect: laat de blauwe laag verschijnen */
@@ -3254,50 +3248,3 @@ label {
   }
 }
 
-
-.hero-cta-button .btn-text {
-  position: relative;
-  z-index: 3; /* hoger dan ::after (1) en button zelf (2) */
-}
-
-.hero-cta-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.hero-cta-wrapper::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-primary); /* blauw */
-  border-radius: 8px;
-  z-index: 0; /* onder de knop */
-  opacity: 0;
-  transform: translate(0, 0);
-  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
-  pointer-events: none;
-}
-
-.hero-cta-wrapper:hover::before {
-  opacity: 1;
-  transform: translate(4px, 4px);
-}
-
-.hero-cta-button {
-  position: relative;
-  z-index: 1;
-  background-color: var(--color-accent); /* oranje */
-  border: 2px solid var(--color-accent);
-  color: var(--color-text-light);
-  padding: 0.9rem 2.2rem;
-  font-size: 1.05rem;
-  font-weight: 700;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
-  transition: transform 0.25s ease-out;
-}
-
-.hero-cta-button:hover {
-  transform: translateY(-3px);
-}
