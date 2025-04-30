@@ -3214,10 +3214,17 @@ label {
      transform: translateY(-3px); /* Kleinere lift */
   }
   .hero-cta-button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0.6rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    max-width: max-content;
   }
+  
   
 }
 
