@@ -3259,3 +3259,45 @@ label {
   position: relative;
   z-index: 3; /* hoger dan ::after (1) en button zelf (2) */
 }
+
+.hero-cta-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-cta-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-primary); /* blauw */
+  border-radius: 8px;
+  z-index: 0; /* onder de knop */
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+  pointer-events: none;
+}
+
+.hero-cta-wrapper:hover::before {
+  opacity: 1;
+  transform: translate(4px, 4px);
+}
+
+.hero-cta-button {
+  position: relative;
+  z-index: 1;
+  background-color: var(--color-accent); /* oranje */
+  border: 2px solid var(--color-accent);
+  color: var(--color-text-light);
+  padding: 0.9rem 2.2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.25s ease-out;
+}
+
+.hero-cta-button:hover {
+  transform: translateY(-3px);
+}
