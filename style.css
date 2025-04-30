@@ -566,6 +566,8 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  position: relative; /* Belangrijk voor stacking context */
+  z-index: 0;
 }
 
 .cta-text {
@@ -3074,6 +3076,7 @@ label {
   padding-top: 10vh; /* Experimenteer met deze waarde (bv. 8vh, 12vh, 5rem, etc.) */
   /* padding-bottom: 5vh; /* Eventueel ook onderaan wat padding */
 }
+
 /* ============================================= */
 /* BUTTON STYLING (DEFINITIEF & OPGESCHOOND)   */
 /* ============================================= */
@@ -3099,6 +3102,8 @@ label {
   user-select: none;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1;
 
   /* Algemene transitie */
   transition: background-color 0.25s ease-out,
@@ -3170,17 +3175,18 @@ label {
 /* --- Specifieke Hero CTA Knop (met blauwe onderlaag effect) --- */
 /* Inherit van .btn, maar overschrijf basiskleur naar ORANJE */
 .hero-cta-button {
-  background-color: var(--color-accent); /* Basis = ORANJE */
+  position: relative;
+  z-index: 1; /* boven de onderlaag */
+  background-color: var(--color-accent);
   border-color: var(--color-accent);
   color: var(--color-text-light);
-  /* Specifieke padding/margin/font-size */
   padding: 0.9rem 2.2rem;
   margin-top: 2rem;
   font-size: 1.05rem;
-  overflow: visible;    /* !!! BELANGRIJK: Laat ::after zien !!! */
-  /* z-index: 1; is al gezet door .btn */
-  /* position: relative; is al gezet door .btn */
+  overflow: visible;
+  will-change: transform;
 }
+
 
 /* De Blauwe Onderlaag */
 .hero-cta-button::after {
