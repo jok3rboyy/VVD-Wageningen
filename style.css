@@ -2116,7 +2116,7 @@ button:focus-visible {
   position: static;
   padding-left: 1rem;
   flex-direction: column;
-  min-width: 240px;
+  min-width: 200px;
 }
 
 /* Als dropdown 'open' is, tonen */
