@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Doe mee met VVD Wageningen! Ontdek hoe u actief kunt bijdragen aan de lokale politiek, meedenken over standpunten en impact kunt maken op Wageningen."
+      content="Blijf op de hoogte van VVD Wageningen. Meld u aan voor onze nieuwsbrief, volg ons op social media en ontdek trainingen en bijeenkomsten van de VVD in Wageningen."
     />
-    <title>Doe Mee - VVD Wageningen | Liberale Partij Gemeenteraad Wageningen</title>
+    <title>Meer Info - VVD Wageningen | Liberale Partij Gemeenteraad Wageningen</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="apple-touch-icon"
@@ -63,8 +63,8 @@
             <a href="over-ons.html" class="nav-link"> over ons <span class="dropdown-arrow">▼</span></a>
             <ul class="dropdown-menu">
               <li><a href="over-ons.html">Ons Team</a></li>
-              <li><a href="doe-mee.html" class="active">Doe mee!</a></li>
-              <li><a href="meer-info.html">Meer Info</a></li>
+              <li><a href="doe-mee.html">Doe mee!</a></li>
+              <li><a href="meer-info.html" class="active">Meer Info</a></li>
             </ul>
           </li>
 
@@ -85,54 +85,124 @@
     <main>
       <section class="page-header">
         <div class="container">
-          <h1>Doe mee.</h1>
+          <h1>Blijf op de hoogte.</h1>
           <p class="intro-text">
-            Wil je actief bijdragen aan de toekomst van Wageningen? Bij de VVD Wageningen zijn er verschillende manieren om mee te doen en impact te maken op onze stad.
+            Wil je niets missen van de VVD Wageningen? Hier vind je alle manieren om in contact te blijven en op de hoogte te blijven van onze activiteiten.
           </p>
         </div>
       </section>
 
       <section class="section-padding">
         <div class="container">
-          <h2>Waarom meedoen?</h2>
+          <h2>Nieuwsbrief aanmelden</h2>
+          <p>Ontvang maandelijks nieuws en updates van VVD Wageningen.</p>
+          
+          <div class="form-container">
+            <div class="contact-form">
+              <form id="newsletter-form" action="https://formsubmit.co/vvdwageningen@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Nieuwsbrief aanmelding VVD Wageningen">
+                
+                <div class="form-group">
+                  <label for="name">Naam</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_next" value="https://vvdwageningen.nl/bedankt-aanmelding.html">
+                
+                <button type="submit" class="btn">Aanmelden</button>
+              </form>
+              <p><small>Door je aan te melden ga je akkoord met het ontvangen van onze nieuwsbrief. Je kunt je altijd weer afmelden via de link onderaan elke nieuwsbrief.</small></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding bg-light">
+        <div class="container">
+          <h2>Volg ons</h2>
+          <p>We delen regelmatig updates, meningen en evenementen op onze socials.</p>
+          
+          <div class="standpunten-grid">
+            <div class="standpunt-card">
+              <div class="standpunt-header">
+                <i class="fab fa-facebook-f" style="font-size: 2.5rem; color: #0A2CCA;" aria-hidden="true"></i>
+                <h3>Facebook</h3>
+              </div>
+              <div class="standpunt-content">
+                <p>Volg ons op Facebook voor dagelijkse updates, foto's van evenementen en interactie met onze fractie.</p>
+                <a href="https://www.facebook.com/VVDWageningen/" target="_blank" rel="noopener noreferrer" class="btn">Volg ons op Facebook</a>
+              </div>
+            </div>
+
+            <div class="standpunt-card">
+              <div class="standpunt-header">
+                <i class="fab fa-instagram" style="font-size: 2.5rem; color: #0A2CCA;" aria-hidden="true"></i>
+                <h3>Instagram</h3>
+              </div>
+              <div class="standpunt-content">
+                <p>Op Instagram delen we visuele updates, korte video's en hoogtepunten van onze activiteiten in Wageningen.</p>
+                <a href="https://www.instagram.com/vvdwageningen/" target="_blank" rel="noopener noreferrer" class="btn">Volg ons op Instagram</a>
+              </div>
+            </div>
+
+            <div class="standpunt-card">
+              <div class="standpunt-header">
+                <i class="fab fa-linkedin-in" style="font-size: 2.5rem; color: #0A2CCA;" aria-hidden="true"></i>
+                <h3>LinkedIn</h3>
+              </div>
+              <div class="standpunt-content">
+                <p>Voor professionele updates, politieke standpunten en netwerkmogelijkheden kun je ons volgen op LinkedIn.</p>
+                <a href="https://www.linkedin.com/company/vvd/" target="_blank" rel="noopener noreferrer" class="btn">Volg ons op LinkedIn</a>
+              </div>
+            </div>
+
+            <div class="standpunt-card">
+              <div class="standpunt-header">
+                <i class="fab fa-twitter" style="font-size: 2.5rem; color: #0A2CCA;" aria-hidden="true"></i>
+                <h3>X (Twitter)</h3>
+              </div>
+              <div class="standpunt-content">
+                <p>Volg ons op X voor snelle updates, politieke standpunten en interactie met onze fractieleden.</p>
+                <a href="https://x.com/vvdwageningen" target="_blank" rel="noopener noreferrer" class="btn">Volg ons op X</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding">
+        <div class="container">
+          <h2>Trainingen & Bijeenkomsten</h2>
+          <p>Wil je jezelf ontwikkelen of anderen ontmoeten?</p>
+          
           <div class="standpunten-grid">
             <div class="standpunt-card">
               <div class="standpunt-header">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  <path d="m9 12 2 2 4-4" />
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
                 </svg>
-                <h3>Actief bijdragen aan lokale politiek</h3>
+                <h3>Introtraining lokale politiek</h3>
               </div>
               <div class="standpunt-content">
-                <p>Als lid van de VVD Wageningen kun je direct invloed uitoefenen op de lokale besluitvorming. Je kunt meedenken over standpunten, deelnemen aan werkgroepen en zelfs kandidaat worden voor de gemeenteraad.</p>
+                <p>Maak kennis met de basis van lokale politiek. Leer hoe de gemeenteraad werkt, wat de rol van een raadslid is en hoe besluitvorming plaatsvindt.</p>
               </div>
             </div>
 
             <div class="standpunt-card">
               <div class="standpunt-header">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 16v-4" />
-                  <path d="M12 8h.01" />
+                  <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+                  <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
                 </svg>
-                <h3>Meedenken over standpunten</h3>
+                <h3>Debattraining voor jongeren</h3>
               </div>
               <div class="standpunt-content">
-                <p>Jouw ideeën en inzichten zijn waardevol. Door mee te doen help je ons om standpunten te ontwikkelen die aansluiten bij wat er leeft in Wageningen. Samen zorgen we voor een sterk liberaal geluid in de gemeenteraad.</p>
-              </div>
-            </div>
-
-            <div class="standpunt-card">
-              <div class="standpunt-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-                  <circle cx="12" cy="12" r="3" />
-                </svg>
-                <h3>Impact maken op Wageningen</h3>
-              </div>
-              <div class="standpunt-content">
-                <p>Door je aan te sluiten bij de VVD Wageningen kun je daadwerkelijk bijdragen aan een beter Wageningen. Of het nu gaat om wonen, veiligheid, duurzaamheid of economie - samen maken we het verschil.</p>
+                <p>Speciaal voor jongeren bieden we debattrainingen aan. Leer hoe je overtuigend argumenteert, goed luistert en effectief reageert in politieke discussies.</p>
               </div>
             </div>
 
@@ -144,73 +214,16 @@
                   <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
                   <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
-                <h3>Leuke borrels & trainingen</h3>
+                <h3>Fractiebijeenkomst – open voor gasten</h3>
               </div>
               <div class="standpunt-content">
-                <p>Politiek is niet alleen serieus, maar ook gezellig! We organiseren regelmatig borrels, trainingen en andere bijeenkomsten waar je andere liberalen kunt ontmoeten en je politieke vaardigheden kunt ontwikkelen.</p>
+                <p>Onze fractievergaderingen zijn regelmatig open voor gasten. Kom langs, maak kennis met onze fractieleden en krijg inzicht in het politieke proces.</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="section-padding bg-light">
-        <div class="container">
-          <h2>Hoe kun je meedoen?</h2>
-          <div class="standpunten-grid">
-            <div class="standpunt-card">
-              <div class="standpunt-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M3 12h18" />
-                  <path d="M3 6h18" />
-                  <path d="M3 18h18" />
-                </svg>
-                <h3>Sluit je aan bij een brainstormavond</h3>
-              </div>
-              <div class="standpunt-content">
-                <p>Regelmatig organiseren we brainstormavonden over actuele thema's in Wageningen. Hier kun je je ideeën delen en meedenken over oplossingen voor lokale uitdagingen.</p>
-              </div>
-            </div>
-
-            <div class="standpunt-card">
-              <div class="standpunt-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect width="18" height="18" x="3" y="3" rx="2" />
-                  <path d="M7 7h10" />
-                  <path d="M7 12h10" />
-                  <path d="M7 17h10" />
-                </svg>
-                <h3>Kom eens langs bij een fractievergadering</h3>
-              </div>
-              <div class="standpunt-content">
-                <p>Onze fractievergaderingen zijn openbaar. Kom eens kijken hoe we werken, welke onderwerpen we bespreken en hoe we tot standpunten komen. Je bent van harte welkom!</p>
-              </div>
-            </div>
-
-            <div class="standpunt-card">
-              <div class="standpunt-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M12 8a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2v-4h2" />
-                  <circle cx="12" cy="12" r="10" />
-                </svg>
-                <h3>Help mee in campagnetijd</h3>
-              </div>
-              <div class="standpunt-content">
-                <p>Tijdens verkiezingscampagnes kunnen we alle hulp gebruiken! Of je nu wilt flyeren, posters plakken, social media berichten maken of meedenken over de campagnestrategie - er is altijd iets wat bij jou past.</p>
-              </div>
-            </div>
-
-            <div class="standpunt-card">
-              <div class="standpunt-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0A2CCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-                <h3>Neem contact met ons op</h3>
-              </div>
-              <div class="standpunt-content">
-                <p>Wil je meer informatie of heb je specifieke vragen? Neem dan contact met ons op via het formulier of stuur ons een e-mail. We vertellen je graag meer over de mogelijkheden om mee te doen.</p>
-              </div>
-            </div>
+          
+          <div class="center-text" style="margin-top: 2rem;">
+            <p>Mail ons voor de actuele planning: <a href="mailto:vvdwageningen@gmail.com">vvdwageningen@gmail.com</a></p>
           </div>
         </div>
       </section>
@@ -218,13 +231,13 @@
       <section class="cta section-padding">
         <div class="container cta-container">
           <div class="cta-content">
-            <h2 class="cta-title">Kom kennismaken!</h2>
+            <h2 class="cta-title">Heb je vragen?</h2>
             <p class="cta-text">
-              Benieuwd naar de VVD Wageningen? Stuur ons een e-mail en we nemen snel contact met je op.
+              Neem contact met ons op voor meer informatie over onze activiteiten, trainingen of hoe je kunt meedoen.
             </p>
           </div>
           <div class="cta-buttons">
-            <a href="mailto:vvdwageningen@gmail.com" class="btn btn-cta">Stuur een e-mail</a>
+            <a href="contact.html" class="btn btn-cta">Neem Contact Op</a>
           </div>
         </div>
       </section>

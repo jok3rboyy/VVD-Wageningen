@@ -37,6 +37,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://vvdwageningen.netlify.app/meer-info.html</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vvdwageningen.netlify.app/doe-mee.html</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://vvdwageningen.netlify.app/standpunt-wonen.html</loc>
     <lastmod>2025-04-23</lastmod>
     <changefreq>monthly</changefreq>
