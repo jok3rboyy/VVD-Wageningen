@@ -495,7 +495,7 @@ function generateNieuws() {
           title: data.title || "Geen titel",
           date: data.date || new Date(0).toISOString(),
           excerpt: data.excerpt || "",
-          thumbnail: data.thumbnail || "/images/VVD_Logo_01_CMYK_Kleur_1200DPI.jpg", // Controleer fallback
+          thumbnail: data.thumbnail || "/images/VVD_Logo_01_RGB_Kleur_1200DPI.png", // Controleer fallback
           path: `/nieuws/${slug}.html`,
           category: data.category || "algemeen" // Categorie voor filteren
         });

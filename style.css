@@ -417,6 +417,12 @@ textarea:focus {
   object-fit: cover;
 }
 
+.card img[src$="VVD_Logo_01_RGB_Kleur_1200DPI.png"] {
+  padding: 12px;
+  background-color: #fff; /* optioneel: zorgt dat transparante randen wit lijken */
+  box-sizing: border-box;
+  border-radius: 8px; /* optioneel */
+}
 .card-content {
   /* Padding binnen de kaart, niet op kaart zelf */
   padding: 1.25rem; /* Meer padding */
