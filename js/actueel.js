@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alleNieuwsItems.forEach(item => {
                 const labelText = item.category ? item.category.charAt(0).toUpperCase() + item.category.slice(1) : 'Nieuws';
                 const cardText = item.title || 'Geen titel';
-                const imageUrl = item.thumbnail || '/images/default-nieuws-placeholder.png';
+                const imageUrl = item.thumbnail || '/images/VVD_Logo_01_CMYK_Kleur_1200DPI.jpg';
                 const formattedDate = formatteerDatum(item.date);
 
                 const cardHtml = `
