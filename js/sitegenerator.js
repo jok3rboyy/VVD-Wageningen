@@ -111,35 +111,33 @@ function createNieuwsHtmlPage(data, htmlContent) {
     </nav>
   </header>
 
-  <main>
-    <section class="page-header${data.thumbnail ? ' page-header-met-afbeelding' : ''}"${data.thumbnail ? ` style="background-image: url('${data.thumbnail}');"` : ''}>
-  <div class="container">
-    <h1>${data.title || "Geen titel"}</h1>
-    <p class="artikel-meta">
-      Gepubliceerd op: ${formattedDate}
-      ${data.category ? ` | Categorie: ${data.category.charAt(0).toUpperCase() + data.category.slice(1)}` : ''}
-    </p>
-  </div>
-</section>
+<main>
+  <section class="section-padding">
+    <div class="container artikel-container">
+      <header class="artikel-header">
+        <h1>${data.title || "Geen titel"}</h1>
+        <p class="artikel-meta">
+          Gepubliceerd op: ${formattedDate}
+          ${data.category ? ` | Categorie: ${data.category.charAt(0).toUpperCase() + data.category.slice(1)}` : ''}
+        </p>
+      </header>
 
-    <section class="section-padding">
-      <div class="container artikel-container"> <!-- Nieuwe class voor styling -->
-        <div class="artikel-inhoud text-content"> <!-- Hergebruik text-content of maak nieuwe class -->
-          ${htmlContent} <!-- Hier komt de markdown inhoud -->
-        </div>
-        <div class="artikel-navigatie"> <!-- Nieuwe class voor styling -->
-           <a href="/actueel.html" class="terug-knop link-arrow">← Terug naar Actueel</a> <!-- Controleer pad/class -->
-        </div>
+      <div class="artikel-inhoud text-content">
+        ${htmlContent}
       </div>
-    </section>
 
-    <!-- Optioneel: Je kunt hier de CTA sectie toevoegen als je die op elke nieuws pagina wilt -->
-    <!--
-    <section class="cta section-padding">
-        ... CTA inhoud ...
-    </section>
-    -->
-  </main>
+      ${data.thumbnail ? `
+        <div class="artikel-afbeelding">
+          <img src="${data.thumbnail}" alt="Afbeelding bij artikel">
+        </div>
+      ` : ''}
+
+      <div class="artikel-navigatie">
+        <a href="/actueel.html" class="terug-knop link-arrow">← Terug naar Actueel</a>
+      </div>
+    </div>
+  </section>
+</main>
 
  <footer class="footer">
       <div class="container">
