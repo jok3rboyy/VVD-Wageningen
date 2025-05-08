@@ -8,7 +8,7 @@ media_folder: "images/uploads" # Waarschijnlijk zonder "VVD-Wageningen/" ervoor
 public_folder: "/images/uploads" # Het URL pad naar de media
 
 # Vul hier de correcte URL in
-site_url: https://vvdwageningen.netlify.app # Of je dev URL
+site_url: https://vvdwageningen.nl # Of je dev URL
 
 # Content Collections
 collections:

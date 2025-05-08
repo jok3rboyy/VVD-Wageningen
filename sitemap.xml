@@ -1,87 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://vvdwageningen.netlify.app/</loc>
-    <lastmod>2025-04-23</lastmod>
+    <loc>https://vvdwageningen.nl/</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://vvdwageningen.netlify.app/over-ons.html</loc>
-    <lastmod>2025-04-23</lastmod>
+    <loc>https://vvdwageningen.nl/over-ons.html</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+<!-- 
   <url>
-    <loc>https://vvdwageningen.netlify.app/standpunten.html</loc>
-    <lastmod>2025-04-23</lastmod>
+    <loc>https://vvdwageningen.nl/standpunten.html</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+  </url> -->
+
   <url>
-    <loc>https://vvdwageningen.netlify.app/contact.html</loc>
-    <lastmod>2025-04-23</lastmod>
+    <loc>https://vvdwageningen.nl/contact.html</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://vvdwageningen.netlify.app/actueel.html</loc>
-    <lastmod>2025-04-23</lastmod>
+    <loc>https://vvdwageningen.nl/actueel.html</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- <url>
+    <loc>https://vvdwageningen.nl/actiepunten.html</loc>
+    <lastmod>2025-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url> -->
+
   <url>
-    <loc>https://vvdwageningen.netlify.app/actiepunten.html</loc>
-    <lastmod>2025-04-23</lastmod>
+    <loc>https://vvdwageningen.nl/meer-info.html</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://vvdwageningen.netlify.app/meer-info.html</loc>
-    <lastmod>2025-05-01</lastmod>
+    <loc>https://vvdwageningen.nl/doe-mee.html</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+<!-- 
   <url>
-    <loc>https://vvdwageningen.netlify.app/doe-mee.html</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://vvdwageningen.netlify.app/standpunt-wonen.html</loc>
-    <lastmod>2025-04-23</lastmod>
+    <loc>https://vvdwageningen.nl/standpunt-wonen.html</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://vvdwageningen.netlify.app/standpunt-economie.html</loc>
-    <lastmod>2025-04-23</lastmod>
+    <loc>https://vvdwageningen.nl/standpunt-economie.html</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://vvdwageningen.netlify.app/standpunt-veiligheid.html</loc>
-    <lastmod>2025-04-23</lastmod>
+    <loc>https://vvdwageningen.nl/standpunt-veiligheid.html</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://vvdwageningen.netlify.app/standpunt-duurzaamheid.html</loc>
-    <lastmod>2025-04-23</lastmod>
+    <loc>https://vvdwageningen.nl/standpunt-duurzaamheid.html</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://vvdwageningen.netlify.app/standpunt-onderwijs.html</loc>
-    <lastmod>2025-04-23</lastmod>
+    <loc>https://vvdwageningen.nl/standpunt-onderwijs.html</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://vvdwageningen.netlify.app/standpunt-bestuur.html</loc>
-    <lastmod>2025-04-23</lastmod>
+    <loc>https://vvdwageningen.nl/standpunt-bestuur.html</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
+  </url> -->
+
 </urlset>
