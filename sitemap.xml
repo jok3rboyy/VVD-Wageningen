@@ -14,13 +14,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-<!-- 
-  <url>
-    <loc>https://vvdwageningen.nl/standpunten.html</loc>
-    <lastmod>2025-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url> -->
 
   <url>
     <loc>https://vvdwageningen.nl/contact.html</loc>
@@ -36,13 +29,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- <url>
-    <loc>https://vvdwageningen.nl/actiepunten.html</loc>
-    <lastmod>2025-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url> -->
-
   <url>
     <loc>https://vvdwageningen.nl/meer-info.html</loc>
     <lastmod>2025-05-08</lastmod>
@@ -56,47 +42,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-<!-- 
-  <url>
-    <loc>https://vvdwageningen.nl/standpunt-wonen.html</loc>
-    <lastmod>2025-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://vvdwageningen.nl/standpunt-economie.html</loc>
-    <lastmod>2025-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://vvdwageningen.nl/standpunt-veiligheid.html</loc>
-    <lastmod>2025-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://vvdwageningen.nl/standpunt-duurzaamheid.html</loc>
-    <lastmod>2025-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://vvdwageningen.nl/standpunt-onderwijs.html</loc>
-    <lastmod>2025-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://vvdwageningen.nl/standpunt-bestuur.html</loc>
-    <lastmod>2025-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url> -->
-
 </urlset>
