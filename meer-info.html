@@ -101,7 +101,8 @@
             <div class="contact-form">
               <form id="newsletter-form" action="https://formsubmit.co/vvdwageningen@gmail.com" method="POST">
                 <input type="hidden" name="_subject" value="Nieuwsbrief aanmelding VVD Wageningen">
-                
+                <input type="hidden" name="_captcha" value="true">
+                <input type="hidden" name="_template" value="box">
                 <div class="form-group">
                   <label for="name">Naam</label>
                   <input type="text" id="name" name="name" required />
@@ -111,14 +112,18 @@
                   <input type="email" id="email" name="email" required />
                 </div>
                 <input type="text" name="_honey" style="display:none">
-                <input type="hidden" name="_next" value="https://vvdwageningen.nl/bedankt-aanmelding.html">
+                
                 
                 <button type="submit" class="btn">Aanmelden</button>
               </form>
-              <p><small>Door je aan te melden ga je akkoord met het ontvangen van onze nieuwsbrief. Je kunt je altijd weer afmelden via de link onderaan elke nieuwsbrief.</small></p>
+              <div id="newsletter-thank-you" style="display:none;" aria-live="polite">
+                <h3>Bedankt voor uw aanmelding!</h3>
+                <p>U ontvangt binnenkort onze nieuwsbrief.</p>
+              </div>
             </div>
           </div>
         </div>
+        
       </section>
 
       <section class="section-padding bg-light">
@@ -327,7 +332,26 @@
         </div>
       </div>
     </footer>
-
+    <script>
+      const newsletterForm = document.getElementById('newsletter-form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const data = new FormData(newsletterForm);
+          fetch(newsletterForm.action, {
+            method: newsletterForm.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          }).then(response => {
+            newsletterForm.style.display = 'none';
+            document.getElementById('newsletter-thank-you').style.display = 'block';
+          }).catch(error => {
+            alert('Er ging iets mis. Probeer het later opnieuw.');
+          });
+        });
+      }
+    </script>
+    
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -123,8 +123,10 @@
             <h2>Stel uw vraag via het formulier</h2>
             <p>Voor algemene vragen kunt u ook onderstaand formulier invullen.</p>
             <form id="contact-form" action="https://formsubmit.co/vvdwageningen@gmail.com" method="POST">
-                <!-- Vervang your@email.com hierboven! -->
+              
                 <input type="hidden" name="_subject" value="Nieuw bericht via Contactformulier VVD Wageningen">
+                <input type="hidden" name="_captcha" value="true">
+                <input type="hidden" name="_template" value="box">
 
                 <div class="form-group">
                     <label for="name">Naam</label>
@@ -147,9 +149,14 @@
 
                 <button type="submit" class="btn">Versturen</button>
             </form>
+            <div id="thank-you-message" style="display:none;">
+              <h2>Bedankt voor uw bericht!</h2>
+              <p>We nemen zo spoedig mogelijk contact met u op.</p>
+            </div>
             <p><small><a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer"></a></small></p>
           </div>
         </div>
+         
       </section>
 
     </main>
@@ -243,5 +250,23 @@
 
     <script src="js/main.js"></script>
     <!-- Eventuele extra JS voor formulier validatie of interacties -->
+    <script>
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        }).then(response => {
+          form.style.display = 'none';
+          document.getElementById('thank-you-message').style.display = 'block';
+        }).catch(error => {
+          alert('Er is iets misgegaan. Probeer het opnieuw.');
+        });
+      });
+    </script>
+    
   </body>
 </html>
