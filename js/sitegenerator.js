@@ -100,10 +100,10 @@ function createNieuwsHtmlPage(data, htmlContent) {
           <li><a href="/over-ons.html">Over Ons</a></li>
           <li class="dropdown">
             <a href="/standpunten.html" class="nav-link">Standpunten <span class="dropdown-arrow">▼</span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/standpunten.html">Onze standpunten</a></li>
-              <li><a href="/actiepunten.html">Actiepunten</a></li>
-            </ul>
+            // <ul class="dropdown-menu">
+            //   <li><a href="/standpunten.html">Onze standpunten</a></li>
+            //   <li><a href="/actiepunten.html">Actiepunten</a></li>
+            // </ul>
           </li>
           <li><a href="/actueel.html">Actueel</a></li>
           <li><a href="/contact.html">Contact</a></li>
@@ -146,8 +146,8 @@ function createNieuwsHtmlPage(data, htmlContent) {
             <h3>VVD Wageningen</h3>
             <ul>
               <li><a href="over-ons.html">Over Ons & Mensen</a></li>
-              <li><a href="standpunten.html">Onze Standpunten</a></li>
-              <li><a href="actiepunten.html">Onze Actiepunten</a></li>
+              // <li><a href="standpunten.html">Onze Standpunten</a></li>
+              // <li><a href="actiepunten.html">Onze Actiepunten</a></li>
             </ul>
           </div>
           <div class="footer-column">
@@ -284,10 +284,10 @@ function createKandidaatHtmlPage(data, htmlBioContent) {
            <li><a href="/over-ons.html">Over Ons</a></li>
            <li class="dropdown">
              <a href="/standpunten.html" class="nav-link">Standpunten <span class="dropdown-arrow">▼</span></a>
-             <ul class="dropdown-menu">
-               <li><a href="/standpunten.html">Onze standpunten</a></li>
-               <li><a href="/actiepunten.html">Actiepunten</a></li>
-             </ul>
+            //  <ul class="dropdown-menu">
+            //    <li><a href="/standpunten.html">Onze standpunten</a></li>
+            //    <li><a href="/actiepunten.html">Actiepunten</a></li>
+            //  </ul>
            </li>
            <li><a href="/actueel.html">Actueel</a></li>
            <li><a href="/contact.html">Contact</a></li>
@@ -342,8 +342,8 @@ function createKandidaatHtmlPage(data, htmlBioContent) {
             <h3>VVD Wageningen</h3>
             <ul>
               <li><a href="over-ons.html">Over Ons & Mensen</a></li>
-              <li><a href="standpunten.html">Onze Standpunten</a></li>
-              <li><a href="actiepunten.html">Onze Actiepunten</a></li>
+              // <li><a href="standpunten.html">Onze Standpunten</a></li>
+              // <li><a href="actiepunten.html">Onze Actiepunten</a></li>
             </ul>
           </div>
           <div class="footer-column">
