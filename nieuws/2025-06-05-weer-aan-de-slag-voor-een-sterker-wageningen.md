@@ -9,4 +9,8 @@ Wat fijn om weer terug in de Raad te zijn! Op 12 mei mocht ik na 32 weken weer z
 
 Naast de Politieke avonden ben ik ook weer gestart in de Raadswerkgroep Democratische Kwaliteit. Hierin buigen we ons over de vraag: hoe zorgen we ervoor dat er meer Wageningers bij de volgende verkiezingen de stembus weten te vinden? Goede ideeën zoals een gezamenlijke verkiezingskrant en -site waar alle informatie op staat is een eerste concrete stap.
 
+Met vriendelijke groet,
+
+Esther Koenders
+
 <!--EndFragment-->
