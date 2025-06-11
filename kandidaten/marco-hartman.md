@@ -1,7 +1,7 @@
 ---
 naam: Marco Hartman
 rol: Steunfractielid
-volgorde: 4
+volgorde: 3
 foto: /images/uploads/220103-vvd_55.jpg
 email: marcohartman@gmail.com
 linkedin: https://www.linkedin.com/in/marcohartman/
