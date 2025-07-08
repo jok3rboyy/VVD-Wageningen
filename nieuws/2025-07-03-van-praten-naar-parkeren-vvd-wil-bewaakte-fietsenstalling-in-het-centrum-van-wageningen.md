@@ -1,7 +1,7 @@
 ---
-title: "Van praten naar parkeren: VVD wil bewaakte fietsenstalling in het
+title: "Van praten naar parkeren: motie VVD bewaakte fietsenstalling in het
   centrum van Wageningen"
-date: 2025-07-03T16:03:26.892Z
+date: 2025-07-08T16:03:26.892Z
 category: raadswerk
 thumbnail: /images/uploads/fietsparkeren.png
 ---
