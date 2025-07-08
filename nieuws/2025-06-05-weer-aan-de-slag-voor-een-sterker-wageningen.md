@@ -2,6 +2,7 @@
 title: Weer aan de slag voor een sterker Wageningen!
 date: 2025-06-05T08:24:18.117Z
 category: aankondiging
+thumbnail: /images/uploads/1000030299.png
 ---
 <!--StartFragment-->
 
