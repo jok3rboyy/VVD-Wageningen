@@ -2,6 +2,7 @@
 title: De laatste loodjes voor het zomerreces
 date: 2025-07-25T19:26:39.676Z
 category: raadswerk
+thumbnail: /images/uploads/220103-vvd_21_l.jpg
 ---
 Vlak voor de zomervakantie is het even aanpoten: bedankjes voor de juffen, nog een toetsweek, eindvoorstelling, etc... Voor veel moeders is dit vast herkenbaar. De politieke kalender sluit daar, qua timing, helaas volledig op aan; Want heb je ideeën die geld kosten? Dan is de kadernota begin juli hét moment om ze mee te geven aan het college.  Zo vond ik het tijd worden dat we in het centrum van Wageningen een bewaakte fietsenstalling krijgen. Mijn motie haalde de meerderheid; Een mooi succes om deze drukke periode positief mee af te sluiten.
 
