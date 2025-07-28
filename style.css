@@ -3327,3 +3327,38 @@ label {
   height: auto;
   border-radius: 8px;
 }
+
+      .iframe-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin-top: 2rem;
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .form-section {
+        background-color: #f9f9f9;
+        padding: 2rem 0;
+      }
+
+      .form-header h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #0a2cca;
+      }
+
+      .form-header p {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #333;
+      }
