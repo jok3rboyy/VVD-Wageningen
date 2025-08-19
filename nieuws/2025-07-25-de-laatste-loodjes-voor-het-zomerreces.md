@@ -14,5 +14,6 @@ Maar nu eerst het zomerreces: opladen voor een nieuw politiek jaar.
 
 Een jaar vol kansen: gemeenteraadsverkiezingen! Na de vakantie bepalen we met onze leden: Wie wordt de lijststrekker? Wie komen er op de kieslijst? Wat komt er in ons verkiezingsprogramma? En hoe zorgen we dat iedereen komt stemmen?
 
-Wil jij meer weten? Bijvoorbeeld hoeveel tijd het kost of welke verschillende rollen we in de fractie kennen? Laat het mij dan gerust weten via een DM op de socials of stuur me een mailtje!
+Wil jij meer weten? Bijvoorbeeld hoeveel tijd het kost of welke verschillende rollen we in de fractie kennen? Laat het mij dan gerust weten via een DM op de socials of stuur [me een mailtje! ](<mailto: ekoendersjollie@gmail.com>)
 
+V﻿oor nu zomerse groet, Esther Koenders
