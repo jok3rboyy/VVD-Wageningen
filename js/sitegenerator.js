@@ -267,18 +267,33 @@ function createKandidaatHtmlPage(data, htmlBioContent) {
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="${data.bio_kort || `Lees meer over ${data.naam}, ${data.rol || ''} bij VVD Wageningen.`}">
-    <title>${data.naam || "Kandidaat"} - VVD Wageningen</title>
-    <!-- Gebruik root-relatieve paden -->
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
-    <link rel="manifest" href="/favicon_io/site.webmanifest" /> <!-- Controleer dit pad -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="${data.bio_kort || `Lees meer over ${data.naam}, ${data.rol || ''} bij VVD Wageningen.`}" />
+  <title>${data.naam || "Kandidaat"} - VVD Wageningen</title>
+
+  <!-- ✅ Open Graph (voor social sharing previews) -->
+  <meta property="og:title" content="${data.naam || 'Kandidaat'} - VVD Wageningen" />
+  <meta property="og:description" content="${data.bio_kort || `Lees meer over ${data.naam}, ${data.rol || ''} bij VVD Wageningen.`}" />
+  <meta property="og:image" content="https://vvdwageningen.nl${data.foto || '/images/default-kandidaat.png'}" />
+  <meta property="og:url" content="https://vvdwageningen.nl/${data.slug || ''}" />
+  <meta property="og:type" content="profile" />
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${data.naam || 'Kandidaat'} - VVD Wageningen" />
+  <meta name="twitter:description" content="${data.bio_kort || `Lees meer over ${data.naam}, ${data.rol || ''} bij VVD Wageningen.`}" />
+  <meta name="twitter:image" content="https://vvdwageningen.nl${data.foto || '/images/default-kandidaat.png'}" />
+
+  <!-- Favicon + styles -->
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="/favicon_io/site.webmanifest" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
     <header class="header">
       <nav class="navbar container">
