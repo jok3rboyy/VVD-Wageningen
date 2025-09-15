@@ -3434,19 +3434,8 @@ label {
   border-color: var(--color-accent); /* Oranje rand verschijnt bij hover */
   color: var(--color-text-light) !important; /* BELANGRIJK: Houdt de tekst wit! */
 }
-
-/* --- Responsive voor mobiele schermen --- */
-@media (max-width: 767px) {
-  .hero-buttons-wrapper {
-    margin-left: 45px;
-    gap: 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero-cta-button,
+@media (max-width: 768px) {
   .btn-mening {
-    padding: 0.7rem 1.8rem;
-    font-size: 1rem;
+    display: none !important;
   }
 }
