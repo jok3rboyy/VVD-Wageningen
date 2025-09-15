@@ -74,16 +74,31 @@ function createNieuwsHtmlPage(data, htmlContent) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="${data.excerpt || data.title || 'Nieuws van VVD Wageningen'}">
+  <meta name="description" content="${data.excerpt || data.title || 'Nieuws van VVD Wageningen'}" />
   <title>${data.title || "Nieuws"} - VVD Wageningen</title>
-  <!-- Gebruik root-relatieve paden -->
+
+  <!-- ✅ Open Graph (voor social sharing previews) -->
+  <meta property="og:title" content="${data.title || 'Nieuwsbericht'}" />
+  <meta property="og:description" content="${data.excerpt || 'Nieuws van VVD Wageningen'}" />
+  <meta property="og:image" content="${data.thumbnail ? 'https://vvdwageningen.nl' + data.thumbnail : 'https://vvdwageningen.nl/images/VVD_Logo_01_RGB_Kleur_1200DPI_Background.png'}" />
+  <meta property="og:url" content="https://vvdwageningen.nl/nieuws/${data.slug || 'artikel'}" />
+  <meta property="og:type" content="article" />
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${data.title || 'Nieuwsbericht'}" />
+  <meta name="twitter:description" content="${data.excerpt || 'Nieuws van VVD Wageningen'}" />
+  <meta name="twitter:image" content="${data.thumbnail ? 'https://vvdwageningen.nl' + data.thumbnail : 'https://vvdwageningen.nl/images/VVD_Logo_01_RGB_Kleur_1200DPI_Background.png'}" />
+
+  <!-- Favicon + styles -->
   <link rel="stylesheet" href="/style.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
-  <link rel="manifest" href="/favicon_io/site.webmanifest" /> <!-- Controleer dit pad -->
+  <link rel="manifest" href="/favicon_io/site.webmanifest" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
   <header class="header">
     <nav class="navbar container">
@@ -471,6 +486,7 @@ function generateNieuws() {
         console.log(`   [Nieuws] Verwerken: ${relativePath}, Frontmatter keys:`, Object.keys(data));
 
         const slug = path.basename(file, ".md");
+        data.slug = slug;
 
         if (!data.title) console.warn(`   ⚠️ WAARSCHUWING: Veld 'title' mist in ${relativePath}`);
         if (!data.date) console.warn(`   ⚠️ WAARSCHUWING: Veld 'date' mist in ${relativePath}`);
