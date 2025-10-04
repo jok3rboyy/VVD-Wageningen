@@ -1,6 +1,6 @@
 ---
 title: Verkiezingsprogramma en het Kieskompas
-date: 2025-10-04T12:23:57.778Z
+date: 2025-10-04T12:34:54.906Z
 category: opinie
 ---
 We zijn druk bezig met het schrijven van het verkiezingsprogramma voor de gemeenteraadsverkiezingen in maart 2026. Hiervoor voeren we extra gesprekken met verenigingen, ondernemers en inwoners. Dat leidt meestal tot concrete ideeën voor het verkiezingsprogramma, maar soms ook gelijk tot actie. Zo diende we vorige week een motie mede in die ertoe leidde dat het betaald parkeren in de avond en zondag nog even uitgesteld gaat worden! Hopelijk komt van uitstel ook afstel.
